@@ -1,0 +1,58 @@
+@use "typography" as *;
+
+.btn {
+  @include regular-b;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 10px;
+  border: none;
+  outline: none;
+
+  border-radius: 48px;
+  padding: 12px 32px;
+  gap: 10px;
+
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &.primary {
+    color: var(--Typography-White-100);
+
+    background: var(--BG-Dissabled, rgba(60, 51, 184, 0.72));
+    box-shadow: -1px -1px 0px 0px var(--BG-Dissabled, #c7c8cc) inset,
+      1px 1px 0px 0px var(--BG-Dissabled, #c7c8cc) inset,
+      0px 0px 32px -8px var(--Button-Secondary-BG, rgba(220, 221, 235, 0.64)) inset;
+
+    &:hover {
+      background: var(--Button-Primary-BG-Hower, rgba(103, 103, 235, 0.72));
+      box-shadow: 0px 0px 32px -8px var(
+            --Button-Secondary-BG,
+            rgba(220, 221, 235, 0.64)
+          ) inset,
+        -1px -1px 0px 0px var(--BG-Dissabled, #c7c8cc) inset,
+        1px 1px 0px 0px var(--BG-Dissabled, #c7c8cc) inset;
+    }
+  }
+
+  &.secondary {
+    color: var(--Typography-200);
+
+    background: var(--Button-Secondary-BG, rgba(220, 221, 235, 0.64));
+    box-shadow: -1px -1px 0px 0px var(--BG-Secondary-Section, #dbdce0) inset,
+      1px 1px 0px 0px var(--BG-Secondary-Section, #dbdce0) inset;
+
+    &:hover {
+      color: var(--Typography-100);
+      background: var(--Button-Secondary-BG-Hower, rgba(234, 235, 250, 0.64));
+      box-shadow: 0px 0px 16px 0px var(--BG-Section, #e5e6eb) inset,
+        -1px -1px 0px 0px var(--BG-Secondary-Section, #dbdce0) inset,
+        1px 1px 0px 0px var(--BG-Secondary-Section, #dbdce0) inset;
+    }
+  }
+}

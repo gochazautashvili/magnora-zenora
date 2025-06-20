@@ -1,0 +1,6 @@
+{
+  "GREETING": "Hello, {{name}}!",
+  "WELCOME": "Welcome to our website",
+  "DESCRIPTION": "This is an internationalized application.",
+  "LANGUAGE_SWITCH": "Switch Language"
+}
