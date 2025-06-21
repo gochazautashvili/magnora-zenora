@@ -1,0 +1,69 @@
+@use "typography" as *;
+
+.hero {
+  display: flex;
+  align-items: end;
+
+  position: relative;
+  overflow: hidden;
+
+  height: 100vh;
+  width: 100%;
+
+  .video {
+    position: absolute;
+    object-fit: cover;
+    z-index: -1;
+
+    width: 100%;
+    height: 100%;
+
+    left: 0;
+    top: 0;
+  }
+
+  .content {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    padding: 0 48px;
+    gap: 20px;
+
+    .title {
+      @include header-m;
+      color: var(--Typography-White-100, #eff0f5);
+
+      span {
+        background: linear-gradient(
+          93deg,
+          var(--Typography-Purple-100, #3c33b8) 41.88%,
+          var(--Typography-Purple-200, #6262f5) 72.96%
+        );
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
+    }
+
+    .box {
+      width: 416px;
+
+      h3 {
+        @include sub-header-s;
+        color: var(--Typography-White-100, #eff0f5);
+      }
+
+      .btns {
+        display: flex;
+        align-items: center;
+        margin-top: 12px;
+        gap: 16px;
+      }
+    }
+  }
+}
+
+.about {
+  height: 100vh;
+}

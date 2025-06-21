@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { NzButtonModule } from 'ng-zorro-antd/button';
-
+import { ButtonComponent } from '../../shared/ui/button/button.component';
 
 @Component({
   selector: 'app-welcome',
-  imports: [RouterModule, NzButtonModule],
+  imports: [RouterModule, ButtonComponent],
   templateUrl: './welcome.component.html',
   styleUrl: './welcome.component.scss',
 })
