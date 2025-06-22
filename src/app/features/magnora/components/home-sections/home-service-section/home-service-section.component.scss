@@ -18,6 +18,7 @@
         }
         p {
             @include sub-header-s;
+            color: var(--Typography-300);
         }        
     }
     
