@@ -6,7 +6,8 @@ import { HomeServiceSectionComponent } from '@features/magnora/components/home-s
 import {
   HomeHeroSectionComponent,
   HomeAboutSectionComponent,
-  HomeServiceSectionComponent,
+
+  
 } from '@features/magnora/components/home-sections';
 import { HomeFeatureSectionComponent } from "../../components/home-sections/home-feature-section/home-feature-section.component";
 
@@ -16,7 +17,8 @@ import { HomeFeatureSectionComponent } from "../../components/home-sections/home
     HomeHeroSectionComponent,
     HomeAboutSectionComponent,
     HomeServiceSectionComponent,
-    HomeFeatureSectionComponent
+    HomeFeatureSectionComponent,
+    HomeQaSectionComponent
 ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
