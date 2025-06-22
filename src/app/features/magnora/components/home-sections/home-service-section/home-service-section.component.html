@@ -1,19 +1,21 @@
 <section class="home-service">
-
+  <div class="container content">
     <div class="service-header">
-        <h2>Magnora's Services</h2>
-        <p>
-            Discover the offerings that make Magnora more than a jewelry brand — from custom pieces to personalized guidance, each service is designed to support your journey.
-        </p>
+      <h2>Magnora's Services</h2>
+      <p>
+        Discover the offerings that make Magnora more than a jewelry brand —
+        from custom pieces to personalized guidance, each service is designed to
+        support your journey.
+      </p>
     </div>
     <div class="service-image-cards">
-        <div *ngFor="let service of services" class="service-card">
-            <img [src]="service.image" alt="">
-            <div>
-                <h3>{{ service.title }}</h3>
-                <p>{{ service.description }}</p>
-            </div>
+      <div *ngFor="let service of services" class="service-card">
+        <img [src]="service.image" alt="" />
+        <div>
+          <h3>{{ service.title }}</h3>
+          <p>{{ service.description }}</p>
         </div>
+      </div>
     </div>
-
+  </div>
 </section>
