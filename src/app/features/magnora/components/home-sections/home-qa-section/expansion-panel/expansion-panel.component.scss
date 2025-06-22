@@ -2,65 +2,65 @@
 
 .mat-expansion-panel.mat-expanded ::ng-deep .mat-expansion-panel-body,
 .mat-expansion-panel.mat-expanded ::ng-deep .mat-expansion-panel-header {
-    background-color: var(--BG-Section) !important;
-     
+  background-color: var(--BG-Section) !important;
 }
-  ::ng-deep .mat-accordion {
-    display: flex !important;
-  }
+::ng-deep .mat-accordion {
+  display: flex !important;
+}
 
-  .mat-expansion-panel {
-      border-radius: 36px !important;
-      background-color: var(--BG-Secondary-Section);
-      box-shadow: none;
-      width: 658px!important;
-      box-shadow: none !important;
-    }
-    
-    .mat-expansion-panel-header {
-        @include regular-b;
-        height: 72px;
-        background-color: var(--BG-Secondary-Section);
-        border-radius: 12px 12px 0 0;
-        transition: 0.5s !important;
-    }
-    
-    ::ng-deep .mat-expansion-panel-body {
-        @include regular-r;
-        background-color: var(--BG-Section);
-        border-radius: 0 0 12px 12px;
-        padding: 16px 24px 32px 32px !important;
-        
-    }
-    
-    // HOVER EFFECT ON HEADER
-    ::ng-deep .mat-expansion-panel-header:hover {
-          background-color: var(--BG-Section) !important;
-          transition: 0.5s !important;
-    }
-    
-    //  LINE BETWEEN HEADER AND CONTENT
-    .mat-expansion-panel-header::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 20px;  // Left padding
-        right: 20px; // Right padding
-        height: 2px;
-        background-color: var(--BG-Secondary-Section);
-        display: none; // Hide by default
-    }
-    
-    .mat-expansion-panel.mat-expanded .mat-expansion-panel-header::after {
-        display: block; // Show when expanded
-    }
+.mat-expansion-panel {
+  border-radius: 36px !important;
+  background-color: var(--BG-Secondary-Section);
+  box-shadow: none;
+  width: 658px !important;
+  box-shadow: none !important;
+}
 
+.mat-expansion-panel-header {
+  @include regular-b;
+  height: 72px;
+  background-color: var(--BG-Secondary-Section);
+  border-radius: 12px 12px 0 0;
+  transition: 0.5s !important;
+}
 
-    // CUSTOM ARROW ANIMATION
-    .mat-expansion-panel-header ::ng-deep .mat-expansion-indicator {
-        transform: rotate(-90deg); // Start pointing right instead of down
-      }
-      
-      .mat-expansion-panel.mat-expanded .mat-expansion-panel-header ::ng-deep .mat-expansion-indicator {
-        transform: rotate(0deg); // Point down when expanded
-      }
+::ng-deep .mat-expansion-panel-body {
+  @include regular-r;
+  background-color: var(--BG-Section);
+  border-radius: 0 0 12px 12px;
+  padding: 16px 24px 32px 32px !important;
+}
+
+// HOVER EFFECT ON HEADER
+::ng-deep .mat-expansion-panel-header:hover {
+  background-color: var(--BG-Section) !important;
+  transition: 0.5s !important;
+}
+
+//  LINE BETWEEN HEADER AND CONTENT
+.mat-expansion-panel-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20px; // Left padding
+  right: 20px; // Right padding
+  height: 2px;
+  background-color: var(--BG-Secondary-Section);
+  display: none; // Hide by default
+}
+
+.mat-expansion-panel.mat-expanded .mat-expansion-panel-header::after {
+  display: block; // Show when expanded
+}
+
+// CUSTOM ARROW ANIMATION
+.mat-expansion-panel-header ::ng-deep .mat-expansion-indicator {
+  transform: rotate(-90deg); // Start pointing right instead of down
+}
+
+.mat-expansion-panel.mat-expanded
+  .mat-expansion-panel-header
+  ::ng-deep
+  .mat-expansion-indicator {
+  transform: rotate(0deg); // Point down when expanded
+}
