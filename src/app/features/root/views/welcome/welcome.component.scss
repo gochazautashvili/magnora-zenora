@@ -68,6 +68,13 @@
   p {
     color: var(--Typography-White-100, #eff0f5);
   }
+
+  .img {
+    right: 0px;
+    bottom: 0px;
+
+    border-radius: 192px 0px 0px 0px;
+  }
 }
 
 .right {
@@ -85,6 +92,24 @@
 
   .btn {
     align-self: self-end;
+  }
+
+  
+
+  .img {
+    left: 0;
+    bottom: 0px;
+    border-radius: 0px 192px 0px 0px;
+  }
+}
+
+.img {
+  position: absolute;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 

@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { ButtonComponent } from '../../../../shared/ui/button/button.component';
+import { HomeHeroSectionComponent } from '../../components/home-sections/home-hero-section/home-hero-section.component';
 
 @Component({
   selector: 'app-home',
-  imports: [ButtonComponent],
+  imports: [HomeHeroSectionComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
