@@ -3,6 +3,7 @@
 
 .main {
   display: flex;
+  position: relative;
   gap: 24px;
 
   width: 100%;
@@ -22,34 +23,38 @@
     position: relative;
     overflow: hidden;
 
-    transition: transform 0.3s ease;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
     transform-origin: center;
     border-radius: 72px;
     padding: 48px;
-    flex: 1 1 0;
+    flex: 0.5;
   }
 
-  &:has(.left:hover) {
+  &:not(.panel-expanded):has(.left:hover) {
     .left {
-      transform: scale(1.1);
       z-index: 1;
+      transform: scale(1.1);
+      transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
     }
 
     .right {
-      opacity: 0.48;
+      opacity: 0.6;
       transform: scale(0.9);
+      transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
     }
   }
 
-  &:has(.right:hover) {
+  &:not(.panel-expanded):has(.right:hover) {
     .right {
-      transform: scale(1.1);
       z-index: 1;
+      transform: scale(1.1);
+      transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
     }
 
     .left {
+      opacity: 0.6;
       transform: scale(0.9);
-      opacity: 0.48;
+      transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
     }
   }
 }
@@ -77,9 +82,7 @@
   .img {
     right: -300px;
     bottom: -300px;
-
     border-radius: 192px 0px 0px 0px;
-    transition: 0.5s ease;
   }
 }
 
@@ -97,7 +100,7 @@
   }
 
   .btn {
-    align-self: self-end;
+    align-self: flex-end;
   }
 
   &:hover .img {
@@ -109,11 +112,11 @@
     left: -300px;
     bottom: -300px;
     border-radius: 0px 192px 0px 0px;
-    transition: 0.5s ease;
   }
 }
 
 .img {
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
   position: absolute;
   z-index: -1;
 
@@ -131,9 +134,88 @@
 
   h1 {
     @include header-m;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
   }
 
   p {
     @include regular-r;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+}
+
+.btn {
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+
+  &.collection-btn {
+    animation: fadeInUp 0.6s cubic-bezier(0.23, 1, 0.32, 1) 0.3s both;
+  }
+}
+
+.close-btn {
+  position: fixed;
+
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.9);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  color: #3c33b8;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
+  animation: fadeInScale 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0.5s both;
+
+  &:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.1) rotate(90deg);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  }
+
+  svg {
+    transition: transform 0.3s ease;
+  }
+
+  &.left-btn {
+    top: 32px;
+    right: 32px;
+  }
+
+  &.right-btn {
+    top: 32px;
+    left: 32px;
+  }
+}
+
+//
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8) rotate(-90deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
   }
 }
