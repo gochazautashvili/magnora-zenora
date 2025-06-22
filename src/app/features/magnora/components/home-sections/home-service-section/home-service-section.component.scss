@@ -5,8 +5,9 @@
     padding: 144px 164px;
 
     .service-header {
-        max-width: 1112px;
-
+        max-width: 1120px;
+        width: 100%;
+        margin: 0 auto;
         display: flex;
         flex-direction: column;
 
@@ -14,17 +15,22 @@
 
         h2 {
             @include header-s;
-            display: block
         }
         p {
             @include sub-header-s;
         }        
     }
-
+    
+    // რესპონსივზე უნდა შეცვალო grid-template-columns
     .service-image-cards {
+        max-width: 1112px;
+        width: 100%;
+
         margin-top: 96px;
+
         display: grid;
         grid-template-columns: repeat(2, 532px);
+
         row-gap: 96px;
         column-gap: 48px;
         
@@ -32,13 +38,8 @@
             display: flex;
             flex-direction: column;
             gap: 96px;
-            
-            img {
-                width: 100%;
-                height: 665px;
-            }
 
-            span{
+            div {
                 display: flex;
                 flex-direction: column;
                 gap: 12px;
@@ -54,3 +55,5 @@
         }
     }
 }
+
+

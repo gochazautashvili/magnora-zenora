@@ -9,10 +9,10 @@
     <div class="service-image-cards">
         <div *ngFor="let service of services" class="service-card">
             <img [src]="service.image" alt="">
-            <span>
+            <div>
                 <h3>{{ service.title }}</h3>
                 <p>{{ service.description }}</p>
-            </span>
+            </div>
         </div>
     </div>
 
