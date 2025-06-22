@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 
+import { HomeQaSectionComponent } from '@features/magnora/components/home-sections/home-qa-section/home-qa-section.component';
+import { HomeServiceSectionComponent } from '@features/magnora/components/home-sections/home-service-section/home-service-section.component';
+  
 import {
   HomeHeroSectionComponent,
   HomeAboutSectionComponent,

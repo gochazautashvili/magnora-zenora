@@ -38,5 +38,6 @@ export class HomeServiceSectionComponent {
         title : 'Symbol & Stone Consultation',
         description : 'Not sure what to choose? We help you find the energy that fits your journey.'
       },
+      
     ]
 }
