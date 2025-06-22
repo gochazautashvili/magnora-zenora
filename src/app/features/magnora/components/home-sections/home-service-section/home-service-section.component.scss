@@ -1,59 +1,57 @@
 @use "typography" as *;
 
 .home-service {
-    background-color: var(--BG-Section);
-    padding: 144px 164px;
+  background-color: var(--BG-Section);
+  padding: 144px 164px;
 
-    .service-header {
-        max-width: 1120px;
-        width: 100%;
-        margin: 0 auto;
+  .service-header {
+    max-width: 1120px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    gap: 24px;
+
+    h2 {
+      @include header-s;
+    }
+    p {
+      @include sub-header-s;
+    }
+  }
+
+  // რესპონსივზე უნდა შეცვალო grid-template-columns
+  .service-image-cards {
+    max-width: 1112px;
+    width: 100%;
+
+    margin-top: 96px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 532px);
+
+    row-gap: 96px;
+    column-gap: 48px;
+
+    .service-card {
+      display: flex;
+      flex-direction: column;
+      gap: 96px;
+
+      div {
         display: flex;
         flex-direction: column;
+        gap: 12px;
 
-        gap: 24px;
-
-        h2 {
-            @include header-s;
+        h3 {
+          @include sub-header-s;
         }
         p {
-            @include sub-header-s;
-        }        
-    }
-    
-    // რესპონსივზე უნდა შეცვალო grid-template-columns
-    .service-image-cards {
-        max-width: 1112px;
-        width: 100%;
-
-        margin-top: 96px;
-
-        display: grid;
-        grid-template-columns: repeat(2, 532px);
-
-        row-gap: 96px;
-        column-gap: 48px;
-        
-        .service-card {
-            display: flex;
-            flex-direction: column;
-            gap: 96px;
-
-            div {
-                display: flex;
-                flex-direction: column;
-                gap: 12px;
-
-                h3 {
-                    @include sub-header-s;
-                }
-                p{
-                    @include regular-r;
-                    color: var(--Typography-300);
-                }
-            }
+          @include regular-r;
+          color: var(--Typography-300);
         }
+      }
     }
+  }
 }
-
-
