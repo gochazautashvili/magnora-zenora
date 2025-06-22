@@ -69,11 +69,17 @@
     color: var(--Typography-White-100, #eff0f5);
   }
 
-  .img {
+  &:hover .img {
     right: 0px;
     bottom: 0px;
+  }
+
+  .img {
+    right: -300px;
+    bottom: -300px;
 
     border-radius: 192px 0px 0px 0px;
+    transition: 0.5s ease;
   }
 }
 
@@ -94,17 +100,22 @@
     align-self: self-end;
   }
 
-  
-
-  .img {
+  &:hover .img {
     left: 0;
     bottom: 0px;
+  }
+
+  .img {
+    left: -300px;
+    bottom: -300px;
     border-radius: 0px 192px 0px 0px;
+    transition: 0.5s ease;
   }
 }
 
 .img {
   position: absolute;
+  z-index: -1;
 
   img {
     width: 100%;
