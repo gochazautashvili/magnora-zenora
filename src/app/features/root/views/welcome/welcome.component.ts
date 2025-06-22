@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { ButtonComponent } from '../../shared/ui/button/button.component';
+
+import { ButtonComponent } from '../../../../shared/ui/button/button.component';
 
 @Component({
   selector: 'app-welcome',
@@ -8,4 +9,4 @@ import { ButtonComponent } from '../../shared/ui/button/button.component';
   templateUrl: './welcome.component.html',
   styleUrl: './welcome.component.scss',
 })
-export class WelcomeComponent {}
+export default class WelcomeComponent {}

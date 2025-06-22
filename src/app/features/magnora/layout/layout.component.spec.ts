@@ -1,18 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MagnoraLayoutComponent } from './magnora-layout.component';
+import { LayoutComponent } from './layout.component';
 
 describe('MagnoraLayoutComponent', () => {
-  let component: MagnoraLayoutComponent;
-  let fixture: ComponentFixture<MagnoraLayoutComponent>;
+  let component: LayoutComponent;
+  let fixture: ComponentFixture<LayoutComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MagnoraLayoutComponent]
-    })
-    .compileComponents();
+      imports: [LayoutComponent],
+    }).compileComponents();
 
-    fixture = TestBed.createComponent(MagnoraLayoutComponent);
+    fixture = TestBed.createComponent(LayoutComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

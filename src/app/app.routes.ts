@@ -1,21 +1,8 @@
 import { Routes } from '@angular/router';
-import { WelcomeComponent } from './routes/welcome/welcome.component';
-
-import { MagnoraLayoutComponent } from './layouts/magnora-layout/magnora-layout.component';
-import { ZenoraLayoutComponent } from './layouts/zenora-layout/zenora-layout.component';
-import { MagnoraHomeComponent } from './routes/magnora-home/magnora-home.component';
 
 export const routes: Routes = [
-  { path: '', component: WelcomeComponent },
-  {
-    path: 'magnora',
-    component: MagnoraLayoutComponent,
-    children: [
-      {
-        path: '',
-        component: MagnoraHomeComponent,
-      },
-    ],
-  },
-  { path: 'zenora', component: ZenoraLayoutComponent },
+  { path: '', loadChildren: () => import('./features/root/root.routes') },
+  { path: '', loadChildren: () => import('./features/auth/auth.routes') },
+  { path: '', loadChildren: () => import('./features/magnora/magnora.routes') },
+  { path: '', loadChildren: () => import('./features/zenora/zenora.routes') },
 ];

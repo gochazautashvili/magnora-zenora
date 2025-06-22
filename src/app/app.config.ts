@@ -13,7 +13,7 @@ import { registerLocaleData } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import en from '@angular/common/locales/en';
 
-import { provideTranslations } from './providers/i18n.providers';
+import { provideTranslations } from './core/providers/i18n.providers';
 import { routes } from './app.routes';
 
 registerLocaleData(en);

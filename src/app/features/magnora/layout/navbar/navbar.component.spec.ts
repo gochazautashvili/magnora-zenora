@@ -1,18 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { MagnoraNavbarComponent } from './magnora-navbar.component';
+import { NavbarComponent } from './navbar.component';
 
 describe('MagnoraNavbarComponent', () => {
-  let component: MagnoraNavbarComponent;
-  let fixture: ComponentFixture<MagnoraNavbarComponent>;
+  let component: NavbarComponent;
+  let fixture: ComponentFixture<NavbarComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MagnoraNavbarComponent]
-    })
-    .compileComponents();
+      imports: [NavbarComponent],
+    }).compileComponents();
 
-    fixture = TestBed.createComponent(MagnoraNavbarComponent);
+    fixture = TestBed.createComponent(NavbarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
