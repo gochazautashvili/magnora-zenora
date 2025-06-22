@@ -1,0 +1,56 @@
+@use "typography" as *;
+
+.home-service {
+    background-color: var(--BG-Section);
+    padding: 144px 164px;
+
+    .service-header {
+        max-width: 1112px;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 24px;
+
+        h2 {
+            @include header-s;
+            display: block
+        }
+        p {
+            @include sub-header-s;
+        }        
+    }
+
+    .service-image-cards {
+        margin-top: 96px;
+        display: grid;
+        grid-template-columns: repeat(2, 532px);
+        row-gap: 96px;
+        column-gap: 48px;
+        
+        .service-card {
+            display: flex;
+            flex-direction: column;
+            gap: 96px;
+            
+            img {
+                width: 100%;
+                height: 665px;
+            }
+
+            span{
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+
+                h3 {
+                    @include sub-header-s;
+                }
+                p{
+                    @include regular-r;
+                    color: var(--Typography-300);
+                }
+            }
+        }
+    }
+}
