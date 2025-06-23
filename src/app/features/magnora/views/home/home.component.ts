@@ -4,6 +4,8 @@ import {
   HomeQaSectionComponent,
   HomeHeroSectionComponent,
   HomeAboutSectionComponent,
+
+  
   HomeServiceSectionComponent,
   HomeFeatureSectionComponent,
 } from '@features/magnora/components/home-sections';
@@ -16,7 +18,8 @@ import {
     HomeAboutSectionComponent,
     HomeServiceSectionComponent,
     HomeFeatureSectionComponent,
-  ],
+    HomeQaSectionComponent
+],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
