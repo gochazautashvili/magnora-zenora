@@ -2,12 +2,13 @@
 
 .home-service {
   background-color: var(--BG-Section);
-  padding: 144px 164px;
+  padding: 144px 0;
+
+  .content {
+    padding: 0 116px;
+  }
 
   .service-header {
-    max-width: 1120px;
-    width: 100%;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
 
@@ -23,16 +24,12 @@
 
   // რესპონსივზე უნდა შეცვალო grid-template-columns
   .service-image-cards {
-    max-width: 1112px;
-    width: 100%;
-
-    margin-top: 96px;
-
     display: grid;
-    grid-template-columns: repeat(2, 532px);
+    grid-template-columns: repeat(2, 1fr);
 
     row-gap: 96px;
     column-gap: 48px;
+    margin-top: 96px;
 
     .service-card {
       display: flex;
@@ -48,13 +45,13 @@
           @include sub-header-s;
         }
         p {
-            @include sub-header-s;
-            color: var(--Typography-300);
-        }        
-    }
-    
-    // რესპონსივზე უნდა შეცვალო grid-template-columns
-    .service-image-cards {
+          @include sub-header-s;
+          color: var(--Typography-300);
+        }
+      }
+
+      // რესპონსივზე უნდა შეცვალო grid-template-columns
+      .service-image-cards {
         max-width: 1112px;
         width: 100%;
 
@@ -65,25 +62,25 @@
 
         row-gap: 96px;
         column-gap: 48px;
-        
+
         .service-card {
+          display: flex;
+          flex-direction: column;
+          gap: 96px;
+
+          div {
             display: flex;
             flex-direction: column;
-            gap: 96px;
+            gap: 12px;
 
-            div {
-                display: flex;
-                flex-direction: column;
-                gap: 12px;
-
-                h3 {
-                    @include sub-header-s;
-                }
-                p{
-                    @include regular-r;
-                    color: var(--Typography-300);
-                }
+            h3 {
+              @include sub-header-s;
             }
+            p {
+              @include regular-r;
+              color: var(--Typography-300);
+            }
+          }
           @include regular-r;
           color: var(--Typography-300);
         }
