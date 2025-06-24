@@ -1,6 +1,147 @@
 {
-  "GREETING": "Hello, {{name}}!",
-  "WELCOME": "Welcome to our website",
-  "DESCRIPTION": "This is an internationalized application.",
-  "LANGUAGE_SWITCH": "Switch Language"
+  "MAGNORA": {
+    "HOME": {
+      "HERO": {
+        "TITLE": {
+          "TITLE_1": "Crafted for",
+          "SPAN_1": "Power.",
+          "TITLE_2": "Designed for",
+          "SPAN_2": "Elegance."
+        },
+        "TEXT": "Magnora blends modern luxury with ancient energy — jewelry for those who wear their ambition with intention."
+      },
+      "ABOUT": {
+        "TEXT_1": "Magnora is a name born from two powerful roots: Magna – Latin for greatness and strength, Ora – Meaning energy, aura, life force.",
+        "TEXT_2": "Together, Magnora represents a brand that transforms luxury jewelry into energetic symbols of power, success, and inner strength.",
+        "TEXT_3": "Every piece is more than an accessory — it’s a code, carrying purpose and transformation for those who lead with vision."
+      },
+      "COLLECTIONS": {
+        "TEXT_1": "Jewelry That Carries Power",
+        "TEXT_2": "Explore our curated collection of energy-infused designs.",
+        "TEXT_3": "Crafted to elevate your presence and reflect your inner strength.",
+        "TEXT_4": "Every piece in our collection is more than an accessory — it’s a reflection of what you’re calling into your life. ",
+        "TEXT_5": "Power, protection, love, clarity — what are you drawn to today?"
+      },
+      "CTA": {
+        "TITLE": "Find Your Power?",
+        "TEXT": "Each piece is more than a design — it’s an intention. Find the one that aligns with your strength, focus, and purpose."
+      },
+      "SERVICES": {
+        "TITLE": "Magnora’s Services",
+        "TEXT": "Discover the offerings that make Magnora more than a jewelry brand — from custom pieces to personalized guidance, each service is designed to support your journey.",
+        "PRODUCT_1": {
+          "TITLE": "Energy-Infused Jewelry Collections",
+          "TEXT": "High-end pieces made with natural crystals and symbols — each designed to attract love, clarity, or protection."
+        },
+        "PRODUCT_2": {
+          "TITLE": "Custom Order & Intent-Based Design",
+          "TEXT": "We craft custom pieces aligned with your energy and personal story."
+        },
+        "PRODUCT_3": {
+          "TITLE": "Gifting & Energetic Packaging",
+          "TEXT": "Each order is beautifully packaged and energetically cleansed — a gift with meaning."
+        },
+        "PRODUCT_4": {
+          "TITLE": "Symbol & Stone Consultation",
+          "TEXT": "Not sure what to choose? We help you find the energy that fits your journey."
+        }
+      },
+      "QA": {
+        "TITLE": "What You Seek to Know, We’re Here to Share",
+        "TEXT": "We’ve answered your most common questions — so you can shop with clarity and intention.",
+        "QUESTION_1": {
+          "TITLE": "How much does a website cost?",
+          "TEXT": "Pricing depends on the project’s scope, features, and complexity. After a discovery call, we provide a custom quote tailored to your needs — no hidden fees, just transparent pricing."
+        },
+        "QUESTION_2": {
+          "TITLE": "How much does a website cost?",
+          "TEXT": "Pricing depends on the project’s scope, features, and complexity. After a discovery call, we provide a custom quote tailored to your needs — no hidden fees, just transparent pricing."
+        },
+        "QUESTION_3": {
+          "TITLE": "How much does a website cost?",
+          "TEXT": "Pricing depends on the project’s scope, features, and complexity. After a discovery call, we provide a custom quote tailored to your needs — no hidden fees, just transparent pricing."
+        },
+        "QUESTION_4": {
+          "TITLE": "How much does a website cost?",
+          "TEXT": "Pricing depends on the project’s scope, features, and complexity. After a discovery call, we provide a custom quote tailored to your needs — no hidden fees, just transparent pricing."
+        },
+        "CTA": {
+          "TITLE": "Still Got Questios?",
+          "TEXT": "If your question wasn’t answered, we’ll guide you directly."
+        }
+      }
+    }
+  },
+  "ZENORA": {
+    "HOME": {
+      "HERO": {
+        "TITLE": {
+          "TITLE_1": "Jewelry for ",
+          "SPAN_1": "Inner",
+          "SPAN_2": "Renewal."
+        },
+        "TEXT": "Zenora is where sacred symbols, natural crystals, and soft intention meet — to bring balance, clarity, and peace to your everyday life."
+      },
+      "ABOUT": {
+        "TEXT_1": "Zenora is inspired by the calming philosophy of Zen and the gentle power of the Aura — your energetic field.",
+        "TEXT_2": "Zenora creates jewelry that helps you reconnect with your inner self — through nature’s energy, ancient wisdom, and mindful design.",
+        "TEXT_3": "Each piece is crafted with natural crystals and spiritual symbols that bring emotional clarity, chakra alignment, and a deeper sense of presence."
+      },
+      "COLLECTIONS": {
+        "TEXT_1": "Made to Balance. Designed to Heal.",
+        "TEXT_2": "Explore our curated collection of energy-infused designs.",
+        "TEXT_3": "Crafted to elevate your presence and reflect your inner strength.",
+        "TEXT_4": "Every piece in our collection is more than an accessory — it’s a reflection of what you’re calling into your life. ",
+        "TEXT_5": "Power, protection, love, clarity — what are you drawn to today?"
+      },
+      "CTA": {
+        "TITLE": "Find Your Power?",
+        "TEXT": "Each piece is more than a design — it’s an intention. Find the one that aligns with your strength, focus, and purpose."
+      },
+      "SERVICES": {
+        "TITLE": "Zenora’s Services",
+        "TEXT": "From healing pieces to personalized guidance, our services are designed to bring calm, connection, and clarity to your life.",
+        "PRODUCT_1": {
+          "TITLE": "Healing Jewelry Collections",
+          "TEXT": "High-vibration designs crafted with crystals and symbols — made to restore balance, peace, and intuitive flow."
+        },
+        "PRODUCT_2": {
+          "TITLE": "Custom Intent Jewelry",
+          "TEXT": "We accept custom orders based on your energy, intention, or chakra needs — designed for your journey, your healing."
+        },
+        "PRODUCT_3": {
+          "TITLE": "Energy & Chakra Guidance",
+          "TEXT": "Not sure what to choose? We guide you to the crystals and symbols that match your emotional state and spiritual goals."
+        },
+        "PRODUCT_4": {
+          "TITLE": "Cleansed Gifting Experience",
+          "TEXT": "Every piece is packed with care and energy-cleansed — perfect for gifting calm, love, or a moment of self-reflection."
+        }
+      },
+      "QA": {
+        "TITLE": "Clarity Begins with Understanding",
+        "TEXT": "Have questions about our pieces, their energy, or how to choose your own? We’re here to guide you.",
+        "QUESTION_1": {
+          "TITLE": "What makes Zenora jewelry different?",
+          "TEXT": "Zenora pieces are designed with natural stones and sacred meaning. They aren’t just beautiful — they’re made to support healing, balance, and personal growth."
+        },
+        "QUESTION_2": {
+          "TITLE": "How do I choose the right piece for me?",
+          "TEXT": "Pricing depends on the project’s scope, features, and complexity. After a discovery call, we provide a custom quote tailored to your needs — no hidden fees, just transparent pricing."
+        },
+        "QUESTION_3": {
+          "TITLE": "Are the crystals real and ethically sourced?",
+          "TEXT": "Pricing depends on the project’s scope, features, and complexity. After a discovery call, we provide a custom quote tailored to your needs — no hidden fees, just transparent pricing."
+        },
+        "QUESTION_4": {
+          "TITLE": "Do you offer custom jewelry?",
+          "TEXT": "Pricing depends on the project’s scope, features, and complexity. After a discovery call, we provide a custom quote tailored to your needs — no hidden fees, just transparent pricing."
+        },
+        "CTA": {
+          "TITLE": "Still Got Questios?",
+          "TEXT": "If your question wasn’t answered, we’ll guide you directly."
+        }
+      }
+    }
+  }
 }

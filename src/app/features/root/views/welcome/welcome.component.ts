@@ -1,15 +1,15 @@
 import {
-  transition,
-  animate,
-  trigger,
-  state,
-  style,
-} from '@angular/animations';
+  ElementRef,
+  Component,
+  ViewChild,
+  inject,
+  OnInit,
+} from '@angular/core';
 
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
 
+import { navigate_animations } from '@features/root/animations/navigate-animation';
 import { ButtonComponent } from '@shared/ui/button/button.component';
 
 @Component({
@@ -17,100 +17,68 @@ import { ButtonComponent } from '@shared/ui/button/button.component';
   imports: [ButtonComponent, CommonModule, RouterModule],
   templateUrl: './welcome.component.html',
   styleUrl: './welcome.component.scss',
-  animations: [
-    trigger('slideAnimation', [
-      // Normal state
-      state(
-        'normal',
-        style({
-          transform: 'translateX(0)',
-          flex: '0.5',
-          opacity: 1,
-        })
-      ),
-
-      // Expanded states
-      state(
-        'expandedLeft',
-        style({
-          transform: 'translateX(0)',
-          flex: '1',
-          opacity: 1,
-        })
-      ),
-
-      state(
-        'expandedRight',
-        style({
-          transform: 'translateX(0)',
-          flex: '1',
-          opacity: 1,
-        })
-      ),
-
-      // Collapsed states - slide out smoothly
-      state(
-        'collapsedLeft',
-        style({
-          transform: 'translateX(-100%)',
-          flex: '0',
-          opacity: 0,
-        })
-      ),
-
-      state(
-        'collapsedRight',
-        style({
-          transform: 'translateX(100%)',
-          flex: '0',
-          opacity: 0,
-        })
-      ),
-
-      // Smooth transitions with better easing
-      transition('normal => expandedLeft', [
-        animate('800ms cubic-bezier(0.23, 1, 0.32, 1)'),
-      ]),
-
-      transition('normal => expandedRight', [
-        animate('800ms cubic-bezier(0.23, 1, 0.32, 1)'),
-      ]),
-
-      transition('normal => collapsedLeft', [
-        animate('800ms cubic-bezier(0.23, 1, 0.32, 1)'),
-      ]),
-
-      transition('normal => collapsedRight', [
-        animate('800ms cubic-bezier(0.23, 1, 0.32, 1)'),
-      ]),
-
-      transition('* => normal', [
-        animate('800ms cubic-bezier(0.23, 1, 0.32, 1)'),
-      ]),
-    ]),
-  ],
+  animations: navigate_animations,
 })
-export default class WelcomeComponent {
-  public expandedSide: 'left' | 'right' | null = null;
+export default class WelcomeComponent implements OnInit {
+  @ViewChild('leftSection') leftSection!: ElementRef;
+  @ViewChild('rightSection') rightSection!: ElementRef;
 
-  public expandSide(side: 'left' | 'right') {
-    if (this.expandedSide !== side) {
-      this.expandedSide = side;
-    }
+  private router = inject(Router);
+
+  public leftSectionState = 'normal';
+  public rightSectionState = 'normal';
+  public oppositeState = 'visible';
+  public overlayState = 'hidden';
+  public isAnimating = false;
+
+  public onMagnoraClick(event: Event) {
+    event.preventDefault();
+    if (this.isAnimating) return;
+
+    this.animateAndNavigate('magnora');
   }
 
-  public reset(event: Event) {
-    event.stopPropagation();
-    this.expandedSide = null;
+  public onZenoraClick(event: Event) {
+    event.preventDefault();
+    if (this.isAnimating) return;
+
+    this.animateAndNavigate('zenora');
   }
 
-  public getAnimationState(side: 'left' | 'right'): string {
-    if (this.expandedSide === null) return '';
+  private animateAndNavigate(route: 'magnora' | 'zenora') {
+    this.isAnimating = true;
 
-    if (this.expandedSide === side) {
-      return `expanded${side.charAt(0).toUpperCase() + side.slice(1)}`;
+    if (route === 'magnora') {
+      this.leftSectionState = 'expanding-left';
+      this.rightSectionState = 'normal';
     } else {
-      return `collapsed${side.charAt(0).toUpperCase() + side.slice(1)}`;
+      this.rightSectionState = 'expanding-right';
+      this.leftSectionState = 'normal';
     }
+
+    setTimeout(() => {
+      this.oppositeState = 'hidden';
+
+      if (route === 'magnora') {
+        this.leftSectionState = 'fullscreen-left';
+      } else {
+        this.rightSectionState = 'fullscreen-right';
+      }
+
+      setTimeout(() => {
+        this.overlayState = 'visible';
+        setTimeout(() => {
+          this.router.navigate([route]);
+        }, 400);
+      }, 300);
+    }, 200);
+  }
+
+  ngOnInit() {
+    this.leftSectionState = 'normal';
+    this.rightSectionState = 'normal';
+    this.oppositeState = 'visible';
+    this.overlayState = 'hidden';
+    this.isAnimating = false;
   }
 }

@@ -1,0 +1,76 @@
+@use "typography" as *;
+
+.home-service {
+  background-color: var(--BG-Section);
+  padding: 144px 0;
+
+  .content {
+    padding: 0 116px;
+  }
+
+  .service-header {
+    display: flex;
+    flex-direction: column;
+
+    gap: 24px;
+
+    h2 {
+      @include header-s;
+    }
+    p {
+      @include sub-header-s;
+    }
+  }
+
+  .service-image-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    row-gap: 96px;
+    column-gap: 48px;
+    margin-top: 96px;
+
+    .service-card {
+      display: flex;
+      flex-direction: column;
+      gap: 96px;
+
+      .service-card-box {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      h3 {
+        @include sub-header-s;
+      }
+
+      p {
+        @include regular-r;
+        color: var(--Typography-300);
+      }
+    }
+  }
+}
+
+.home-service.zenora {
+  .service-header {
+    h2 {
+      color: var(--Typography-Purple-100, #3c33b8);
+    }
+
+    p {
+      color: var(--Typography-Purple-200, #6262f5);
+    }
+  }
+
+  .service-image-cards .service-card {
+    h3 {
+      color: var(--Typography-Purple-100, #3c33b8);
+    }
+
+    p {
+      color: var(--Typography-Purple-200, #6262f5);
+    }
+  }
+}

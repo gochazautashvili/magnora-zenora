@@ -1,0 +1,43 @@
+<section class="section">
+  <div [ngClass]="type" class="about container">
+    <div class="first">
+      @if(type === "magnora") {
+      {{ "MAGNORA.HOME.ABOUT.TEXT_1" | translate }}
+      } @else {
+      {{ "ZENORA.HOME.ABOUT.TEXT_1" | translate }}
+      }
+    </div>
+    <div class="second">
+      <img
+        width="300"
+        height="208"
+        loading="lazy"
+        alt="magnora-about-img-1"
+        src="assets/images/magnora-about-img.png "
+      />
+      <p>
+        @if(type === "magnora"){
+        {{ "MAGNORA.HOME.ABOUT.TEXT_2" | translate }}
+        } @else {
+        {{ "ZENORA.HOME.ABOUT.TEXT_2" | translate }}
+        }
+      </p>
+    </div>
+    <div class="third">
+      <img
+        width="300"
+        height="360"
+        loading="lazy"
+        alt="magnora-about-img-2"
+        src="assets/images/magnora-about-img2.png "
+      />
+      <p>
+        @if(type === "magnora"){
+        {{ "MAGNORA.HOME.ABOUT.TEXT_3" | translate }}
+        } @else {
+        {{ "ZENORA.HOME.ABOUT.TEXT_3" | translate }}
+        }
+      </p>
+    </div>
+  </div>
+</section>

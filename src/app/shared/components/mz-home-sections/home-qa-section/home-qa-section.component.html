@@ -1,0 +1,63 @@
+<!-- Q&A Section -->
+<section [ngClass]="type" class="qa-section">
+  <div class="container qa-section-container">
+    <div class="answers-section">
+      <div class="answer-texts">
+        <h2>
+          @if (type === 'magnora') {
+          {{ "MAGNORA.HOME.QA.TITLE" | translate }}
+          } @else {
+          {{ "ZENORA.HOME.QA.TITLE" | translate }}
+          }
+        </h2>
+        <p>
+          @if (type === 'magnora') {
+          {{ "MAGNORA.HOME.QA.TEXT" | translate }}
+          } @else {
+          {{ "ZENORA.HOME.QA.TEXT" | translate }}
+          }
+        </p>
+      </div>
+
+      <!-- this component loops, manage it from expansion-panels ts -->
+      <mat-accordion class="accordion">
+        <mat-expansion-panel
+          *ngFor="let panel of type === 'magnora' ? magnora_qa : zenora_qa"
+          [expanded]="panel.expanded"
+        >
+          <mat-expansion-panel-header>
+            <mat-panel-title>{{ panel.title | translate }}</mat-panel-title>
+          </mat-expansion-panel-header>
+
+          <div class="mat-panel-body">
+            <span class="separator"></span>
+            <p>
+              {{ panel.content | translate }}
+            </p>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+
+    <!-- CTA -->
+    <div class="contact-us">
+      <div class="contact-text">
+        <h5>
+          @if (type === 'magnora') {
+          {{ "MAGNORA.HOME.QA.CTA.TITLE" | translate }}
+          } @else {
+          {{ "ZENORA.HOME.QA.CTA.TITLE" | translate }}
+          }
+        </h5>
+        <p>
+          @if (type === 'magnora') {
+          {{ "MAGNORA.HOME.QA.CTA.TEXT" | translate }}
+          } @else {
+          {{ "ZENORA.HOME.QA.CTA.TEXT" | translate }}
+          }
+        </p>
+      </div>
+      <app-button class="btn">Contact Us</app-button>
+    </div>
+  </div>
+</section>

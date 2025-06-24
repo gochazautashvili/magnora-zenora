@@ -4,9 +4,9 @@ import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from '@shared/layouts/magnora-zenora-navbar/navbar.component';
 
 @Component({
-  selector: 'app-layout',
+  selector: 'app-zenora-layout',
   imports: [RouterOutlet, NavbarComponent],
-  templateUrl: './layout.component.html',
-  styleUrl: './layout.component.scss',
+  templateUrl: './zenora-layout.component.html',
+  styleUrl: './zenora-layout.component.scss',
 })
-export default class LayoutComponent {}
+export default class ZenoraLayoutComponent {}

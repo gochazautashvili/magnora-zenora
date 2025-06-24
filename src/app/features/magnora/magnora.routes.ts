@@ -1,10 +1,9 @@
 import { Routes } from '@angular/router';
 
-
-
 export const routes: Routes = [
   {
     path: 'magnora',
+    data: { animation: 'home' },
     loadComponent: () => import('./layout/layout.component'),
     children: [
       {

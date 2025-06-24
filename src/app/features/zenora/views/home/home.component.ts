@@ -4,8 +4,8 @@ import {
   HomeQaSectionComponent,
   HomeHeroSectionComponent,
   HomeAboutSectionComponent,
-  HomeServiceSectionComponent,
   HomeFeatureSectionComponent,
+  HomeServiceSectionComponent,
 } from '@shared/components/mz-home-sections';
 
 @Component({
