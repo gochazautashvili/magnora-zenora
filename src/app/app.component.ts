@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
   imports: [RouterOutlet, TranslateModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
+  animations: [],
 })
 export class AppComponent {
   constructor(private translate: TranslateService) {

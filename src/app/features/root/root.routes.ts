@@ -4,6 +4,7 @@ const routes: Routes = [
   {
     path: '',
     loadComponent: () => import('./views/welcome/welcome.component'),
+    data: { animation: 'welcome' },
   },
 ];
 

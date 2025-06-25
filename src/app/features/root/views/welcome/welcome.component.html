@@ -1,22 +1,10 @@
-<section class="main" [class.panel-expanded]="expandedSide !== null">
-  <button
-    *ngIf="expandedSide !== null"
-    [ngClass]="expandedSide == 'left' ? 'left-btn' : 'right-btn'"
-    (click)="reset($event)"
-    aria-label="Close"
-    class="close-btn"
+<section class="main">
+  <div
+    class="left"
+    #leftSection
+    [@sectionExpand]="leftSectionState"
+    [@fadeOut]="leftSectionState === 'normal' ? oppositeState : 'visible'"
   >
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-      <path
-        d="M18 6L6 18M6 6l12 12"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-      />
-    </svg>
-  </button>
-
-  <div [@slideAnimation]="getAnimationState('left')" class="left">
     <div class="content">
       <h1>Magnora</h1>
       <p>
@@ -31,21 +19,11 @@
     <div id="left_stars3"></div>
 
     <app-button
-      *ngIf="expandedSide !== 'left'"
-      (click)="expandSide('left')"
+      (click)="onMagnoraClick($event)"
       variant="secondary"
       class="btn"
     >
       Enter the World of Magnora
-    </app-button>
-
-    <app-button
-      *ngIf="expandedSide === 'left'"
-      class="btn collection-btn"
-      routerLink="magnora"
-      variant="secondary"
-    >
-      View Magnora Collection
     </app-button>
 
     <div class="img">
@@ -57,7 +35,12 @@
     </div>
   </div>
 
-  <div [@slideAnimation]="getAnimationState('right')" class="right">
+  <div
+    class="right"
+    #rightSection
+    [@sectionExpand]="rightSectionState"
+    [@fadeOut]="rightSectionState === 'normal' ? oppositeState : 'visible'"
+  >
     <div class="content">
       <h1>Zenora</h1>
       <p>
@@ -71,20 +54,8 @@
     <div id="right_stars2"></div>
     <div id="right_stars3"></div>
 
-    <app-button
-      *ngIf="expandedSide !== 'right'"
-      (click)="expandSide('right')"
-      class="btn"
-    >
+    <app-button (click)="onZenoraClick($event)" class="btn">
       Explore Zenora's Serenity
-    </app-button>
-
-    <app-button
-      *ngIf="expandedSide === 'right'"
-      class="btn collection-btn"
-      routerLink="zenora"
-    >
-      View Zenora Collection
     </app-button>
 
     <div class="img">
@@ -95,4 +66,7 @@
       />
     </div>
   </div>
+
+  <!-- Overlay for smooth transition -->
+  <div class="transition-overlay" [@overlayFade]="overlayState"></div>
 </section>

@@ -1,0 +1,15 @@
+import { TranslateModule } from '@ngx-translate/core';
+import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+import { ButtonComponent } from '@shared/ui';
+
+@Component({
+  selector: 'app-home-hero-section',
+  imports: [ButtonComponent, CommonModule, TranslateModule],
+  templateUrl: './home-hero-section.component.html',
+  styleUrl: './home-hero-section.component.scss',
+})
+export class HomeHeroSectionComponent {
+  @Input() type: 'magnora' | 'zenora' = 'magnora';
+}

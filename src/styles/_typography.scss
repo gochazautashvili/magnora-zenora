@@ -1,5 +1,4 @@
 @mixin header-m {
-  font-family: "Outfit";
   font-size: 84px;
   font-style: normal;
   font-weight: 500;
@@ -8,16 +7,14 @@
 }
 
 @mixin header-s {
-  font-family: "Familjen Grotesk";
-  font-size: 64px;
+  font-size: 40px;
   font-style: normal;
-  font-weight: 600;
-  line-height: 72px;
-  letter-spacing: 2.56px;
+  font-weight: 500;
+  line-height: 44px;
+  letter-spacing: 3.2px;
 }
 
 @mixin sub-header-l {
-  font-family: Outfit;
   font-size: 32px;
   font-style: normal;
   font-weight: 500;
@@ -26,7 +23,6 @@
 }
 
 @mixin sub-header-m {
-  font-family: "Familjen Grotesk";
   font-size: 28px;
   font-style: normal;
   font-weight: 500;
@@ -35,7 +31,6 @@
 }
 
 @mixin sub-header-s {
-  font-family: Outfit;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
@@ -44,7 +39,6 @@
 }
 
 @mixin regular-r {
-  font-family: Outfit;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -53,7 +47,6 @@
 }
 
 @mixin regular-b {
-  font-family: Outfit;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
@@ -62,7 +55,6 @@
 }
 
 @mixin small-r {
-  font-family: Outfit;
   font-size: 12px;
   font-style: normal;
   font-weight: 300;
@@ -70,7 +62,6 @@
 }
 
 @mixin small-b {
-  font-family: Outfit;
   font-size: 12px;
   font-style: normal;
   font-weight: 500;

@@ -1,0 +1,35 @@
+<section class="hero">
+  <video autoplay loop muted class="video">
+    <source src="assets/videos/magnora-hero-video.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <div [ngClass]="type" class="content">
+    <div class="title">
+      @if(type === "magnora") {
+      {{ "MAGNORA.HOME.HERO.TITLE.TITLE_1" | translate }}
+      <span>{{ "MAGNORA.HOME.HERO.TITLE.SPAN_1" | translate }}</span> <br />
+      {{ "MAGNORA.HOME.HERO.TITLE.TITLE_2" | translate }}
+      <span>{{ "MAGNORA.HOME.HERO.TITLE.SPAN_2" | translate }}</span>
+      } @else {
+      {{ "ZENORA.HOME.HERO.TITLE.TITLE_1" | translate }}
+      <span>{{ "ZENORA.HOME.HERO.TITLE.SPAN_1" | translate }}</span> <br />
+      <span>{{ "ZENORA.HOME.HERO.TITLE.SPAN_2" | translate }}</span>
+      }
+    </div>
+
+    <div class="box">
+      <h3>
+        @if(type === "magnora"){
+        {{ "MAGNORA.HOME.HERO.TEXT" | translate }}
+        } @else {
+        {{ "ZENORA.HOME.HERO.TEXT" | translate }}
+        }
+      </h3>
+      <div class="btns">
+        <app-button>Get started</app-button>
+        <app-button variant="secondary">See Our Product</app-button>
+      </div>
+    </div>
+  </div>
+</section>

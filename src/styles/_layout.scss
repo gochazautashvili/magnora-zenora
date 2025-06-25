@@ -1,0 +1,27 @@
+@mixin container {
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 48px;
+  margin: 0 auto;
+
+  @media screen and (max-width: 900px) {
+    padding: 0 24px;
+  }
+}
+
+@mixin grid_container {
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 48px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 48px;
+
+  @media screen and (max-width: 900px) {
+    grid-template-columns: repeat(7, 1fr);
+    column-gap: 24px;
+    padding: 0 24px;
+  }
+}

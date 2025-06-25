@@ -1,0 +1,33 @@
+<section class="home-service" [ngClass]="type">
+  <div class="content">
+    <div class="service-header">
+      <h2>
+        @if (type === "magnora") {
+        {{ "MAGNORA.HOME.SERVICES.TITLE" | translate }}
+        } @else {
+        {{ "ZENORA.HOME.SERVICES.TITLE" | translate }}
+        }
+      </h2>
+      <p>
+        @if (type === "magnora") {
+        {{ "MAGNORA.HOME.SERVICES.TEXT" | translate }}
+        } @else {
+        {{ "ZENORA.HOME.SERVICES.TEXT" | translate }}
+        }
+      </p>
+    </div>
+
+    <div class="service-image-cards">
+      @for (service of type === 'magnora' ? magnora_services : zenora_services;
+      track $index) {
+      <div class="service-card">
+        <img [src]="service.image" alt="" />
+        <div class="service-card-box">
+          <h3>{{ service.title | translate }}</h3>
+          <p>{{ service.description | translate }}</p>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</section>
