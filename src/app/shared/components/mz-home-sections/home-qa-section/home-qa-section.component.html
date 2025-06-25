@@ -21,10 +21,9 @@
 
     <!-- this component loops, manage it from expansion-panels ts -->
     <mat-accordion class="box_2 accordion">
-      <mat-expansion-panel
-        *ngFor="let panel of type === 'magnora' ? magnora_qa : zenora_qa"
-        [expanded]="panel.expanded"
-      >
+      @for (panel of type === 'magnora' ? magnora_qa : zenora_qa; track $index)
+      {
+      <mat-expansion-panel>
         <mat-expansion-panel-header>
           <mat-panel-title>{{ panel.title | translate }}</mat-panel-title>
         </mat-expansion-panel-header>
@@ -36,6 +35,7 @@
           </p>
         </div>
       </mat-expansion-panel>
+      }
     </mat-accordion>
 
     <!-- CTA -->

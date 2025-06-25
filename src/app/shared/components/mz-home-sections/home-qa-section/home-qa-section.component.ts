@@ -5,12 +5,6 @@ import { Component, Input } from '@angular/core';
 import { ButtonComponent } from '@shared/ui/button/button.component';
 import { TranslateModule } from '@ngx-translate/core';
 
-interface Panel {
-  expanded: boolean;
-  content: string;
-  title: string;
-}
-
 @Component({
   selector: 'app-home-qa-section',
   imports: [MatExpansionModule, CommonModule, ButtonComponent, TranslateModule],
@@ -20,7 +14,7 @@ interface Panel {
 export class HomeQaSectionComponent {
   @Input() type: 'magnora' | 'zenora' = 'magnora';
 
-  public magnora_qa: Panel[] = [
+  public magnora_qa = [
     {
       expanded: true,
       title: 'MAGNORA.HOME.QA.QUESTION_1.TITLE',
@@ -43,7 +37,7 @@ export class HomeQaSectionComponent {
     },
   ];
 
-  public zenora_qa: Panel[] = [
+  public zenora_qa = [
     {
       expanded: true,
       title: 'ZENORA.HOME.QA.QUESTION_1.TITLE',

@@ -5,7 +5,7 @@ import { FooterComponent, NavbarComponent } from '@shared/layouts';
 
 @Component({
   selector: 'app-layout',
-  imports: [RouterOutlet, NavbarComponent, FooterComponent],
+  imports: [NavbarComponent, FooterComponent, RouterOutlet],
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.scss',
 })

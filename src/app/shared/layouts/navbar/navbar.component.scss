@@ -1,13 +1,12 @@
 @use "layout" as *;
 
 .header {
-  @include container;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   position: relative;
+
+  @include container;
 }
 
 .nav {

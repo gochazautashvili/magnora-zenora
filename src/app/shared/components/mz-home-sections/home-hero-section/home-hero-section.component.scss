@@ -22,8 +22,9 @@
   }
 
   .content {
-    @include grid-container;
     margin-bottom: 48px;
+
+    @include grid-container;
 
     .title {
       @include header-m;

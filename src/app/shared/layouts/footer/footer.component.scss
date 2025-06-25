@@ -1,0 +1,124 @@
+@use "typography" as *;
+
+li {
+    list-style: none;
+}
+
+footer {
+    background-color: #EFF0F5;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--BG-Section);
+    border-top-left-radius: 96px;
+    border-top-right-radius: 96px;
+    position: relative;
+    z-index: 999;
+
+
+    .subscribe-section {
+        width: 100%;
+        gap: 48px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 96px 0px;
+
+        .subscribe-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 616px;
+            gap: 8px;
+
+            h4 {
+                @include sub-header-s;
+                color: var(--Typography-100);
+            }
+
+            p {
+                @include regular-r;
+                color: var(--Typography-300);
+
+            }
+
+        }
+    }
+
+    .info-section {
+        display: flex;
+        justify-content: space-between;
+        padding-inline: 48px;
+
+        .info-name {    
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            h5 {
+                @include sub-header-s;
+                color : var(--Typography-100);
+            }
+            p {
+                font-size: 14px;
+                line-height: 16px;
+                letter-spacing: 4%;
+                font-weight: 400;
+                color : var(--Typography-300);
+            }
+        }
+
+        .info-links {
+            display: flex;
+            gap: 96px;
+
+
+            ul > p{
+                @include regular-b;
+            }
+            ul > li {
+                @include regular-r;
+                color: var(--Typography-300);
+                cursor: pointer;
+            }
+        }
+    }
+    .copyright-section {
+        display: flex;
+        justify-content: space-between;
+        padding: 48px 48px 98px 48px;
+        p {
+            @include small-r;
+            color: var(--Typography-400);
+        }
+        span {
+            color: black;
+        }
+    }
+    .bg-images {
+        width: 100%;
+        height: 100%;
+        
+        .img {
+            position: absolute;
+            width: 496px;
+            height: 496px;
+            top: 53px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: -1;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+
+}

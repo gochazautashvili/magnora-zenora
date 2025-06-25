@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
-import { NavbarComponent } from '@shared/layouts/magnora-zenora-navbar/navbar.component';
+import { RouterOutlet } from '@angular/router';
+import { FooterComponent, NavbarComponent } from '@shared/layouts';
 
 @Component({
   selector: 'app-zenora-layout',
-  imports: [RouterOutlet, NavbarComponent],
+  imports: [RouterOutlet, NavbarComponent, FooterComponent],
   templateUrl: './zenora-layout.component.html',
   styleUrl: './zenora-layout.component.scss',
 })
