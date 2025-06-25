@@ -1,0 +1,108 @@
+:root {
+  --FONT-FAMILY-1: "Familjen Grotesk";
+  --FONT-FAMILY-2: "Outfit";
+
+  // Header L
+  --FONT-SIZE-HL: 84px;
+  --FONT-WEIGHT-HL: 500;
+  --LETTER-SPACING-HL: -1.68px;
+
+  // Header M
+  --FONT-SIZE-HM: 52px;
+  --FONT-WEIGHT-HM: 600;
+  --LETTER-SPACING-HM: 1.04px;
+
+  // Header S
+  --FONT-SIZE-HS: 40px;
+  --FONT-WEIGHT-HS: 500;
+  --LETTER-SPACING-HS: 3.2px;
+
+  // Sub Header L
+  --FONT-SIZE-SHL: 32px;
+  --FONT-WEIGHT-SHL: 500;
+  --LETTER-SPACING-SHL: 2.56px;
+
+  // Sub Header S
+  --FONT-SIZE-SHS: 16px;
+  --FONT-WEIGHT-SHS: 500;
+  --LETTER-SPACING-SHS: 1.6px;
+
+  // Regular R
+  --FONT-SIZE-RR: 16px;
+  --FONT-WEIGHT-RR: 400;
+  --LETTER-SPACING-RR: 0.96px;
+
+  // Regular B
+  --FONT-SIZE-RB: 14px;
+  --FONT-WEIGHT-RB: 600;
+  --LETTER-SPACING-RB: 0.32px;
+
+  // Small R
+  --FONT-SIZE-SR: 14px;
+  --FONT-WEIGHT-SR: 400;
+  --LETTER-SPACING-SR: 0.56px;
+
+  // Small B
+  --FONT-SIZE-SB: 12px;
+  --FONT-WEIGHT-SB: 500;
+  --LETTER-SPACING-SB: 0.56px;
+
+  // Caption R
+  --FONT-SIZE-CR: 12px;
+  --FONT-WEIGHT-CR: 300;
+  --LETTER-SPACING-CR: 0px;
+
+  // Caption B
+  --FONT-SIZE-CB: 12px;
+  --FONT-WEIGHT-CB: 500;
+  --LETTER-SPACING-CB: 0px;
+}
+
+html[lang="ka"] {
+  --FONT-FAMILY-1: "Mersad";
+  --FONT-FAMILY-2: "Mersad";
+
+  --FONT-SIZE-HL: 68px;
+  --FONT-WEIGHT-HL: 700;
+  --LETTER-SPACING-HL: -1.36px;
+
+  --FONT-SIZE-HM: 48px;
+  --FONT-WEIGHT-HM: 700;
+  --LETTER-SPACING-HM: -0.96px;
+
+  --FONT-SIZE-HS: 36px;
+  --FONT-WEIGHT-HS: 700;
+  --LETTER-SPACING-HS: 0.72px;
+
+  --FONT-SIZE-SHL: 28px;
+  --FONT-WEIGHT-SHL: 600;
+  --LETTER-SPACING-SHL: 1.12px;
+
+  --FONT-SIZE-SHS: 18px;
+  --FONT-WEIGHT-SHS: 600;
+  --LETTER-SPACING-SHS: 0.36px;
+
+  --FONT-SIZE-RR: 16px;
+  --FONT-WEIGHT-RR: 400;
+  --LETTER-SPACING-RR: 0px;
+
+  --FONT-SIZE-RB: 16px;
+  --FONT-WEIGHT-RB: 700;
+  --LETTER-SPACING-RB: 0px;
+
+  --FONT-SIZE-SR: 12px;
+  --FONT-WEIGHT-SR: 400;
+  --LETTER-SPACING-SR: -0.48px;
+
+  --FONT-SIZE-SB: 12px;
+  --FONT-WEIGHT-SB: 600;
+  --LETTER-SPACING-SB: -0.48px;
+
+  --FONT-SIZE-CR: 10px;
+  --FONT-WEIGHT-CR: 400;
+  --LETTER-SPACING-CR: -0.4px;
+
+  --FONT-SIZE-CB: 10px;
+  --FONT-WEIGHT-CB: 600;
+  --LETTER-SPACING-CB: -0.4px;
+}

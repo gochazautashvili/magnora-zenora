@@ -4,6 +4,7 @@
 .hero {
   display: flex;
   align-items: end;
+  padding-bottom: 48px;
 
   position: relative;
   overflow: hidden;
@@ -23,12 +24,10 @@
   }
 
   .content {
-    margin-bottom: 48px;
-
     @include grid-container;
 
     .title {
-      @include header-m;
+      @include header-l;
       grid-column: 1 / 9;
 
       span {

@@ -1,5 +1,6 @@
 import { Component, inject, Input } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
+
+import { LanguageService } from '@core/i18n/language.service';
 
 @Component({
   selector: 'app-navbar',
@@ -10,17 +11,15 @@ import { TranslateService } from '@ngx-translate/core';
 export class NavbarComponent {
   @Input() type: 'magnora' | 'zenora' = 'magnora';
 
-  public translate = inject(TranslateService);
+  public translate = inject(LanguageService);
 
   public toggleLanguage() {
     const language = localStorage.getItem('language');
 
     if (language === 'en') {
-      this.translate.use('ka');
-      localStorage.setItem('language', 'ka');
+      this.translate.changeLang('ka');
     } else {
-      this.translate.use('en');
-      localStorage.setItem('language', 'en');
+      this.translate.changeLang('en');
     }
   }
 }
