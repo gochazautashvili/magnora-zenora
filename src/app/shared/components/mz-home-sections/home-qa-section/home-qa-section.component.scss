@@ -1,37 +1,37 @@
 @use "typography" as *;
+@use "layout" as *;
 
 .qa-section {
   padding: 144px 0;
   background-color: var(--BG-Background);
 
   .qa-section-container {
-    display: flex;
-    flex-direction: column;
-    max-width: 1220px;
-    gap: 48px;
+    @include grid-container;
+
+    .box_1 {
+      grid-column: 2 / 6;
+    }
+
+    .box_2 {
+      grid-column: 6 / 12;
+    }
+
+    .box_3 {
+      grid-column: 3 / 11;
+    }
   }
 
-  .answers-section {
+  .answer-texts {
     display: flex;
-    justify-content: space-between;
-    grid-gap: 48px;
+    flex-direction: column;
+    gap: 12px;
 
-    .answer-texts {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
+    h2 {
+      @include header-s;
+    }
 
-      h2 {
-        font-family: "Outfit";
-        font-size: 46px;
-        line-height: 44px;
-        font-weight: 500;
-        letter-spacing: 2.5px;
-      }
-
-      p {
-        @include sub-header-s;
-      }
+    p {
+      @include sub-header-s;
     }
   }
 
@@ -39,10 +39,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    max-width: 880px;
-    margin: 0 auto;
-    width: 100%;
+    margin-top: 48px;
 
     .contact-text {
       display: flex;
@@ -126,6 +123,7 @@
   }
 }
 
+// magnora - zenora
 .qa-section.magnora {
   .answer-texts {
     h2 {

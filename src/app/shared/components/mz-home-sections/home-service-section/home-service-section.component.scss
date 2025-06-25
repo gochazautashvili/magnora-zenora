@@ -1,17 +1,19 @@
 @use "typography" as *;
+@use "layout" as *;
 
 .home-service {
   background-color: var(--BG-Section);
   padding: 144px 0;
 
   .content {
-    padding: 0 116px;
+    @include grid-container;
+    position: relative;
   }
 
   .service-header {
     display: flex;
     flex-direction: column;
-
+    grid-column: 2 / 12;
     gap: 24px;
 
     h2 {
@@ -25,6 +27,7 @@
   .service-image-cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-column: 2 / 12;
 
     row-gap: 96px;
     column-gap: 48px;

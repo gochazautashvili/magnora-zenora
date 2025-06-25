@@ -1,91 +1,131 @@
 @use "typography" as *;
+@use "layout" as *;
 
 .features {
   padding: 144px 0;
   background: var(--BG-Background, #eff0f5);
 }
 
-.first {
-  display: flex;
+// Grid
+.content {
+  @include grid-container;
+}
 
-  margin-bottom: 96px;
-  margin-left: 232px;
+//
+.box_1 {
+  margin-top: 48px;
+}
+
+.box_2 {
+  grid-column: 6 / 9;
+}
+
+.box_3 {
+  grid-column: 9 / 12;
+  align-self: flex-end;
+  margin-bottom: 48px;
+}
+
+.box_4 {
+  grid-column: 1 / 5;
+}
+
+.box_5 {
+  grid-column: 5 / 8;
+  margin-top: 156px;
+}
+
+.box_6 {
+  grid-column: 8 / 12;
+  margin-top: 96px;
+}
+
+.box_7 {
+  grid-column: 2 / 4;
+}
+
+.box_8 {
+  grid-column: 4 / 7;
+}
+
+.box_9 {
+  grid-column: 7 / 11;
+  align-self: flex-end;
+  margin-bottom: 48px;
+}
+
+.box_10 {
+  grid-column: 2 / 5;
+  position: relative;
+  top: 96px;
+}
+
+.box_11 {
+  grid-column: 6 / 10;
+}
+
+.box_12 {
+  grid-column: 10 / 13;
+  position: relative;
+  top: 156px;
+}
+
+.box_13 {
+  grid-column: 6 / 11;
+}
+
+//
+.separator {
+  grid-column: 1 / 13;
+  margin-top: 96px;
+}
+
+.separator_2 {
+  grid-column: 1 / 13;
+  margin-top: 48px;
+}
+
+// CTA
+.cta {
+  display: flex;
+  flex-direction: column;
 
   .text {
-    margin: 0 0 48px 48px;
-    align-self: flex-end;
+    @include regular-r;
+
+    margin-top: 4px;
+    margin-bottom: 16px;
   }
 }
 
-.second {
-  display: flex;
-  margin-bottom: 47px;
-  margin-right: 116px;
-
-  .text {
-    margin: 156px 0 48px 48px;
-  }
-
-  .img2 {
-    margin-top: 96px;
-  }
-}
-
-.third {
-  display: flex;
-  margin: 0 232px 96px 116px;
-  gap: 48px;
-
-  .text {
-    align-self: flex-end;
-    margin-bottom: 48px;
-  }
-}
-
-.fourth {
-  display: flex;
-  align-items: center;
-  margin-left: 116px;
-  gap: 164px;
-
-  .right {
-    display: flex;
-    flex-direction: column;
-    gap: 96px;
-  }
-
-  .top {
-    display: flex;
-    align-items: end;
-    gap: 48px;
-
-    .text {
-      margin-bottom: 48px;
-    }
-  }
-
-  .bottom {
-    display: flex;
-    flex-direction: column;
-
-    .text {
-      margin-top: 4px;
-      margin-bottom: 16px;
-    }
-  }
-}
-
+// TEXTS
 .title {
   @include header-s;
-  color: var(--Typography-100, #252529);
 }
 
 .text {
   @include sub-header-s;
-  color: var(--Typography-300, #4b4b52);
+}
+
+.features.magnora {
+  .box_1 {
+    grid-column: 3 / 6;
+  }
+
+  .title {
+    color: var(--Typography-100, #252529);
+  }
+
+  .text {
+    color: var(--Typography-300, #4b4b52);
+  }
 }
 
 .features.zenora {
+  .box_1 {
+    grid-column: 2 / 6;
+  }
+
   .title {
     color: var(--Typography-Purple-100, #3c33b8);
   }

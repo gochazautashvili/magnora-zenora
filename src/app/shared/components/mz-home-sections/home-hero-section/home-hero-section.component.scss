@@ -1,4 +1,5 @@
 @use "typography" as *;
+@use "layout" as *;
 
 .hero {
   display: flex;
@@ -21,15 +22,12 @@
   }
 
   .content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 32px;
-    gap: 20px;
+    @include grid-container;
+    margin-bottom: 48px;
 
     .title {
       @include header-m;
-      max-width: 880px;
+      grid-column: 1 / 9;
 
       span {
         background: linear-gradient(
@@ -44,13 +42,17 @@
     }
 
     .box {
-      width: 416px;
+      display: flex;
+      flex-direction: column;
+      grid-column: 9 / 13;
+      align-self: flex-end;
 
       h3 {
         @include sub-header-s;
       }
 
       .btns {
+        align-items: start;
         display: flex;
         align-items: center;
         margin-top: 12px;

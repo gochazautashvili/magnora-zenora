@@ -1,5 +1,5 @@
 <section class="home-service" [ngClass]="type">
-  <div class="container content">
+  <div class="content">
     <div class="service-header">
       <h2>
         @if (type === "magnora") {
@@ -16,19 +16,18 @@
         }
       </p>
     </div>
+
     <div class="service-image-cards">
-      <div
-        *ngFor="
-          let service of type === 'magnora' ? magnora_services : zenora_services
-        "
-        class="service-card"
-      >
+      @for (service of type === 'magnora' ? magnora_services : zenora_services;
+      track $index) {
+      <div class="service-card">
         <img [src]="service.image" alt="" />
         <div class="service-card-box">
           <h3>{{ service.title | translate }}</h3>
           <p>{{ service.description | translate }}</p>
         </div>
       </div>
+      }
     </div>
   </div>
 </section>

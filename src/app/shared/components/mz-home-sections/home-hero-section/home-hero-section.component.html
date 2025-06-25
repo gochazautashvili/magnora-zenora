@@ -4,21 +4,19 @@
     Your browser does not support the video tag.
   </video>
 
-  <div [ngClass]="type" class="content container">
-    @if(type === "magnora") {
+  <div [ngClass]="type" class="content">
     <div class="title">
+      @if(type === "magnora") {
       {{ "MAGNORA.HOME.HERO.TITLE.TITLE_1" | translate }}
       <span>{{ "MAGNORA.HOME.HERO.TITLE.SPAN_1" | translate }}</span> <br />
       {{ "MAGNORA.HOME.HERO.TITLE.TITLE_2" | translate }}
       <span>{{ "MAGNORA.HOME.HERO.TITLE.SPAN_2" | translate }}</span>
-    </div>
-    } @else {
-    <div class="title">
+      } @else {
       {{ "ZENORA.HOME.HERO.TITLE.TITLE_1" | translate }}
       <span>{{ "ZENORA.HOME.HERO.TITLE.SPAN_1" | translate }}</span> <br />
       <span>{{ "ZENORA.HOME.HERO.TITLE.SPAN_2" | translate }}</span>
+      }
     </div>
-    }
 
     <div class="box">
       <h3>

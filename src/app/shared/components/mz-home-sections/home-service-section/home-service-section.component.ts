@@ -1,6 +1,6 @@
-import { CommonModule, NgFor } from '@angular/common';
-import { Component, Input } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
+import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 interface ServiceCard {
   image: string;
@@ -10,7 +10,7 @@ interface ServiceCard {
 
 @Component({
   selector: 'app-home-service-section',
-  imports: [NgFor, CommonModule, TranslateModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './home-service-section.component.html',
   styleUrl: './home-service-section.component.scss',
 })
