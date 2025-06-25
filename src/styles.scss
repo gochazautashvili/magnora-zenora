@@ -19,7 +19,13 @@ p {
   margin: 0;
 }
 
+li,
+ol {
+  list-style: none;
+}
+
 html,
 body {
   font-family: "Outfit";
+  background: var(--BG-Background, #eff0f5);
 }

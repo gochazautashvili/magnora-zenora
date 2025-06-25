@@ -1,15 +1,68 @@
 @use "typography" as *;
 
-input {
-    @include regular-r;
-    width: 246px;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 24px;
-    background-color: var(--BG-Secondary-Section);
-    box-shadow: inset 0 2px 4px rgba(220, 221, 235, 1);
-    
-}
-input:focus {
-    outline: none;
+.input {
+  @include regular-r;
+
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 12px 24px;
+  border-radius: 24px;
+  color: var(--Typography-300, #4b4b52);
+  background: var(--BG-Secondary-Section, #dbdce0);
+  box-shadow: -1px -1px 0px 0px var(--BG-Dissabled, #c7c8cc) inset,
+    1px 1px 0px 0px var(--BG-Dissabled, #c7c8cc) inset,
+    0px 0px 12px -2px var(--BG-Dissabled, #c7c8cc) inset;
+
+  &::placeholder {
+    color: var(--Typography-300, #4b4b52);
+  }
+
+  &:focus {
+    color: var(--Typography-100, #252529);
+    background: var(--BG-Section, #e5e6eb);
+    box-shadow: -1px -1px 0px 0px var(--BG-Dissabled, #c7c8cc) inset,
+      1px 1px 0px 0px var(--BG-Dissabled, #c7c8cc) inset,
+      0px 0px 24px 0px var(--BG-Background, #eff0f5) inset;
+
+    &::placeholder {
+      color: var(--Typography-100, #252529);
+    }
+  }
+
+  &:disabled {
+    color: var(--Typography-Dissabled, #88838f);
+    background: var(--BG-Dissabled, #c7c8cc);
+    box-shadow: -1px -1px 0px 0px var(--BG-Dissabled, #c7c8cc) inset,
+      1px 1px 0px 0px var(--BG-Dissabled, #c7c8cc) inset,
+      0px 0px 24px -4px var(--BG-Section, #e5e6eb) inset;
+
+    &::placeholder {
+      color: var(--Typography-Dissabled, #88838f);
+    }
+  }
+
+  &.error {
+    color: var(--Indicator-Error, #eb381c);
+    background: var(--BG-Secondary-Section, #dbdce0);
+    box-shadow: -1px -1px 0px 0px var(--BG-Dissabled, #c7c8cc) inset,
+      1px 1px 0px 0px var(--BG-Dissabled, #c7c8cc) inset,
+      0px 0px 32px -12px var(--Indicator-Error, #eb381c) inset;
+
+    &::placeholder {
+      color: var(--Indicator-Error, #eb381c);
+    }
+  }
+
+  &.success {
+    color: var(--Indicator-Success, #1aa323);
+    background: var(--BG-Secondary-Section, #dbdce0);
+    box-shadow: -1px -1px 0px 0px var(--BG-Dissabled, #c7c8cc) inset,
+      1px 1px 0px 0px var(--BG-Dissabled, #c7c8cc) inset,
+      0px 0px 32px -12px var(--Indicator-Success, #1aa323) inset;
+
+    &::placeholder {
+      color: var(--Indicator-Success, #1aa323);
+    }
+  }
 }
