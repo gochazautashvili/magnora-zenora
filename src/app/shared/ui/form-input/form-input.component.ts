@@ -23,6 +23,10 @@ export class FormInputComponent implements ControlValueAccessor {
   @Input() placeholder: string = '';
   @Input() label: string = 'Label';
   @Input() type: string = 'text';
+  // this note will display in "()" 
+  @Input() labelNote?: string;
+  // this will display in the input as a hint
+  @Input() formatProperties?: string[];
 
   public value: string = '';
 

@@ -1,5 +1,17 @@
 @use "typography" as *;
 
+
+
+.hints p{
+  color: var(--Indicator-Success);
+}
+.hints {
+  margin-top: 1rem;
+}
+input {
+  margin-top: 0.5rem;
+}
+
 .input {
   @include regular-r;
 
@@ -14,6 +26,9 @@
   box-shadow: -1px -1px 0px 0px var(--BG-Dissabled, #c7c8cc) inset,
     1px 1px 0px 0px var(--BG-Dissabled, #c7c8cc) inset,
     0px 0px 12px -2px var(--BG-Dissabled, #c7c8cc) inset;
+
+
+
 
   &::placeholder {
     color: var(--Typography-300, #4b4b52);

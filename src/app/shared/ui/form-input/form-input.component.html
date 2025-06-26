@@ -1,5 +1,8 @@
 <div class="flex flex-col gap-2 w-full">
-    <label [for]="label" class="font-medium text-sm">{{ label }}</label>
+    <label [for]="label" class="font-medium text-sm">
+      {{ label }}
+      <span *ngIf="labelNote" class="text-gray-500 font-normal">({{ labelNote }})</span>
+    </label>
     <input
       [type]="type"
       [id]="label"
@@ -18,4 +21,8 @@
     <p class="text-sm text-error font-semibold"  [ngClass]="status"  *ngIf="errorMessage">
       {{ errorMessage }}
     </p>
+    <div *ngIf="formatProperties?.length" class="hints">
+        <p *ngFor="let item of formatProperties">• {{ item }}</p>
+    </div>
+    
   </div>
