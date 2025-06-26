@@ -1,15 +1,77 @@
 <div class="container">
 
     <form action="submit" [formGroup]="form">
-        <!-- @let firstName = form.controls.firstName; -->
-        <label for="">
-            <app-form-input 
-                formControlName="firstName" 
-                [errorMessage]="getErrorMessage(form.controls.firstName)"
-                [status]="'success'">
-            </app-form-input>
-        </label>
-       
+
+        <div class="input-group">
+            
+            <div class="input">
+                <app-form-input 
+                    formControlName="firstName" 
+                    [errorMessage]="getErrorMessage(form.controls.firstName)"
+                    [status]="'success'"
+                    [label]="'First Name'"
+                    
+                >
+                </app-form-input>
+            </div>
+            <div class="input">
+                <app-form-input 
+                    formControlName="firstName" 
+                    [errorMessage]="getErrorMessage(form.controls.firstName)"
+                    [status]="'success'"
+                    [label]="'Last Name'"
+                >
+                </app-form-input>
+            </div>
+            <div class="input ">
+                <app-form-input 
+                    formControlName="firstName" 
+                    [errorMessage]="getErrorMessage(form.controls.firstName)"
+                    [status]="'success'"
+                    [label]="'Your Email'"
+                >
+                </app-form-input>
+            </div>
+            <div class="input">
+                <app-form-input 
+                    formControlName="firstName" 
+                    [errorMessage]="getErrorMessage(form.controls.firstName)"
+                    [status]="'success'"
+                    [label]="'Phone Number'"
+                    [labelNote]="'Optional'"
+                >
+                </app-form-input>
+            </div>
+            <div class="input">
+                <app-form-input 
+                    formControlName="firstName" 
+                    [errorMessage]="getErrorMessage(form.controls.firstName)"
+                    [status]="'success'"
+                    [label]="'Create Password'"
+                    [formatProperties]="[
+                       'Minimum 8 characters',
+                       'At least one number',
+                       'At least uppercase letter'
+                    ]"
+                >
+                </app-form-input>
+            </div>
+            <div class="input">
+                <app-form-input 
+                    formControlName="firstName" 
+                    [errorMessage]="getErrorMessage(form.controls.firstName)"
+                    [status]="'success'"
+                    [label]="'Confirm Password'"
+                >
+                </app-form-input>
+            </div>
+
+        </div>
+
+        <div class="button">
+            <app-button>Create Account</app-button>
+        </div>
+
     </form>
 
 </div>
