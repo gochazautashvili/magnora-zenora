@@ -1,0 +1,23 @@
+@use "typography" as *;
+@use "layout" as *;
+
+
+
+.container {
+    padding: 48px;
+    border-radius: 48px;
+    background-color: var(--BG-Section);
+
+    .input-group {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1.2fr, 1.2fr, 2fr;
+        row-gap: 1.5rem;
+        column-gap: 3rem;
+    }
+
+    .button {
+        margin-top: 2.5rem;
+    }
+
+}

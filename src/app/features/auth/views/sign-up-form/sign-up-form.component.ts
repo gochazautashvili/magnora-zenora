@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { ButtonComponent } from '@shared/ui';
 import { FormInputComponent } from '@shared/ui/form-input/form-input.component';
 import { getFormErrorMessage } from '@shared/utils/errors';
 
 
 @Component({
   selector: 'app-sign-up-form',
-  imports: [ReactiveFormsModule, FormInputComponent],
+  imports: [ReactiveFormsModule, FormInputComponent, ButtonComponent],
   templateUrl: './sign-up-form.component.html',
   styleUrl: './sign-up-form.component.scss'
 })

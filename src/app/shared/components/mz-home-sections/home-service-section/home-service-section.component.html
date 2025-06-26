@@ -1,5 +1,7 @@
 <section class="home-service" [ngClass]="type">
+
   <div class="content">
+
     <div class="service-header">
       <h2>
         @if (type === "magnora") {
@@ -21,7 +23,9 @@
       @for (service of type === 'magnora' ? magnora_services : zenora_services;
       track $index) {
       <div class="service-card">
+
         <img [src]="service.image" alt="" />
+        
         <div class="service-card-box">
           <h3>{{ service.title | translate }}</h3>
           <p>{{ service.description | translate }}</p>
