@@ -1,12 +1,15 @@
-import { Component, Input, input } from '@angular/core';
-
+import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-input',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './input.component.html',
-  styleUrl: './input.component.scss'
+  styleUrl: './input.component.scss',
 })
 export class InputComponent {
-  @Input() placeholder :string = '';
+  @Input() status: 'normal' | 'success' | 'error' = 'normal';
+  @Input() placeholder?: string = '';
+  @Input() disabled: boolean = false;
+  @Input() type: string = 'text';
 }
