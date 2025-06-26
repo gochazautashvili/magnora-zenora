@@ -6,13 +6,13 @@
   padding: 144px 0;
 
   .content {
-    @include grid-container;
+    @include container;
+    max-width: 1112px;
   }
 
   .service-header {
     display: flex;
     flex-direction: column;
-    grid-column: 2 / 12;
     gap: 24px;
 
     h2 {
@@ -25,22 +25,27 @@
 
   .service-image-cards {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column: 2 / 12;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
 
-    row-gap: 96px;
-    column-gap: 48px;
-    margin-top: 96px;
+    row-gap: var(--Spacing-XL);
+    column-gap: var(--Spacing-L);
+    margin-top: var(--Spacing-XL);
 
     .service-card {
       display: flex;
       flex-direction: column;
-      gap: 96px;
+      gap: var(--Spacing-XL);
 
       .service-card-box {
         display: flex;
         flex-direction: column;
         gap: 12px;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
       }
 
       h3 {

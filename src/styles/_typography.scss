@@ -1,69 +1,76 @@
+@mixin header-l {
+  font-family: var(--FONT-FAMILY-1);
+  font-size: var(--FONT-SIZE-HL);
+  font-weight: var(--FONT-WEIGHT-HL);
+  letter-spacing: var(--LETTER-SPACING-HL);
+}
+
 @mixin header-m {
-  font-size: 84px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 88px;
-  letter-spacing: -1.68px;
+  font-family: var(--FONT-FAMILY-1);
+  font-size: var(--FONT-SIZE-HM);
+  font-weight: var(--FONT-WEIGHT-HM);
+  letter-spacing: var(--LETTER-SPACING-HM);
 }
 
 @mixin header-s {
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 44px;
-  letter-spacing: 3.2px;
+  font-family: var(--FONT-FAMILY-2);
+  font-size: var(--FONT-SIZE-HS);
+  font-weight: var(--FONT-WEIGHT-HS);
+  letter-spacing: var(--LETTER-SPACING-HS);
 }
 
 @mixin sub-header-l {
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 36px;
-  letter-spacing: 2.56px;
-}
-
-@mixin sub-header-m {
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 36px;
-  letter-spacing: 1.12px;
+  font-family: var(--FONT-FAMILY-2);
+  font-size: var(--FONT-SIZE-SHL);
+  font-weight: var(--FONT-WEIGHT-SHL);
+  letter-spacing: var(--LETTER-SPACING-SHL);
 }
 
 @mixin sub-header-s {
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 28px;
-  letter-spacing: 1.6px;
+  font-family: var(--FONT-FAMILY-2);
+  font-size: var(--FONT-SIZE-SHS);
+  font-weight: var(--FONT-WEIGHT-SHS);
+  letter-spacing: var(--LETTER-SPACING-SHS);
 }
 
 @mixin regular-r {
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0.96px;
+  font-family: var(--FONT-FAMILY-2);
+  font-size: var(--FONT-SIZE-RR);
+  font-weight: var(--FONT-WEIGHT-RR);
+  letter-spacing: var(--LETTER-SPACING-RR);
 }
 
 @mixin regular-b {
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 24px;
-  letter-spacing: 0.32px;
+  font-family: var(--FONT-FAMILY-2);
+  font-size: var(--FONT-SIZE-RB);
+  font-weight: var(--FONT-WEIGHT-RB);
+  letter-spacing: var(--LETTER-SPACING-RB);
 }
 
 @mixin small-r {
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 14px;
+  font-family: var(--FONT-FAMILY-2);
+  font-size: var(--FONT-SIZE-SR);
+  font-weight: var(--FONT-WEIGHT-SR);
+  letter-spacing: var(--LETTER-SPACING-SR);
 }
 
 @mixin small-b {
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 14px;
+  font-family: var(--FONT-FAMILY-2);
+  font-size: var(--FONT-SIZE-SB);
+  font-weight: var(--FONT-WEIGHT-SB);
+  letter-spacing: var(--LETTER-SPACING-SB);
+}
+
+@mixin caption-r {
+  font-family: var(--FONT-FAMILY-2);
+  font-size: var(--FONT-SIZE-CR);
+  font-weight: var(--FONT-WEIGHT-CR);
+  letter-spacing: var(--LETTER-SPACING-CR);
+}
+
+@mixin caption-b {
+  font-family: var(--FONT-FAMILY-2);
+  font-size: var(--FONT-SIZE-CB);
+  font-weight: var(--FONT-WEIGHT-CB);
+  letter-spacing: var(--LETTER-SPACING-CB);
 }

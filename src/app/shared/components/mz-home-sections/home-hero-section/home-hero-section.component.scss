@@ -4,12 +4,13 @@
 .hero {
   display: flex;
   align-items: end;
+  padding-bottom: 48px;
 
   position: relative;
   overflow: hidden;
 
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   z-index: 1;
 
   .video {
@@ -23,13 +24,15 @@
   }
 
   .content {
-    margin-bottom: 48px;
+    @include container;
 
-    @include grid-container;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--Spacing-xl);
 
     .title {
-      @include header-m;
-      grid-column: 1 / 9;
+      @include header-l;
 
       span {
         background: linear-gradient(
@@ -46,8 +49,6 @@
     .box {
       display: flex;
       flex-direction: column;
-      grid-column: 9 / 13;
-      align-self: flex-end;
 
       h3 {
         @include sub-header-s;
