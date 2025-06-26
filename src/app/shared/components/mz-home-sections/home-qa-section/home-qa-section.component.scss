@@ -65,7 +65,8 @@
   }
 
   .mat-expansion-panel {
-    width: 658px;
+    width: 100%;
+    max-width: 658px;
     border-radius: 36px;
     background: var(--BG-Section, #e5e6eb);
     box-shadow: -1px -1px 0px 0px var(--BG-Dissabled, #c7c8cc) inset,

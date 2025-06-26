@@ -1,0 +1,15 @@
+<div class="container">
+
+    <form action="submit" [formGroup]="form">
+        <!-- @let firstName = form.controls.firstName; -->
+        <label for="">
+            <app-form-input 
+                formControlName="firstName" 
+                [errorMessage]="getErrorMessage(form.controls.firstName)"
+                [status]="'success'">
+            </app-form-input>
+        </label>
+       
+    </form>
+
+</div>

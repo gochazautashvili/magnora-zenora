@@ -1,10 +1,12 @@
 @use "typography" as *;
 @use "layout" as *;
 
+
+
 .home-service {
   background-color: var(--BG-Section);
   padding: 144px 0;
-
+  
   .content {
     @include grid-container;
   }
@@ -36,6 +38,14 @@
       display: flex;
       flex-direction: column;
       gap: 96px;
+
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover; 
+      }
+
 
       .service-card-box {
         display: flex;

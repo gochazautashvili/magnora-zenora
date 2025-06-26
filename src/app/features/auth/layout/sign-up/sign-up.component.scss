@@ -1,0 +1,41 @@
+@use "layout" as *;
+@use "typography" as *;
+
+
+.sign_up_section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    @include container;
+
+
+    .sign_up_texts {
+        width: 416px;
+
+        div {
+            h2 {
+                @include sub-header-l;
+            }
+            p {
+                @include sub-header-s;
+                color: var(--Typography-300);
+                margin-top: 12px;
+            }
+        }
+
+        p {
+            @include regular-b;
+            margin-top: 40px;
+        }
+        span {
+            @include regular-r;
+            color: var(--Typography-Purple-100);
+            margin-right: 12px;
+        }
+    }
+
+
+}

@@ -1,0 +1,21 @@
+<div class="flex flex-col gap-2 w-full">
+    <label [for]="label" class="font-medium text-sm">{{ label }}</label>
+    <input
+      [type]="type"
+      [id]="label"
+      [value]="value"
+      title="FormInput"
+      (blur)="onTouched()"
+      class="input"
+      [ngClass]="status"
+      (input)="onInput($event)"
+      [placeholder]="placeholder"
+      [ngClass]="
+        errorMessage &&
+        'border-red-500 border-2 focus:outline-none focus:border-green-500'
+      "
+    />
+    <p class="text-sm text-error font-semibold"  [ngClass]="status"  *ngIf="errorMessage">
+      {{ errorMessage }}
+    </p>
+  </div>
