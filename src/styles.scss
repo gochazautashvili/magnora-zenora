@@ -19,10 +19,15 @@ p {
   margin: 0;
 }
 
+li,
+ol {
+  list-style: none;
+}
+
 html,
 body {
   font-family: "Outfit";
-  position: relative;
+  background: var(--BG-Background, #eff0f5);
 }
 
 header {

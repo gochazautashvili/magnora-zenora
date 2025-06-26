@@ -1,124 +1,139 @@
 @use "typography" as *;
+@use "layout" as *;
 
-li {
-    list-style: none;
-}
+.footer {
+  background-color: var(--BG-Section);
+  border-top-right-radius: 96px;
+  border-top-left-radius: 96px;
+  padding-top: 50px;
 
-footer {
-    background-color: #EFF0F5;
-}
+  position: relative;
 
-.footer{
+  .bg-images {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    width: 100%;
+    height: 100%;
+
+    .logo {
+      width: 496px;
+      height: 496px;
+    }
+
+    .logo_title {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.footer__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  z-index: 1;
+
+  @include container;
+
+  .subscribe-section {
+    width: 100%;
+    gap: 48px;
+
+    display: flex;
+    align-items: center;
     justify-content: center;
-    background-color: var(--BG-Section);
-    border-top-left-radius: 96px;
-    border-top-right-radius: 96px;
-    position: relative;
-    z-index: 999;
+    padding: 50px 0px 96px;
 
+    .subscribe-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 616px;
+      gap: 8px;
 
-    .subscribe-section {
-        width: 100%;
-        gap: 48px;
+      h4 {
+        @include sub-header-s;
+        color: var(--Typography-100);
+      }
 
+      p {
+        @include regular-r;
+        color: var(--Typography-300);
+      }
+    }
+
+    .subscribe-inp-btn-group {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      app-input {
+        width: 294px;
+      }
+    }
+  }
+
+  .info-section {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 48px;
+
+    .info-name {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      h5 {
+        @include sub-header-s;
+        color: var(--Typography-100);
+      }
+      p {
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 4%;
+        font-weight: 400;
+        color: var(--Typography-300);
+      }
+    }
+
+    .info-links {
+      display: flex;
+      gap: 96px;
+
+      ul {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 96px 0px;
+        flex-direction: column;
+        gap: 8px;
 
-        .subscribe-text {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            width: 616px;
-            gap: 8px;
+        li {
+          @include regular-r;
+          color: var(--Typography-300);
 
-            h4 {
-                @include sub-header-s;
-                color: var(--Typography-100);
-            }
+          &:first-child {
+            @include regular-b;
 
-            p {
-                @include regular-r;
-                color: var(--Typography-300);
-
-            }
-
+            margin-bottom: 8px;
+            color: var(--Typography-100, #252529);
+          }
         }
+      }
     }
+  }
 
-    .info-section {
-        display: flex;
-        justify-content: space-between;
-        padding-inline: 48px;
-
-        .info-name {    
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-
-            h5 {
-                @include sub-header-s;
-                color : var(--Typography-100);
-            }
-            p {
-                font-size: 14px;
-                line-height: 16px;
-                letter-spacing: 4%;
-                font-weight: 400;
-                color : var(--Typography-300);
-            }
-        }
-
-        .info-links {
-            display: flex;
-            gap: 96px;
-
-
-            ul > p{
-                @include regular-b;
-            }
-            ul > li {
-                @include regular-r;
-                color: var(--Typography-300);
-                cursor: pointer;
-            }
-        }
+  .copyright-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 48px 48px 98px 48px;
+    p {
+      @include small-r;
+      color: var(--Typography-400);
     }
-    .copyright-section {
-        display: flex;
-        justify-content: space-between;
-        padding: 48px 48px 98px 48px;
-        p {
-            @include small-r;
-            color: var(--Typography-400);
-        }
-        span {
-            color: black;
-        }
+    span {
+      color: black;
     }
-    .bg-images {
-        width: 100%;
-        height: 100%;
-        
-        .img {
-            position: absolute;
-            width: 496px;
-            height: 496px;
-            top: 53px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: -1;
-        }
-
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
-
-
+  }
 }
