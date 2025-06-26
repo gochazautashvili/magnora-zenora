@@ -10,9 +10,9 @@
 }
 
 .nav {
-  display: flex;
+  display: grid;
   align-items: center;
-  justify-content: space-between;
+  grid-template-columns: 1fr auto 1fr;
 
   padding: 12px 48px 20px;
   position: absolute;
@@ -36,6 +36,10 @@
   align-items: center;
 
   gap: 32px;
+}
+
+.right {
+  justify-self: end;
 }
 
 .box {

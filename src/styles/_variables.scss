@@ -30,4 +30,15 @@
 
   --Indicator-Error: #eb381c;
   --Indicator-Success: #1aa323;
+
+  //
+  --Spacing-XL: clamp(1.5rem, 7vw + 1rem, 6rem); // 24px - 96px
+  --Spacing-L: clamp(0.75rem, 7vw + 1rem, 3rem); // 12px - 48px
+
+  //
+  --Section-Padding-XL: clamp(6rem, 7vw + 1rem, 12rem); // 96px - 192px
+  --Section-Padding-L: clamp(6rem, 12vw, 9rem); // 96px - 144px
+
+  //
+  --Border-Radius: 12px;
 }

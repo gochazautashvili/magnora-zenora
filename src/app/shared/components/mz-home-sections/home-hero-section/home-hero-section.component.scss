@@ -10,7 +10,7 @@
   overflow: hidden;
 
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   z-index: 1;
 
   .video {
@@ -24,11 +24,15 @@
   }
 
   .content {
-    @include grid-container;
+    @include container;
+
+    display: grid;
+    align-items: center;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--Spacing-xl);
 
     .title {
       @include header-l;
-      grid-column: 1 / 9;
 
       span {
         background: linear-gradient(
@@ -45,8 +49,6 @@
     .box {
       display: flex;
       flex-direction: column;
-      grid-column: 9 / 13;
-      align-self: flex-end;
 
       h3 {
         @include sub-header-s;
