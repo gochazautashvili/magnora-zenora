@@ -1,139 +1,72 @@
-// @mixin header-m {
-//   font-size: 84px;
-//   font-style: normal;
-//   font-weight: 500;
-//   line-height: 88px;
-//   letter-spacing: -1.68px;
-// }
-
-// @mixin header-s {
-//   font-size: 40px;
-//   font-style: normal;
-//   font-weight: 500;
-//   line-height: 44px;
-//   letter-spacing: 3.2px;
-// }
-
-// @mixin sub-header-l {
-//   font-size: 32px;
-//   font-style: normal;
-//   font-weight: 500;
-//   line-height: 36px;
-//   letter-spacing: 2.56px;
-// }
-
-// @mixin sub-header-m {
-//   font-size: 28px;
-//   font-style: normal;
-//   font-weight: 500;
-//   line-height: 36px;
-//   letter-spacing: 1.12px;
-// }
-
-// @mixin sub-header-s {
-//   font-size: 20px;
-//   font-style: normal;
-//   font-weight: 500;
-//   line-height: 28px;
-//   letter-spacing: 1.6px;
-// }
-
-// @mixin regular-r {
-//   font-size: 16px;
-//   font-style: normal;
-//   font-weight: 400;
-//   line-height: 24px;
-//   letter-spacing: 0.96px;
-// }
-
-// @mixin regular-b {
-//   font-size: 16px;
-//   font-style: normal;
-//   font-weight: 600;
-//   line-height: 24px;
-//   letter-spacing: 0.32px;
-// }
-
-// @mixin small-r {
-//   font-size: 12px;
-//   font-style: normal;
-//   font-weight: 300;
-//   line-height: 14px;
-// }
-
-// @mixin small-b {
-//   font-size: 12px;
-//   font-style: normal;
-//   font-weight: 500;
-//   line-height: 14px;
-// }
-
-
-
-// Base font style mixin
-@mixin font-style($weight, $style: normal) {
-  font-style: $style;
-  font-weight: $weight;
-}
-
-
 @mixin header-m {
-  @include font-style(500);
-  font-size: clamp(3.5rem, 6vw, 5.25rem); // 56–84px
-  line-height: clamp(4rem, 7vw, 5.5rem); // 64–88px
-  letter-spacing: -0.105rem; // -1.68px
+  font-size: 84px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 88px;
+  letter-spacing: -1.68px;
 }
 
 @mixin header-s {
-  @include font-style(500);
-  font-size: clamp(2.25rem, 4vw, 2.5rem); // 36–40px
-  line-height: clamp(2.5rem, 4.2vw, 2.75rem); // 40–44px
-  letter-spacing: 0.2rem; // 3.2px
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 44px;
+  letter-spacing: 3.2px;
 }
 
 @mixin sub-header-l {
-  @include font-style(500);
-  font-size: clamp(1.75rem, 3vw, 2rem); // 28–32px
-  line-height: clamp(2rem, 3.5vw, 2.25rem); // 32–36px
-  letter-spacing: 0.16rem; // 2.56px
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: 2.56px;
 }
 
 @mixin sub-header-m {
-  @include font-style(500);
-  font-size: clamp(1.5rem, 2.5vw, 1.75rem); // 24–28px
-  line-height: 2.25rem; // fixed 36px
-  letter-spacing: 0.07rem; // 1.12px
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: 1.12px;
 }
 
 @mixin sub-header-s {
-  @include font-style(500);
-  font-size: clamp(1.125rem, 2vw, 1.25rem); // 18–20px
-  line-height: 1.75rem; // 28px
-  letter-spacing: 0.1rem; // 1.6px
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 1.6px;
 }
 
 @mixin regular-r {
-  @include font-style(400);
-  font-size: clamp(0.9375rem, 1.5vw, 1rem); // 15–16px
-  line-height: 1.5rem; // 24px
-  letter-spacing: 0.06rem; // 0.96px
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.96px;
 }
 
 @mixin regular-b {
-  @include font-style(600);
-  font-size: clamp(0.9375rem, 1.5vw, 1rem); // 15–16px
-  line-height: 1.5rem;
-  letter-spacing: 0.02rem; // 0.32px
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.32px;
 }
 
 @mixin small-r {
-  @include font-style(300);
-  font-size: clamp(0.6875rem, 1vw, 0.75rem); // 11–12px
-  line-height: 0.875rem; // 14px
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 14px;
 }
 
 @mixin small-b {
-  @include font-style(500);
-  font-size: clamp(0.6875rem, 1vw, 0.75rem);
-  line-height: 0.875rem;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px;
 }
+
+
+
