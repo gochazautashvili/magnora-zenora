@@ -1,141 +1,157 @@
 <section [ngClass]="type" class="features">
   <div class="content">
     <!-- 1 -->
-    <div class="box_1 title">
-      @if (type === "magnora") {
-      {{ "MAGNORA.HOME.COLLECTIONS.TEXT_1" | translate }}
-      } @else {
-      {{ "ZENORA.HOME.COLLECTIONS.TEXT_1" | translate }}
-      }
-    </div>
+    <div class="first">
+      <div class="left">
+        <h1 class="title">
+          @if (type === "magnora") {
+          {{ "MAGNORA.HOME.COLLECTIONS.TEXT_1" | translate }}
+          } @else {
+          {{ "ZENORA.HOME.COLLECTIONS.TEXT_1" | translate }}
+          }
+        </h1>
+      </div>
 
-    <div class="box_2 img">
-      <img
-        width="300"
-        height="360"
-        loading="lazy"
-        alt="magnora-feature (1)"
-        src="assets/images/magnora-feature (5).png"
-      />
-    </div>
+      <div class="right">
+        <div class="img">
+          <img
+            width="300"
+            height="360"
+            loading="lazy"
+            alt="magnora-feature (1)"
+            src="assets/images/magnora-feature (5).png"
+          />
+        </div>
 
-    <div class="box_3 text">
-      @if (type === "magnora") {
-      {{ "MAGNORA.HOME.COLLECTIONS.TEXT_2" | translate }}
-      } @else {
-      {{ "ZENORA.HOME.COLLECTIONS.TEXT_2" | translate }}
-      }
+        <div class="text">
+          @if (type === "magnora") {
+          {{ "MAGNORA.HOME.COLLECTIONS.TEXT_2" | translate }}
+          } @else {
+          {{ "ZENORA.HOME.COLLECTIONS.TEXT_2" | translate }}
+          }
+        </div>
+      </div>
     </div>
-
-    <div class="separator"></div>
 
     <!-- 2 -->
-    <div class="box_4 img">
-      <img
-        width="416"
-        height="288"
-        loading="lazy"
-        alt="magnora-feature (2)"
-        src="assets/images/magnora-feature (4).png"
-      />
-    </div>
+    <div class="second">
+      <div class="left img">
+        <img
+          width="416"
+          height="288"
+          loading="lazy"
+          alt="magnora-feature (2)"
+          src="assets/images/magnora-feature (4).png"
+        />
+      </div>
 
-    <div class="box_5 text">
-      @if (type === "magnora") {
-      {{ "MAGNORA.HOME.COLLECTIONS.TEXT_3" | translate }}
-      } @else {
-      {{ "ZENORA.HOME.COLLECTIONS.TEXT_3" | translate }}
-      }
-    </div>
+      <div class="right">
+        <div class="text">
+          @if (type === "magnora") {
+          {{ "MAGNORA.HOME.COLLECTIONS.TEXT_3" | translate }}
+          } @else {
+          {{ "ZENORA.HOME.COLLECTIONS.TEXT_3" | translate }}
+          }
+        </div>
 
-    <div class="box_6 img2">
-      <img
-        width="416"
-        height="289"
-        loading="lazy"
-        alt="magnora-feature (3)"
-        src="assets/images/magnora-feature (3).png"
-      />
+        <div class="img">
+          <img
+            width="416"
+            height="289"
+            loading="lazy"
+            alt="magnora-feature (3)"
+            src="assets/images/magnora-feature (3).png"
+          />
+        </div>
+      </div>
     </div>
-
-    <div class="separator_2"></div>
 
     <!-- 3 -->
-    <div class="box_7 img">
-      <img
-        width="184"
-        height="220"
-        loading="lazy"
-        alt="magnora-feature (4)"
-        src="assets/images/magnora-feature (2).png"
-      />
-    </div>
+    <div class="third">
+      <div class="left">
+        <div class="img">
+          <img
+            width="184"
+            height="220"
+            loading="lazy"
+            alt="magnora-feature (4)"
+            src="assets/images/magnora-feature (2).png"
+          />
+        </div>
 
-    <div class="box_8 img">
-      <img
-        width="300"
-        height="360"
-        loading="lazy"
-        alt="magnora-feature (5)"
-        src="assets/images/magnora-feature (1).png"
-      />
-    </div>
+        <div class="img">
+          <img
+            width="300"
+            height="360"
+            loading="lazy"
+            alt="magnora-feature (5)"
+            src="assets/images/magnora-feature (1).png"
+          />
+        </div>
+      </div>
 
-    <div class="box_9 text">
-      @if (type === "magnora") {
-      {{ "MAGNORA.HOME.COLLECTIONS.TEXT_4" | translate }}
-      } @else {
-      {{ "ZENORA.HOME.COLLECTIONS.TEXT_4" | translate }}
-      }
+      <div class="right">
+        <p class="text">
+          @if (type === "magnora") {
+          {{ "MAGNORA.HOME.COLLECTIONS.TEXT_4" | translate }}
+          } @else {
+          {{ "ZENORA.HOME.COLLECTIONS.TEXT_4" | translate }}
+          }
+        </p>
+      </div>
     </div>
-
-    <div class="separator"></div>
 
     <!-- 4 -->
-    <div class="box_10 img">
-      <img
-        width="300"
-        height="360"
-        loading="lazy"
-        alt="magnora-feature (6)"
-        src="assets/images/magnora-about-img.png"
-      />
-    </div>
+    <div class="forth">
+      <div class="left img">
+        <img
+          width="300"
+          height="360"
+          loading="lazy"
+          alt="magnora-feature (6)"
+          src="assets/images/magnora-about-img.png"
+        />
+      </div>
 
-    <div class="box_11 img">
-      <img
-        width="416"
-        height="288"
-        loading="lazy"
-        alt="magnora-feature (7)"
-        src="assets/images/magnora-feature (6).png"
-      />
-    </div>
+      <div class="right">
+        <div class="top">
+          <div class="img">
+            <img
+              width="416"
+              height="288"
+              loading="lazy"
+              alt="magnora-feature (7)"
+              src="assets/images/magnora-feature (6).png"
+            />
+          </div>
 
-    <div class="box_12 text">
-      @if (type === "magnora") {
-      {{ "MAGNORA.HOME.COLLECTIONS.TEXT_5" | translate }}
-      } @else {
-      {{ "ZENORA.HOME.COLLECTIONS.TEXT_5" | translate }}
-      }
-    </div>
+          <div class="text">
+            @if (type === "magnora") {
+            {{ "MAGNORA.HOME.COLLECTIONS.TEXT_5" | translate }}
+            } @else {
+            {{ "ZENORA.HOME.COLLECTIONS.TEXT_5" | translate }}
+            }
+          </div>
+        </div>
 
-    <div class="box_13 cta">
-      <h1 class="title">
-        @if (type === "magnora") {
-        {{ "MAGNORA.HOME.CTA.TITLE" | translate }}
-        } @else {
-        {{ "ZENORA.HOME.CTA.TITLE" | translate }}
-        }
-      </h1>
-      <p class="text">
-        @if (type === "magnora") {
-        {{ "MAGNORA.HOME.CTA.TEXT" | translate }}
-        } @else {
-        {{ "ZENORA.HOME.CTA.TEXT" | translate }}
-        }
-      </p>
-      <app-button>See Our Collection</app-button>
+        <div class="cta">
+          <h1 class="title">
+            @if (type === "magnora") {
+            {{ "MAGNORA.HOME.CTA.TITLE" | translate }}
+            } @else {
+            {{ "ZENORA.HOME.CTA.TITLE" | translate }}
+            }
+          </h1>
+          <p class="text">
+            @if (type === "magnora") {
+            {{ "MAGNORA.HOME.CTA.TEXT" | translate }}
+            } @else {
+            {{ "ZENORA.HOME.CTA.TEXT" | translate }}
+            }
+          </p>
+          <app-button>See Our Collection</app-button>
+        </div>
+      </div>
     </div>
   </div>
 </section>

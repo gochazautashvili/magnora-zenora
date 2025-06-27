@@ -2,7 +2,7 @@
 @use "layout" as *;
 
 .qa-section {
-  padding: 144px 0;
+  padding-block: var(--Spacing-3XL);
   background-color: var(--BG-Background);
 
   .qa-section-container {
@@ -102,10 +102,10 @@
 .contact-us {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
   justify-content: space-between;
-  margin: 48px auto 0;
-  max-width: 880px;
+  padding-inline: var(--Spacing-2XL);
+  padding-top: var(--Spacing-L);
+  flex-wrap: wrap;
 
   .contact-text {
     display: flex;
