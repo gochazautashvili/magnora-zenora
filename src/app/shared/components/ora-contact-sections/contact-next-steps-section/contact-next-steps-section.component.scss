@@ -1,0 +1,338 @@
+.contact-next-steps-section {
+  background-color: #eff0f5;
+  padding: clamp(72px, 8vw, 96px) clamp(16px, 5vw, 48px) clamp(96px, 10vw, 144px);
+  width: 100%;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+
+  h2 {
+    color: var(--Typography-100, #252529);
+    text-align: center;
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: 2.56px;
+  }
+
+  .next-steps-info {
+    width: 100%;
+    padding: 12px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+
+    .info-container {
+      flex: 1 1 300px; // allow growth/shrink with min width
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      .info-title {
+        color: var(--Typography-200, #38383D);
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 28px;
+        letter-spacing: 1.6px;
+      }
+
+      .info-content {
+        color: var(--Typography-300, #4B4B52);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0.96px;
+      }
+    }
+
+    .arrow {
+      height: 100%;
+      max-width: 48px;
+      flex-shrink: 0;
+    }
+  }
+
+  // Large Desktop (1440px+)
+  @media (min-width: 1440px) {
+    padding: clamp(96px, 10vw, 120px) clamp(48px, 6vw, 80px) clamp(120px, 12vw, 180px);
+    min-height: 280px;
+    gap: 64px;
+
+    h2 {
+      font-size: 40px;
+      line-height: 44px;
+      letter-spacing: 3.2px;
+    }
+
+    .next-steps-info {
+      gap: 48px;
+      padding: 16px 0;
+
+      .info-container {
+        flex: 1 1 350px;
+        gap: 16px;
+
+        .info-title {
+          font-size: 24px;
+          line-height: 32px;
+          letter-spacing: 1.92px;
+        }
+
+        .info-content {
+          font-size: 18px;
+          line-height: 26px;
+          letter-spacing: 1.08px;
+        }
+      }
+
+      .arrow {
+        max-width: 56px;
+      }
+    }
+  }
+
+  // Desktop (1200px - 1439px)
+  @media (max-width: 1439px) and (min-width: 1200px) {
+    gap: 56px;
+
+    h2 {
+      font-size: 36px;
+      line-height: 40px;
+      letter-spacing: 2.88px;
+    }
+
+    .next-steps-info {
+      gap: 40px;
+
+      .info-container {
+        flex: 1 1 320px;
+        gap: 14px;
+
+        .info-title {
+          font-size: 22px;
+          line-height: 30px;
+          letter-spacing: 1.76px;
+        }
+
+        .info-content {
+          font-size: 17px;
+          line-height: 25px;
+          letter-spacing: 1.02px;
+        }
+      }
+
+      .arrow {
+        max-width: 52px;
+      }
+    }
+  }
+
+  // Tablet Landscape (1024px - 1199px)
+  @media (max-width: 1199px) and (min-width: 1024px) {
+    padding: clamp(64px, 7vw, 88px) clamp(24px, 4vw, 40px) clamp(88px, 9vw, 120px);
+    min-height: 200px;
+    gap: 40px;
+
+    h2 {
+      font-size: 30px;
+      line-height: 34px;
+      letter-spacing: 2.4px;
+    }
+
+    .next-steps-info {
+      gap: 28px;
+
+      .info-container {
+        flex: 1 1 280px;
+        gap: 10px;
+
+        .info-title {
+          font-size: 19px;
+          line-height: 26px;
+          letter-spacing: 1.52px;
+        }
+
+        .info-content {
+          font-size: 15px;
+          line-height: 22px;
+          letter-spacing: 0.9px;
+        }
+      }
+
+      .arrow {
+        max-width: 44px;
+      }
+    }
+  }
+
+  // Tablet Portrait (768px - 1023px)
+  @media (max-width: 1023px) and (min-width: 769px) {
+    padding: clamp(56px, 6vw, 80px) clamp(20px, 3vw, 32px) clamp(80px, 8vw, 104px);
+    min-height: 180px;
+    gap: 36px;
+
+    h2 {
+      font-size: 28px;
+      line-height: 32px;
+      letter-spacing: 2.24px;
+    }
+
+    .next-steps-info {
+      gap: 24px;
+      flex-wrap: wrap;
+
+      .info-container {
+        flex: 1 1 250px;
+        gap: 8px;
+
+        .info-title {
+          font-size: 18px;
+          line-height: 24px;
+          letter-spacing: 1.44px;
+        }
+
+        .info-content {
+          font-size: 14px;
+          line-height: 20px;
+          letter-spacing: 0.84px;
+        }
+      }
+
+      .arrow {
+        max-width: 40px;
+        order: 2;
+        align-self: center;
+      }
+    }
+  }
+
+  // Mobile Large (481px - 768px)
+  @media (max-width: 768px) and (min-width: 481px) {
+    padding: clamp(48px, 5vw, 72px) clamp(20px, 3vw, 28px) clamp(72px, 7vw, 96px);
+    min-height: 160px;
+    gap: 32px;
+
+    h2 {
+      font-size: 26px;
+      line-height: 30px;
+      letter-spacing: 2.08px;
+    }
+
+    .next-steps-info {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+      padding: 8px 0;
+
+      .info-container {
+        width: 100%;
+        flex: none;
+        gap: 8px;
+
+        .info-title {
+          font-size: 18px;
+          line-height: 24px;
+          letter-spacing: 1.44px;
+        }
+
+        .info-content {
+          font-size: 15px;
+          line-height: 22px;
+          letter-spacing: 0.9px;
+        }
+      }
+
+      .arrow {
+        display: none;
+      }
+    }
+  }
+
+  // Mobile Small (320px - 480px)
+  @media (max-width: 480px) {
+    padding: clamp(40px, 4vw, 64px) clamp(16px, 2vw, 24px) clamp(64px, 6vw, 80px);
+    min-height: 140px;
+    gap: 28px;
+
+    h2 {
+      font-size: 24px;
+      line-height: 28px;
+      letter-spacing: 1.92px;
+    }
+
+    .next-steps-info {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 6px 0;
+
+      .info-container {
+        width: 100%;
+        flex: none;
+        gap: 6px;
+
+        .info-title {
+          font-size: 17px;
+          line-height: 22px;
+          letter-spacing: 1.36px;
+        }
+
+        .info-content {
+          font-size: 14px;
+          line-height: 20px;
+          letter-spacing: 0.84px;
+        }
+      }
+
+      .arrow {
+        display: none;
+      }
+    }
+  }
+
+  // Extra Small Mobile (max 319px)
+  @media (max-width: 319px) {
+    padding: clamp(32px, 3vw, 56px) clamp(12px, 1.5vw, 20px) clamp(56px, 5vw, 72px);
+    min-height: 120px;
+    gap: 24px;
+
+    h2 {
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: 1.6px;
+    }
+
+    .next-steps-info {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 4px 0;
+
+      .info-container {
+        width: 100%;
+        flex: none;
+        gap: 4px;
+
+        .info-title {
+          font-size: 16px;
+          line-height: 20px;
+          letter-spacing: 1.28px;
+        }
+
+        .info-content {
+          font-size: 13px;
+          line-height: 18px;
+          letter-spacing: 0.78px;
+        }
+      }
+
+      .arrow {
+        display: none;
+      }
+    }
+  }
+}
