@@ -102,27 +102,6 @@
     }
   }
 
-  @media (min-width: 1440px) {
-    padding: clamp(120px, 12vw, 180px) clamp(48px, 6vw, 80px) clamp(96px, 10vw, 120px);
-    
-    .section-title {
-      font-size: 48px;
-      line-height: 52px;
-      letter-spacing: 3.8px;
-    }
-
-    .contact-form {
-      gap: 64px;
-      grid-template-columns: 480px 480px;
-
-      .form-group {
-        &:nth-child(5) {
-          width: 740px;
-        }
-      }
-    }
-  }
-
   @media (max-width: 1439px) and (min-width: 1024px) {
     .contact-form {
       grid-template-columns: 380px 380px;
