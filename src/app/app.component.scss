@@ -15,9 +15,9 @@
     top: 148px;
     left: 32px;
     display: flex;
-    width: 25.5dvw;
-    height: 100%;
-    max-height: 81dvh;
+    width: 30dvw;
+    height: 79.5dvh;
+    max-height: 100%;
     padding: 24px 32px 16px 32px;
     flex-direction: column;
     align-items: flex-start;
@@ -285,6 +285,95 @@
         font-weight: 600;
         line-height: 24px;
         letter-spacing: 0.32px;
+      }
+    }
+
+    .auth-required-message,
+    .cart-empty-state {
+      width: 100%;
+      max-height: 65dvh;
+      display: flex;
+      flex: 1 0 0;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 96px;
+      gap: 32px;
+
+      .message-container {
+        width: 100%;
+        display: flex;
+        padding: 0 12px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 8px;
+
+        .message-heading {
+          color: var(--Typography-100, #252529);
+          font-size: 20px;
+          font-weight: 500;
+          letter-spacing: 1px;
+        }
+
+        .message-content {
+          color: var(--Typography-200, #38383d);
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px; /* 150% */
+          letter-spacing: 0.96px;
+        }
+      }
+
+      .actions {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+
+        button {
+          background: var(--Button-Primary-BG, rgba(60, 51, 184, 0.72));
+          box-shadow: -1px -1px 0px 0px var(--BG-Dissabled, #c7c8cc) inset,
+          1px 1px 0px 0px var(--BG-Dissabled, #c7c8cc) inset,
+          0px 0px 32px -8px var(
+            --Button-Secondary-BG,
+            rgba(220, 221, 235, 0.64)
+            ) inset;
+          backdrop-filter: blur(12px);
+          border-radius: 48px;
+          border: none;
+          color: var(--Typography-White-100, #EFF0F5);
+          font-family: inherit;
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 24px;
+          letter-spacing: 0.32px;
+          width: 100%;
+          display: flex;
+          padding: 12px 32px;
+          align-items: center;
+          justify-content: center;
+        }
+
+        p {
+          color: var(--Typography-200, #38383D);
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          letter-spacing: 0.96px;
+
+          a {
+            color: var(--Typography-100, #252529);
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 24px; /* 150% */
+            letter-spacing: 0.32px;
+            text-decoration: none;
+            margin-left: 12px;
+          }
+        }
       }
     }
   }
