@@ -38,14 +38,13 @@
     </div>
 
     <div class="center">
-      <img
-        [src]="
-          type === 'magnora'
-            ? 'assets/icons/magnora-navbar-logo.png'
-            : 'assets/icons/zenora-navbar-logo.png'
-        "
-        alt="magnora navbar icon"
-      />
+      @if(type === "root"){
+      <img src="assets/icons/ora-navbar-icon.png" alt="ora navbar" />
+      } @else if (type === "magnora") {
+      <img src="assets/icons/magnora-navbar-logo.png" alt="magnora navbar" />
+      } @else if (type === "zenora") {
+      <img src="assets/icons/zenora-navbar-logo.png" alt="zenora navbar" />
+      }
     </div>
 
     <div class="right">

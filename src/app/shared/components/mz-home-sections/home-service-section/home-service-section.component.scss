@@ -3,7 +3,7 @@
 
 .home-service {
   background-color: var(--BG-Section);
-  padding: 144px 0;
+  padding-block: var(--Spacing-3XL);
 
   .content {
     @include container;

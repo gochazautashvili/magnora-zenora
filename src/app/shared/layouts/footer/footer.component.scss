@@ -80,7 +80,6 @@
   .info-section {
     display: flex;
     justify-content: space-between;
-    padding-inline: 48px;
 
     .info-name {
       display: flex;
@@ -127,7 +126,8 @@
   .copyright-section {
     display: flex;
     justify-content: space-between;
-    padding: 48px 48px 98px 48px;
+    padding-top: var(--Spacing-L);
+
     p {
       @include small-r;
       color: var(--Typography-400);
