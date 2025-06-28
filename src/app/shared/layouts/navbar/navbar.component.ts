@@ -1,15 +1,16 @@
+import { CommonModule } from '@angular/common';
 import { Component, inject, Input } from '@angular/core';
 
 import { LanguageService } from '@core/i18n/language.service';
 
 @Component({
   selector: 'app-navbar',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
-  @Input() type: 'magnora' | 'zenora' = 'magnora';
+  @Input() type: 'magnora' | 'zenora' | 'root' = 'root';
 
   public translate = inject(LanguageService);
 

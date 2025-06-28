@@ -336,15 +336,16 @@
         button {
           background: var(--Button-Primary-BG, rgba(60, 51, 184, 0.72));
           box-shadow: -1px -1px 0px 0px var(--BG-Dissabled, #c7c8cc) inset,
-          1px 1px 0px 0px var(--BG-Dissabled, #c7c8cc) inset,
-          0px 0px 32px -8px var(
-            --Button-Secondary-BG,
-            rgba(220, 221, 235, 0.64)
-            ) inset;
+            1px 1px 0px 0px var(--BG-Dissabled, #c7c8cc) inset,
+            0px 0px 32px -8px var(
+                --Button-Secondary-BG,
+                rgba(220, 221, 235, 0.64)
+              ) inset;
+          -webkit-backdrop-filter: blur(12px);
           backdrop-filter: blur(12px);
           border-radius: 48px;
           border: none;
-          color: var(--Typography-White-100, #EFF0F5);
+          color: var(--Typography-White-100, #eff0f5);
           font-family: inherit;
           font-size: 16px;
           font-weight: 600;
@@ -358,7 +359,7 @@
         }
 
         p {
-          color: var(--Typography-200, #38383D);
+          color: var(--Typography-200, #38383d);
           font-size: 16px;
           font-weight: 400;
           line-height: 24px;
