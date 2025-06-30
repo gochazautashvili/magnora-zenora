@@ -71,6 +71,11 @@
 }
 
 @media (max-width: 900px) {
+  .nav {
+    left: 12px;
+    right: 12px;
+  }
+
   .left {
     .box:first-child {
       display: none;
