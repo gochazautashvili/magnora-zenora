@@ -69,3 +69,21 @@
     gap: 16px;
   }
 }
+
+@media (max-width: 900px) {
+  .left {
+    .box:first-child {
+      display: none;
+    }
+  }
+
+  .right {
+    .box:first-child {
+      display: none;
+    }
+
+    .box:nth-child(2) {
+      display: none;
+    }
+  }
+}
