@@ -15,9 +15,11 @@
     flex-direction: column;
     gap: 24px;
 
+
     h2 {
       @include header-s;
     }
+
     p {
       @include sub-header-s;
     }
@@ -30,6 +32,7 @@
     row-gap: var(--Spacing-XL);
     column-gap: var(--Spacing-L);
     margin-top: var(--Spacing-XL);
+
 
     .service-card {
       display: flex;
@@ -78,6 +81,118 @@
 
     p {
       color: var(--Typography-Purple-200, #6262f5);
+    }
+  }
+}
+
+
+@media (max-width: 780px) {
+  .home-service {
+
+    .service-header {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+
+      h2 {
+        @include sub-header-l;
+      }
+
+      p {
+        @include regular-r;
+      }
+    }
+
+    .service-image-cards {
+      display: grid;
+      grid-template-columns: 1fr;
+
+      row-gap: var(--Spacing-XL);
+      column-gap: var(--Spacing-L);
+      margin-top: var(--Spacing-XL);
+
+
+      .service-card {
+        width: 400px;
+        justify-self: center;
+        gap: var(--Spacing-XL);
+
+        .service-card-box {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        img {
+          width: 100%;
+          min-height: 244px;
+          max-height: 420px;
+          border-radius: 12px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+
+
+
+@media (max-width: 500px) {
+  .home-service {
+
+    .service-header {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+
+      h2 {
+        @include sub-header-l;
+      }
+
+      p {
+        @include regular-r;
+      }
+    }
+
+    .service-image-cards {
+      display: grid;
+      grid-template-columns: 1fr;
+
+      row-gap: var(--Spacing-XL);
+      column-gap: var(--Spacing-L);
+      margin-top: var(--Spacing-XL);
+
+
+      .service-card {
+        width: 400px;
+        justify-self: center;
+        gap: var(--Spacing-XL);
+
+        .service-card-box {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        img {
+          width: 100%;
+          width: 342px;
+          height: 244px;
+          border-radius: 12px;
+          object-fit: cover;
+        }
+        
+      h3 {
+        @include sub-header-s;
+      }
+
+      p {
+        @include regular-r;
+        color: var(--Typography-300);
+      }
+      }
     }
   }
 }
