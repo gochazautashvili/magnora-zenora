@@ -1,28 +1,4 @@
-<!-- <section class="container">
-    <div class="input">
-        <app-form-input 
-            formControlName="email" 
-            [errorMessage]="getErrorMessage(form.controls.email)"
-            [label]="'Your Email'"
-            [status]="form.controls.email.valid ? 'success' : (form.controls.email.touched ? 'error' : 'normal')"
-        >
-        </app-form-input>
-    </div>
-    <div class="input">
-        <app-form-input 
-            formControlName="password" 
-            [errorMessage]="getErrorMessage(form.controls.password)"
-            [label]="'Password'"
-            [status]="form.controls.password.valid ? 'success' : (form.controls.password.touched ? 'error' : 'normal')"
-        >
-        </app-form-input>
-    </div>
-
-</section> -->
-
-
 <div class="container">
-
     <form [formGroup]="form" class="form">
         <div class="input-wrapper">
             <div class="input ">
@@ -55,5 +31,4 @@
             <app-button>Continue</app-button>
         </div>
     </form>
-
 </div>
