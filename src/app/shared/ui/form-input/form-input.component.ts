@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, forwardRef, Input } from '@angular/core';
+import { Component, forwardRef, input, Input } from '@angular/core';
 import { ControlValueAccessor, FormsModule, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
@@ -27,7 +27,24 @@ export class FormInputComponent implements ControlValueAccessor {
   @Input() labelNote?: string;
   // this will display in the input as a hint
   @Input() formatProperties?: string[];
+  @Input() forgotPasswordText?: boolean = false;
 
+  isValidRule(rule: string): boolean {
+  if (!this.value) return false;
+
+  switch (rule) {
+    case 'Minimum 8 characters':
+      return this.value.length >= 8;
+    case 'At least one number':
+      return /\d/.test(this.value);
+    case 'At least uppercase letter':
+      return /[A-Z]/.test(this.value);
+    default:
+      return false;
+  }
+}
+
+  public showPassword: boolean = false;
   public value: string = '';
 
   public onInput(event: Event): void {
@@ -42,6 +59,7 @@ export class FormInputComponent implements ControlValueAccessor {
 
   public writeValue(value: string): void {
     this.value = value;
+    console.log(this.errorMessage)
   }
 
   public registerOnChange(fn: any): void {

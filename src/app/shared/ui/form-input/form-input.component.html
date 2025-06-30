@@ -1,28 +1,48 @@
-<div class="flex flex-col gap-2 w-full">
-    <label [for]="label" class="font-medium text-sm">
+<div class="input-wrapper">
+    <label [for]="label" >
       {{ label }}
-      <span *ngIf="labelNote" class="text-gray-500 font-normal">({{ labelNote }})</span>
+    <span *ngIf="labelNote" >({{ labelNote }})</span>
     </label>
     <input
-      [type]="type"
+      [type]="showPassword ? 'text' : type"
+      class="input" 
       [id]="label"
       [value]="value"
       title="FormInput"
       (blur)="onTouched()"
-      class="input"
       [ngClass]="status"
       (input)="onInput($event)"
       [placeholder]="placeholder"
-      [ngClass]="
-        errorMessage &&
-        'border-red-500 border-2 focus:outline-none focus:border-green-500'
-      "
     />
-    <p class="text-sm text-error font-semibold"  [ngClass]="status"  *ngIf="errorMessage">
+    <button
+      *ngIf="type === 'password'"
+      type="button"
+      class="toggle-visibility"
+      (click)="showPassword = !showPassword"
+    >
+      <img *ngIf="showPassword" src="assets/icons/Vissible-Icon.png">
+      <img *ngIf="!showPassword" src="assets/icons/Hidden-Icon.png">
+    </button>
+
+    <p [ngClass]="status" class="errorMessage"  *ngIf="errorMessage">
       {{ errorMessage }}
     </p>
+    
     <div *ngIf="formatProperties?.length" class="hints">
-        <p *ngFor="let item of formatProperties">• {{ item }}</p>
+      <div>
+        <p
+          *ngFor="let item of formatProperties"
+          [ngClass]="{
+            'default': !value,
+            'valid': isValidRule(item),
+            'invalid': !isValidRule(item)
+          }"
+          style="margin-top: 5px;"
+        >
+          • {{ item }}
+        </p>
+      </div>
+      <p *ngIf="forgotPasswordText == true" class="forgot-password">Forgot Password?</p>
     </div>
     
   </div>

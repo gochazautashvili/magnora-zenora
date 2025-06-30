@@ -1,16 +1,70 @@
 @use "typography" as *;
 
 
+.hints p {
+  font-size: 0.875rem;
+  margin: 2px 0;
 
-.hints p{
-  color: var(--Indicator-Success);
+  &.valid {
+    color: var(--Indicator-Success); 
+  }
+
+  &.invalid {
+    color: var(--Indicator-Error); 
+  }
+
+  &.default {
+    color: var(--Typography-100);
+  }
 }
 .hints {
-  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+
+  .forgot-password {
+    color: var(--Typography-100);
+    font-family: 'Outfit';
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 12px;
+    margin-top: 8px;
+    cursor: pointer;
+  }
 }
 input {
   margin-top: 0.5rem;
 }
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+
+  .toggle-visibility {
+    top: 2.2rem;
+    position: absolute;
+    right: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    
+    img {
+      padding: 5px;
+    }
+  }
+
+}
+.errorMessage {
+  position: absolute;
+  margin-top: 0.6rem;
+
+  &.error {
+    color: var(--Indicator-Error);
+  }
+
+}
+
+
 
 .input {
   @include regular-r;
