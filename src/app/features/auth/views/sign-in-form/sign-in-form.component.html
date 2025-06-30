@@ -1,1 +1,59 @@
-<p>sign-in-form works!</p>
+<!-- <section class="container">
+    <div class="input">
+        <app-form-input 
+            formControlName="email" 
+            [errorMessage]="getErrorMessage(form.controls.email)"
+            [label]="'Your Email'"
+            [status]="form.controls.email.valid ? 'success' : (form.controls.email.touched ? 'error' : 'normal')"
+        >
+        </app-form-input>
+    </div>
+    <div class="input">
+        <app-form-input 
+            formControlName="password" 
+            [errorMessage]="getErrorMessage(form.controls.password)"
+            [label]="'Password'"
+            [status]="form.controls.password.valid ? 'success' : (form.controls.password.touched ? 'error' : 'normal')"
+        >
+        </app-form-input>
+    </div>
+
+</section> -->
+
+
+<div class="container">
+
+    <form [formGroup]="form" class="form">
+        <div class="input-wrapper">
+            <div class="input ">
+                <app-form-input 
+                    formControlName="email" 
+                    [errorMessage]="getErrorMessage(form.controls.email)"
+                    [label]="'Your Email'"
+                    [type]="'email'"
+                    [status]="form.controls.email.valid ? 'success' : (form.controls.email.touched ? 'error' : 'normal')"
+                >
+                </app-form-input>
+            </div>
+    
+            <div class="input">
+                <app-form-input 
+                    formControlName="password" 
+                    [label]="'Password'"
+                    [formatProperties]="[
+                       'Minimum 8 characters',
+                       'At least one number',
+                       'At least uppercase letter'
+                    ]"
+                    [type]="'password'"
+                    [status]="form.controls.password.valid ? 'success' : (form.controls.password.touched ? 'error' : 'normal')"
+                    [forgotPasswordText]="true"
+                ></app-form-input>
+            </div>
+        </div>
+        <div class="button">
+            <app-button>Continue</app-button>
+        </div>
+    </form>
+
+</div>
