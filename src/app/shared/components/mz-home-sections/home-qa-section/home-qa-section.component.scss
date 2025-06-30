@@ -8,6 +8,14 @@
   .qa-section-container {
     @include container;
     max-width: 1112px;
+
+    @media (max-width: 900px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+    }
   }
 
   .top {
@@ -15,6 +23,13 @@
     grid-template-columns: 1fr 41.1dvw;
     justify-content: center;
     gap: 48px;
+
+    @media (max-width: 900px) {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+    }
 
     .answer-texts {
       display: flex;
@@ -106,6 +121,12 @@
   padding-inline: var(--Spacing-2XL);
   padding-top: var(--Spacing-L);
   flex-wrap: wrap;
+  gap: 24px;
+
+  @media (max-width: 900px) {
+    width: 100%;
+    padding: 0;
+  }
 
   .contact-text {
     display: flex;

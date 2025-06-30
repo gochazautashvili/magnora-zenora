@@ -38,14 +38,9 @@
     </div>
 
     <div class="center">
-      @if(type === "root"){
-      <img src="assets/icons/ora-navbar-icon.png" alt="ora navbar" />
-      } @else if (type === "magnora") {
-      <img src="assets/icons/magnora-navbar-logo.png" alt="magnora navbar" />
-      } @else if (type === "zenora") {
-      <img src="assets/icons/zenora-navbar-logo.png" alt="zenora navbar" />
-      }
+      <img *ngIf="navbarLogo" [src]="navbarLogo" alt="navbar logo" />
     </div>
+    
 
     <div class="right">
       <div (click)="toggleLanguage()" class="box">

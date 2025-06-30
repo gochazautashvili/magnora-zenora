@@ -149,7 +149,7 @@
   }
 
   @media (max-width: 1023px) and (min-width: 768px) {
-    padding-block: clamp(80px, 15vw, 196px) clamp(40px, 6vw, 100px) clamp(60px, 10vw, 140px) ;
+    padding-block: clamp(130px, 15vw, 196px) clamp(40px, 6vw, 100px) clamp(60px, 10vw, 140px) ;
     min-height: 520px;
     align-items: center;
     text-align: center;
@@ -187,7 +187,7 @@
   }
 
   @media (max-width: 767px) and (min-width: 481px) {
-    padding-block: clamp(80px, 15vw, 196px) clamp(30px, 5vw, 80px) clamp(50px, 8vw, 120px);
+    padding: clamp(130px, 15vw, 196px) clamp(30px, 5vw, 80px) clamp(50px, 8vw, 120px);
     padding-inline: clamp(20px, 4vw, 32px);
     min-height: 450px;
     align-items: center;
@@ -226,7 +226,7 @@
   }
 
   @media (max-width: 480px) {
-    padding-block: clamp(60px, 6vw, 120px) clamp(24px, 4vw, 60px);
+    padding-block: clamp(130px, 6vw, 150px) clamp(24px, 4vw, 60px);
     padding-inline: clamp(16px, 3vw, 24px);
     min-height: 380px;
     align-items: center;
@@ -267,7 +267,7 @@
   }
 
   @media (max-width: 319px) {
-    padding-block: clamp(32px, 5vw, 80px) clamp(20px, 3vw, 48px);
+    padding-block: clamp(130px, 5vw, 150px) clamp(20px, 3vw, 48px);
     padding-inline: clamp(12px, 2vw, 20px);
     min-height: 320px;
     gap: 24px;
