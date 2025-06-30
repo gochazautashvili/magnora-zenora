@@ -13,7 +13,6 @@ body {
     margin-left: auto;
     margin-right: auto;
 
-
     h2 {
       color: var(--Typography-100, #252529);
       font-family: Outfit;
@@ -51,11 +50,16 @@ body {
         border-radius: 48px;
         border: none;
         background: var(--Button-Primary-BG, rgba(60, 51, 184, 0.72));
-        box-shadow: -1px -1px 0px 0px var(--BG-Dissabled, #C7C8CC) inset, 1px 1px 0px 0px var(--BG-Dissabled, #C7C8CC) inset, 0px 0px 32px -8px var(--Button-Secondary-BG, rgba(220, 221, 235, 0.64)) inset;
+        box-shadow: -1px -1px 0px 0px var(--BG-Dissabled, #c7c8cc) inset,
+          1px 1px 0px 0px var(--BG-Dissabled, #c7c8cc) inset,
+          0px 0px 32px -8px var(
+              --Button-Secondary-BG,
+              rgba(220, 221, 235, 0.64)
+            ) inset;
         backdrop-filter: blur(12px);
 
         a {
-          color: var(--Typography-White-100, #EFF0F5);
+          color: var(--Typography-White-100, #eff0f5);
           font-family: Outfit;
           font-size: 16px;
           font-style: normal;
@@ -75,12 +79,13 @@ body {
         align-self: stretch;
         border-radius: 48px;
         background: var(--Button-Secondary-BG, rgba(220, 221, 235, 0.64));
-        box-shadow: -1px -1px 0px 0px var(--BG-Secondary-Section, #DBDCE0) inset, 1px 1px 0px 0px var(--BG-Secondary-Section, #DBDCE0) inset;
+        box-shadow: -1px -1px 0px 0px var(--BG-Secondary-Section, #dbdce0) inset,
+          1px 1px 0px 0px var(--BG-Secondary-Section, #dbdce0) inset;
         backdrop-filter: blur(12px);
         border: none;
 
         a {
-          color: var(--Typography-200, #38383D);
+          color: var(--Typography-200, #38383d);
           font-family: Outfit;
           font-size: 16px;
           font-style: normal;
@@ -92,8 +97,6 @@ body {
       }
     }
   }
-
-
 
   @media (max-width: 820px) {
     .main-div {

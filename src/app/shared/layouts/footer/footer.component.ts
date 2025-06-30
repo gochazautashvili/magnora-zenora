@@ -11,7 +11,7 @@ import { InputComponent } from '@shared/ui/input/input.component';
   styleUrl: './footer.component.scss',
 })
 export class FooterComponent {
-  @Input() type: 'magnora' | 'zenora' = 'magnora';
+  @Input() type: 'magnora' | 'zenora' | 'root' = 'root';
 
   // Magnora footer texts
   MTexts = {

@@ -1,0 +1,137 @@
+section {
+  height: 80vh;
+  margin-top: 9rem;
+  margin-left: 10px;
+  display: grid;
+  grid-auto-rows: auto;
+  row-gap: 10px;
+  margin-left: 48px;
+  margin-right: 48px;
+
+  .div-header {
+    margin-top: 35px;
+    height: 176px;
+    width: 880px;
+
+    h1 {
+      color: var(--Typography-100, #252529);
+      font-family: "Familjen Grotesk";
+      font-size: 84px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 88px;
+      letter-spacing: -1.68px;
+
+      span {
+        background: linear-gradient(
+          90deg,
+          var(--Typography-Purple-200, #6262f5),
+          var(--Typography-Purple-100, #3c33b8)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+      }
+    }
+  }
+
+  .div-right {
+    width: 416px;
+    height: 86px;
+    transform: translateY(-0.8rem);
+    justify-self: end;
+    color: var(--Typography-100, #252529);
+    font-family: Outfit;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 1.6px;
+  }
+
+  .div-left {
+    width: 427px;
+    height: 56px;
+    justify-self: center;
+    transform: translate(-14rem, -5rem);
+    color: var(--Typography-100, #252529);
+    font-family: Outfit;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 1.6px;
+  }
+
+  @media (max-width: 1024px) {
+    .div-header {
+      width: 600px;
+
+      h1 {
+        font-size: 64px;
+        line-height: 72px;
+      }
+    }
+
+    .div-right,
+    .div-left {
+      font-size: 18px;
+      line-height: 26px;
+      letter-spacing: 1.2px;
+    }
+
+    .div-left {
+      transform: translate(-6rem, -3rem);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .div-header {
+      width: 100%;
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 0 16px;
+
+      h1 {
+        margin: 0;
+        text-align: center;
+      }
+    }
+
+    .div-right,
+    .div-left {
+      max-width: 100%;
+      justify-self: center;
+      text-align: center;
+      transform: none;
+    }
+
+    .div-left {
+      margin-top: -1rem;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .div-header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      h1 {
+        font-size: 55px;
+        line-height: 44px;
+        margin: 0;
+        text-align: center;
+      }
+    }
+
+    .div-right,
+    .div-left {
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 1px;
+    }
+  }
+}

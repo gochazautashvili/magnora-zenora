@@ -64,10 +64,19 @@
       class="logo"
       src="assets/images/footer-background-icon.png"
     />
+
+    @if(type === "magnora"){
     <img
       alt="img"
       class="logo_title"
-      src="assets/images/footer-background-text.png"
+      src="assets/images/magnora-footer-text.png"
     />
+    } @else if (type=== "zenora") {
+    <img
+      alt="img"
+      class="logo_title"
+      src="assets/images/zenora-footer-text.png"
+    />
+    }
   </div>
 </footer>

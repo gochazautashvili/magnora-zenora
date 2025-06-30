@@ -30,7 +30,7 @@
     .magnora-description {
       margin-top: 24px;
       margin-left: calc(280px - 48px);
-      color: var(--Typography-300, #4B4B52);
+      color: var(--Typography-300, #4b4b52);
       font-family: Outfit;
       font-size: 20px;
       font-weight: 500;
@@ -38,7 +38,6 @@
       letter-spacing: 1.6px;
       width: 305px;
       height: 168px;
-      
     }
   }
 
@@ -61,7 +60,7 @@
     }
 
     .zenora-description {
-      color: var(--Typography-300, #4B4B52);
+      color: var(--Typography-300, #4b4b52);
       font-family: Outfit;
       font-size: 20px;
       font-weight: 500;
@@ -83,9 +82,7 @@
     width: 885px;
     margin-bottom: 144px;
   }
-
 }
-
 
 @media (max-width: 1190px) {
   .container {
@@ -100,7 +97,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 150px;  
+      gap: 150px;
       padding-top: 144px;
       width: 100%;
 
@@ -128,7 +125,7 @@
         .magnora-description,
         .zenora-description {
           margin-top: 24px;
-          color: var(--Typography-300, #4B4B52);
+          color: var(--Typography-300, #4b4b52);
           font-family: Outfit;
           font-size: 15px;
           font-weight: 500;
@@ -139,7 +136,7 @@
           height: 168px;
         }
 
-        .magnora-description{
+        .magnora-description {
           margin-left: 0 !important;
         }
       }
