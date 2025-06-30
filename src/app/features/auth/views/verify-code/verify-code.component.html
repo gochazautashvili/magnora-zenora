@@ -1,1 +1,49 @@
-<p>verify-code works!</p>
+<div class="container">
+
+  <div class="titles">
+    <div class="go-back">
+        <img (click)="goBack()" src="assets/icons/left-arrow.png" alt="">
+        <p>Go Back</p>
+    </div>
+    <div class="verify-texts">
+        <h3>Verify It’s You</h3>
+        <p>We’ve sent a 6-digit code to your Email. Enter it below to verify your account.</p>
+    </div>
+  </div>
+
+    <!-- 6 digit code input field -->
+    <div class="otp-container">
+      <div class="otp-inputs">
+        <div
+          class="otp-wrapper"
+          *ngFor="let _ of otpArray; let i = index"
+        >
+          <input
+            #otpInput
+            type="text"
+            maxlength="1"
+            class="otp-input"
+            [class.filled]="digits[i] && digits[i] !== ''"
+            [class.error]="hasError"
+            (input)="onInput($event, i)"
+            (keydown)="onKeyDown($event, i)"
+            (paste)="onPaste($event, i)"
+            (focus)="onFocus(i)"
+            autocomplete="off"
+            inputmode="numeric"
+          />
+        </div>
+      </div>
+    
+      <div *ngIf="hasError" class="error-message">
+        {{ errorMessage }}
+      </div>
+    </div>
+    
+    <div class="resend-code-texts">
+      <p class="p-1">Did not get the Code?</p>
+      <p class="p-2">Resend</p>
+    </div>
+      
+
+</div>
