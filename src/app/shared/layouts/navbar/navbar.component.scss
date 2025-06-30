@@ -69,3 +69,28 @@
     gap: 16px;
   }
 }
+
+@media (max-width: 900px) {
+  .nav {
+    padding: 8px 24px 16px;
+    top: 24px;
+    left: 12px;
+    right: 12px;
+  }
+
+  .left {
+    .box:first-child {
+      display: none;
+    }
+  }
+
+  .right {
+    .box:first-child {
+      display: none;
+    }
+
+    .box:nth-child(2) {
+      display: none;
+    }
+  }
+}

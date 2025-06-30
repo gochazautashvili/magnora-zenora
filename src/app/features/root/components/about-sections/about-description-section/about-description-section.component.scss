@@ -1,0 +1,158 @@
+.container {
+  display: grid;
+  grid-template-columns: auto auto;
+  max-width: 100%;
+  margin-left: 48px;
+  margin-right: 48px;
+
+  .clas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 144px;
+  }
+
+  .magnora-section {
+    grid-column: 1;
+    grid-row: 1;
+
+    .magnora-title {
+      margin-bottom: 24px;
+      width: 537px;
+      height: 88px;
+      color: var(--Typography-100, #252529);
+      font-family: Outfit;
+      font-size: 40px;
+      font-weight: 500;
+      letter-spacing: 3.2px;
+      line-height: 44px;
+    }
+
+    .magnora-description {
+      margin-top: 24px;
+      margin-left: calc(280px - 48px);
+      color: var(--Typography-300, #4b4b52);
+      font-family: Outfit;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 28px;
+      letter-spacing: 1.6px;
+      width: 305px;
+      height: 168px;
+    }
+  }
+
+  .zenora-section {
+    justify-items: end;
+    margin-top: -100px;
+    grid-column: 3;
+    grid-row: 3;
+
+    .zenora-title {
+      margin-bottom: 24px;
+      font-size: 40px;
+      line-height: 44px;
+      letter-spacing: 3.2px;
+      font-family: Outfit;
+      font-weight: 500;
+      margin-right: 0;
+      width: 532px;
+      height: 88px;
+    }
+
+    .zenora-description {
+      color: var(--Typography-300, #4b4b52);
+      font-family: Outfit;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 28px;
+      letter-spacing: 1.6px;
+      width: 300px;
+      height: 168px;
+    }
+  }
+
+  .main-description {
+    grid-column: 1 / -1;
+    font-family: Outfit;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: 2.56px;
+    width: 885px;
+    margin-bottom: 144px;
+  }
+}
+
+@media (max-width: 1190px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 48px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .clas {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 150px;
+      padding-top: 144px;
+      width: 100%;
+
+      .magnora-section,
+      .zenora-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        .magnora-title,
+        .zenora-title {
+          margin-bottom: 24px;
+          width: 100%;
+          max-width: 537px;
+          height: 88px;
+          color: var(--Typography-100, #252529);
+          font-family: Outfit;
+          font-size: 25px;
+          font-weight: 500;
+          letter-spacing: 3.2px;
+          line-height: 44px;
+        }
+
+        .magnora-description,
+        .zenora-description {
+          margin-top: 24px;
+          color: var(--Typography-300, #4b4b52);
+          font-family: Outfit;
+          font-size: 15px;
+          font-weight: 500;
+          line-height: 28px;
+          letter-spacing: 1.6px;
+          width: 100%;
+          max-width: 305px;
+          height: 168px;
+        }
+
+        .magnora-description {
+          margin-left: 0 !important;
+        }
+      }
+    }
+
+    .main-description {
+      margin-top: 72px;
+      font-family: Outfit;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 36px;
+      letter-spacing: 2.56px;
+      width: 100%;
+      max-width: 885px;
+      text-align: center;
+    }
+  }
+}

@@ -47,3 +47,14 @@
     }
   }
 }
+
+@media (max-width: 900px) {
+  :host {
+    display: block;
+    width: 100%;
+  }
+  
+  button {
+    width: 100%;
+  }  
+}
