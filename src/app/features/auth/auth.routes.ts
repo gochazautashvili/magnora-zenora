@@ -12,12 +12,26 @@ const routes: Routes = [
           {
             path: '',
             loadComponent: () => import('./views/sign-up-form/sign-up-form.component'),
+          },
+          {
+            path: 'verify-code',
+            loadComponent: () => import('./views/verify-code/verify-code.component'),
           }
         ]
       },
       {
         path: 'sign-in',
         loadComponent: () => import('./layout/sign-in/sign-in.component'),
+        children: [
+          {
+            path: '',
+            loadComponent: () => import('./views/sign-in-form/sign-in-form.component'),
+          },
+          {
+            path: 'verify-code',
+            loadComponent: () => import('./views/verify-code/verify-code.component'),
+          }
+        ]
       },
       {
         path: 'reset-password',
