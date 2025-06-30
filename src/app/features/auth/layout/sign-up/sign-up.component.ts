@@ -7,4 +7,7 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './sign-up.component.html',
   styleUrl: './sign-up.component.scss',
 })
-export default class SignUpComponent {}
+export default class SignUpComponent {
+
+  
+}

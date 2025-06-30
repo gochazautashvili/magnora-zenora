@@ -4,9 +4,8 @@
 
 .sign_up_section {
     height: 100vh;
-
+    
     display: flex;
-    align-items: center;
     justify-content: center;
     @include container;
     
@@ -14,7 +13,7 @@
         display: grid;
         grid-template-columns: 1fr 1.84fr;
         grid-column-gap: 2.5rem;
-        padding-top: 12.7rem;
+        padding-top: 13rem;
 
 
         .outlet {
@@ -23,9 +22,7 @@
             
         }
     }
-
 }
-
 
 .sign_up_texts {
     width: 100%;
