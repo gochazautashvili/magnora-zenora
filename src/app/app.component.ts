@@ -2,10 +2,11 @@ import { RouterOutlet } from '@angular/router';
 import { Component } from '@angular/core';
 
 import { LanguageService } from '@core/i18n/language.service';
+import { MainOverlayComponent } from "./core/components/main-overlay/main-overlay.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, MainOverlayComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   animations: [],
