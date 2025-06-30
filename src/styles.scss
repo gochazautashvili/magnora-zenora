@@ -4,39 +4,7 @@
 @import url("https://fonts.cdnfonts.com/css/mersad");
 
 // Styles
-@import url("./styles/_variables.scss");
-@import url("./styles/_language.scss");
-
-//
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0;
-}
-
-li,
-ol {
-  list-style: none;
-}
-
-html,
-body {
-  font-family: "Outfit", sans-serif;
-  background: var(--BG-Background);
-}
-
-header {
-  position: relative;
-}
+@import url("./styles/variables.scss");
+@import url("./styles/language.scss");
+@import url("./styles/overlay.scss");
+@import url("./styles/global.scss");

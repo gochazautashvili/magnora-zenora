@@ -70,6 +70,51 @@
           "TEXT": "If your question wasn’t answered, we’ll guide you directly."
         }
       }
+    },
+    "COLLECTIONS": {
+      "HERO": {
+        "TITLE": {
+          "TEXT_1": "Explore",
+          "SPAN_1": "the Power",
+          "TEXT_2": "Within",
+          "SPAN_2": "Each Collection"
+        },
+        "TEXT_1": "Zenora is more than jewelry — it’s an energetic code. Discover pieces designed to align you with strength, love, success, and protection.",
+        "TEXT_2": "Each Zenora collection blends sacred symbols, natural crystals, and purpose-driven design — timeless tools to align your energy and transform your reality."
+      },
+      "SUB": {
+        "TITLE": "Zenora Crystal Collections",
+        "TEXT_1": "Jewelry crafted from high-vibration crystals and infused with ancient feminine energy.",
+        "TEXT_2": "Each collection channels specific intentions like love, intuition, protection, and abundance.",
+        "BOX_1": {
+          "TITLE": "Zenora Isis",
+          "TEXT": "Protection and Wisdom"
+        },
+        "BOX_2": {
+          "TITLE": "Zenora Venus",
+          "TEXT": "Love and Femine Grace"
+        },
+        "BOX_3": {
+          "TITLE": "Zenora Selene",
+          "TEXT": "Moon Energy, Intuition and Balance"
+        },
+        "BOX_4": {
+          "TITLE": "Zenora Freya",
+          "TEXT": "Freedom and Power"
+        },
+        "BOX_5": {
+          "TITLE": "Zenora Dali",
+          "TEXT": "Nature’s Force and Wild Spirit"
+        },
+        "BOX_6": {
+          "TITLE": "Zenora Mandragora",
+          "TEXT": "Herbal Healing and Alchemy"
+        }
+      },
+      "CTA": {
+        "TITLE": "Not Sure What You Need? Let’s Discover It Together.",
+        "TEXT": "Book a consultation to find the crystal, symbol, or intention that aligns with your path — guided with care and clarity."
+      }
     }
   },
   "ZENORA": {
@@ -142,6 +187,49 @@
           "TEXT": "If your question wasn’t answered, we’ll guide you directly."
         }
       }
+    },
+    "HERO": {
+      "TITLE": {
+        "TEXT_1": "Explore",
+        "SPAN_1": "the Power",
+        "TEXT_2": "Within",
+        "SPAN_2": "Each Collection"
+      },
+      "TEXT_1": "Zenora is more than jewelry — it’s an energetic code. Discover pieces designed to align you with strength, love, success, and protection.",
+      "TEXT_2": "Each Zenora collection blends sacred symbols, natural crystals, and purpose-driven design — timeless tools to align your energy and transform your reality."
+    },
+    "SUB": {
+      "TITLE": "Zenora Crystal Collections",
+      "TEXT_1": "Jewelry crafted from high-vibration crystals and infused with ancient feminine energy.",
+      "TEXT_2": "Each collection channels specific intentions like love, intuition, protection, and abundance.",
+      "BOX_1": {
+        "TITLE": "Zenora Isis",
+        "TEXT": "Protection and Wisdom"
+      },
+      "BOX_2": {
+        "TITLE": "Zenora Venus",
+        "TEXT": "Love and Femine Grace"
+      },
+      "BOX_3": {
+        "TITLE": "Zenora Selene",
+        "TEXT": "Moon Energy, Intuition and Balance"
+      },
+      "BOX_4": {
+        "TITLE": "Zenora Freya",
+        "TEXT": "Freedom and Power"
+      },
+      "BOX_5": {
+        "TITLE": "Zenora Dali",
+        "TEXT": "Nature’s Force and Wild Spirit"
+      },
+      "BOX_6": {
+        "TITLE": "Zenora Mandragora",
+        "TEXT": "Herbal Healing and Alchemy"
+      }
+    },
+    "CTA": {
+      "TITLE": "Not Sure What You Need? Let’s Discover It Together.",
+      "TEXT": "Book a consultation to find the crystal, symbol, or intention that aligns with your path — guided with care and clarity."
     }
   }
 }
