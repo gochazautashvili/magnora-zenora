@@ -1,0 +1,88 @@
+<section class="hero">
+  <video autoplay loop muted class="video">
+    <source src="assets/videos/magnora-hero-video.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <div [ngClass]="type" class="content">
+    <!--  -->
+    <div class="top">
+      <h1 class="title">
+        @if(type === "magnora") {
+        {{ "MAGNORA.COLLECTIONS.HERO.TITLE.TEXT_1" | translate }}
+        <span> {{ "MAGNORA.COLLECTIONS.HERO.TITLE.SPAN_1" | translate }}</span>
+        {{ "MAGNORA.COLLECTIONS.HERO.TITLE.TEXT_2" | translate }}
+        <span> {{ "MAGNORA.COLLECTIONS.HERO.TITLE.SPAN_2" | translate }}</span>
+        } @else {
+        {{ "ZENORA.COLLECTIONS.HERO.TITLE.TEXT_1" | translate }}
+        <span> {{ "ZENORA.COLLECTIONS.HERO.TITLE.SPAN_1" | translate }}</span>
+        {{ "ZENORA.COLLECTIONS.HERO.TITLE.TEXT_2" | translate }}
+        <span> {{ "ZENORA.COLLECTIONS.HERO.TITLE.SPAN_2" | translate }}</span>
+        }
+      </h1>
+    </div>
+
+    <!--  -->
+    <div class="bottom">
+      <div class="left">
+        <p class="text">
+          @if(type === "magnora") {
+          {{ "MAGNORA.COLLECTIONS.HERO.TEXT_1" | translate }}
+          } @else {
+          {{ "ZENORA.COLLECTIONS.HERO.TEXT_1" | translate }}
+          }
+        </p>
+      </div>
+
+      <div class="rigth">
+        <p class="text">
+          @if(type === "magnora") {
+          {{ "MAGNORA.COLLECTIONS.HERO.TEXT_2" | translate }}
+          } @else {
+          {{ "ZENORA.COLLECTIONS.HERO.TEXT_2" | translate }}
+          }
+        </p>
+      </div>
+    </div>
+
+    <!--  -->
+    <div class="pagination">
+      <button title="Prev banner" class="icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 32 32"
+          fill="none"
+        >
+          <path
+            d="M28.9998 25.0001C28.9998 25.2653 28.8945 25.5196 28.7069 25.7072C28.5194 25.8947 28.265 26.0001 27.9998 26.0001C27.7346 26.0001 27.4802 25.8947 27.2927 25.7072C27.1052 25.5196 26.9998 25.2653 26.9998 25.0001C26.9965 22.0837 25.8365 19.2877 23.7743 17.2255C21.7121 15.1634 18.9162 14.0034 15.9998 14.0001H6.41356L10.7073 18.2926C10.895 18.4802 11.0004 18.7347 11.0004 19.0001C11.0004 19.2654 10.895 19.5199 10.7073 19.7076C10.5197 19.8952 10.2652 20.0006 9.99981 20.0006C9.73445 20.0006 9.47995 19.8952 9.29231 19.7076L3.29231 13.7076C3.19933 13.6147 3.12557 13.5044 3.07525 13.383C3.02493 13.2616 2.99902 13.1315 2.99902 13.0001C2.99902 12.8687 3.02493 12.7385 3.07525 12.6171C3.12557 12.4957 3.19933 12.3854 3.29231 12.2926L9.29231 6.29257C9.47995 6.10493 9.73445 5.99951 9.99981 5.99951C10.2652 5.99951 10.5197 6.10493 10.7073 6.29257C10.895 6.48021 11.0004 6.7347 11.0004 7.00007C11.0004 7.26543 10.895 7.51993 10.7073 7.70757L6.41356 12.0001H15.9998C19.4465 12.0037 22.751 13.3745 25.1882 15.8117C27.6254 18.2489 28.9962 21.5534 28.9998 25.0001Z"
+            fill="#252529"
+          />
+        </svg>
+      </button>
+
+      <div class="dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+
+      <button title="next banner" class="icon">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 32 32"
+          fill="none"
+        >
+          <path
+            d="M28.7075 13.7076L22.7075 19.7076C22.5199 19.8952 22.2654 20.0006 22 20.0006C21.7346 20.0006 21.4801 19.8952 21.2925 19.7076C21.1049 19.5199 20.9994 19.2654 20.9994 19.0001C20.9994 18.7347 21.1049 18.4802 21.2925 18.2926L25.5863 14.0001H16C13.0836 14.0034 10.2877 15.1634 8.22548 17.2255C6.1633 19.2877 5.00331 22.0837 5 25.0001C5 25.2653 4.89464 25.5196 4.70711 25.7072C4.51957 25.8947 4.26522 26.0001 4 26.0001C3.73478 26.0001 3.48043 25.8947 3.29289 25.7072C3.10536 25.5196 3 25.2653 3 25.0001C3.00364 21.5534 4.37445 18.2489 6.81163 15.8117C9.24882 13.3745 12.5533 12.0037 16 12.0001H25.5863L21.2925 7.70757C21.1996 7.61466 21.1259 7.50436 21.0756 7.38296C21.0253 7.26157 20.9994 7.13146 20.9994 7.00007C20.9994 6.86867 21.0253 6.73856 21.0756 6.61717C21.1259 6.49578 21.1996 6.38548 21.2925 6.29257C21.4801 6.10493 21.7346 5.99951 22 5.99951C22.1314 5.99951 22.2615 6.02539 22.3829 6.07567C22.5043 6.12596 22.6146 6.19966 22.7075 6.29257L28.7075 12.2926C28.8005 12.3854 28.8742 12.4957 28.9246 12.6171C28.9749 12.7385 29.0008 12.8687 29.0008 13.0001C29.0008 13.1315 28.9749 13.2616 28.9246 13.383C28.8742 13.5044 28.8005 13.6147 28.7075 13.7076Z"
+            fill="black"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>

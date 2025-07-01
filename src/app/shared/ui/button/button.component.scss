@@ -3,21 +3,13 @@
 .btn {
   @include regular-b;
 
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-
-  border: none;
-  outline: none;
-
+  text-wrap-mode: nowrap;
   border-radius: 48px;
   padding: 12px 32px;
   gap: 10px;
 
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
-
-  cursor: pointer;
   transition: all 0.3s;
 
   &.primary {

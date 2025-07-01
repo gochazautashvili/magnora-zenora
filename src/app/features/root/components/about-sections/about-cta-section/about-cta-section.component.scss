@@ -56,6 +56,7 @@ body {
               --Button-Secondary-BG,
               rgba(220, 221, 235, 0.64)
             ) inset;
+        -webkit-backdrop-filter: blur(12px);
         backdrop-filter: blur(12px);
 
         a {
@@ -81,6 +82,7 @@ body {
         background: var(--Button-Secondary-BG, rgba(220, 221, 235, 0.64));
         box-shadow: -1px -1px 0px 0px var(--BG-Secondary-Section, #dbdce0) inset,
           1px 1px 0px 0px var(--BG-Secondary-Section, #dbdce0) inset;
+        -webkit-backdrop-filter: blur(12px);
         backdrop-filter: blur(12px);
         border: none;
 

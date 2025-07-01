@@ -14,6 +14,27 @@ export const routes: Routes = [
         path: 'collections',
         loadComponent: () =>
           import('./views/collections/collections.component'),
+        children: [
+          {
+            path: '',
+            pathMatch: 'full',
+            redirectTo: 'woman',
+          },
+          {
+            path: 'man',
+            loadComponent: () =>
+              import(
+                './views/collections/man-collections/man-collections.component'
+              ),
+          },
+          {
+            path: 'woman',
+            loadComponent: () =>
+              import(
+                './views/collections/woman-collections/woman-collections.component'
+              ),
+          },
+        ],
       },
     ],
   },

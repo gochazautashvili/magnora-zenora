@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer [ngClass]="type" class="footer">
   <div class="footer__section">
     <div class="subscribe-section">
       <div class="subscribe-text">
@@ -32,29 +32,33 @@
       </div>
       <div class="info-links">
         <ul>
-          <li>Socials</li>
-          <li>Facebook</li>
-          <li>Instagram</li>
-          <li>Linked In</li>
+          <li><a href="#">Socials</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Linked In</a></li>
         </ul>
         <ul>
-          <li>Company</li>
-          <li>Products</li>
-          <li>About</li>
-          <li>Services</li>
-          <li>Contact</li>
+          <li><a href="#">Company</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
         </ul>
         <ul>
-          <li>Contact</li>
-          <li>Tel: +995 555 555 555</li>
-          <li>Email: Example&#64;gmail.com</li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="tel:+995555555555">Tel: +995 555 555 555</a></li>
+          <li>
+            <a href="mailto:Example@gmail.com">Email: Example&#64;gmail.com</a>
+          </li>
         </ul>
       </div>
     </div>
 
     <div class="copyright-section">
       <p>© All Rights Received.</p>
-      <p>Designed & Developed by <span>- Koober Coders | 2025</span></p>
+      <a href="/" target="_blank">
+        Designed & Developed by <span>- Koober Coders | 2025</span>
+      </a>
     </div>
   </div>
 
