@@ -15,6 +15,10 @@
 
     gap: var(--Spacing-L);
     max-width: 880px;
+
+    @media screen and (max-width: 670px) {
+      flex-direction: column;
+    }
   }
 
   .content {
