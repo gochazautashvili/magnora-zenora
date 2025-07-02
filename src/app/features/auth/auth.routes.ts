@@ -36,6 +36,24 @@ const routes: Routes = [
       {
         path: 'reset-password',
         loadComponent: () => import('./layout/reset-password/reset-password.component'),
+        children: [
+          {
+            path: '',
+            loadComponent: () => import('./views/reset-password-form/reset-password-form.component'),
+          },
+          {
+            path: 'verify-code',
+            loadComponent: () => import('./views/verify-code/verify-code.component'),
+          },
+          {
+            path: 'passwords',
+            loadComponent: () => import('./views/reset-password-form-passwords/reset-password-form-passwords.component'),
+          },
+          {
+            path: 'success',
+            loadComponent: () => import('./views/succsess-message/succsess-message.component'),
+          }
+        ]
       },
     ],
     
