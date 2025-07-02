@@ -1,0 +1,33 @@
+<div class="search-bar-section" [style.top.px]="topValue">
+  <div class="input-container">
+    <input 
+      type="text"
+      id="searchInput" 
+      [(ngModel)]="searchQuery"
+      name="searchQuery" 
+      placeholder="Search for a product" 
+    />
+    <button type="button" (click)="clearInput()">
+      <img src="assets/icons/close.svg" alt="Close Icon" />
+    </button>
+  </div>
+  <ng-container *ngIf="searchQuery !== ''">
+    <div class="divider"></div>
+    <div class="results-container" @fadeInOut>
+      <div class="product-card">
+        <img src="assets/images/ca42ce959afd902bec1bd16b39e6e75cabaf669b.jpg" alt="Product Image" class="product-image">
+        <div class="product-info">
+          <h4 class="product-title">Product Title</h4>
+          <p class="product-description">Product Description</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="assets/images/68e5899d73f13e5c3ceb9e6cf38daeee88bca3f5.jpg" alt="Product Image" class="product-image">
+        <div class="product-info">
+          <h4 class="product-title">Product Title</h4>
+          <p class="product-description">Product Description</p>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>
