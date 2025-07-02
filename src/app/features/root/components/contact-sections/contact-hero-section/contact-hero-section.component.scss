@@ -69,7 +69,7 @@
     min-height: 800px;
 
     .section-title {
-      width: 1000px;
+      width: 800px;
       font-size: 96px;
       line-height: 100px;
       letter-spacing: -1.92px;
@@ -96,7 +96,7 @@
 
   @media (max-width: 1439px) and (min-width: 1200px) {
     .section-title {
-      width: 800px;
+      width: 600px;
       font-size: 76px;
       line-height: 80px;
       letter-spacing: -1.52px;
@@ -123,7 +123,7 @@
     min-height: 600px;
 
     .section-title {
-      width: 700px;
+      width: 500px;
       font-size: 68px;
       line-height: 72px;
       letter-spacing: -1.36px;
@@ -156,10 +156,11 @@
 
     .section-title {
       width: 100%;
-      max-width: 600px;
+      max-width: 400px;
       font-size: 56px;
       line-height: 60px;
       letter-spacing: -1.12px;
+      margin-bottom: 48px;
     }
 
     .contact-info {
@@ -196,6 +197,7 @@
 
     .section-title {
       width: 100%;
+      max-width: 350px;
       font-size: 44px;
       line-height: 48px;
       letter-spacing: -0.88px;
@@ -211,6 +213,10 @@
         max-width: none;
         justify-content: center;
         gap: 12px;
+
+        &:nth-child(3) {
+          width: 400px;
+        }
 
         .info-container {
           gap: 6px;
@@ -235,6 +241,7 @@
 
     .section-title {
       width: 100%;
+      max-width: 300px;
       font-size: 36px;
       line-height: 40px;
       letter-spacing: -0.72px;
