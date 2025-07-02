@@ -9,16 +9,23 @@
 
 .content {
   @include container;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 48px;
 }
 
 .top {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin-bottom: var(--Spacing-2XL);
   justify-self: center;
+   column-gap: 48px;
 
   .left {
     max-width: 36.9dvw;
+
+    .mobile {
+      display: none;
+    }
   }
 
   .right {
@@ -30,6 +37,30 @@
       max-width: 300px;
       max-height: 208px;
     }
+  }
+
+  @media (max-width: 850px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+
+    .left {
+      max-width: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr;
+      gap: 48px;
+
+      .mobile {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 50px;
+      }
+    }
+
+    .right {
+      display: none;
+    }
+
   }
 }
 
@@ -47,6 +78,12 @@
       max-width: 300px;
       max-height: 360px;
     }
+
+    @media (max-width: 850px) {
+      &.img {
+        width: 100%;
+      }
+    }
   }
 
   .right {
@@ -58,12 +95,39 @@
       transform: translateY(-48px);
     }
 
+    @media (max-width:850px) {
+      .text_box:first-child {
+        justify-self: end;
+      }
+
+      .mobile {
+        display: none;
+
+      }
+
+      grid-template-columns: 1fr;
+    }
+
     .text_box:last-child {
       align-self: flex-end;
     }
 
     .text_box {
-      max-width: 28dvw;
+      max-width: 29dvw;
+      margin-top: 40px;
+    }
+
+  }
+
+  @media (max-width: 850px) {
+    .left {
+      grid-column: 2;
+      grid-row: 1;
+    }
+
+    .right {
+      grid-column: 1;
+      grid-row: 1;
     }
   }
 }
@@ -77,6 +141,7 @@
 .text {
   @include sub-header-s;
   color: var(--Typography-300, #4b4b52);
+  text-align: left !important;
 }
 
 // Dynamic styles
@@ -110,4 +175,55 @@
     height: 100%;
     object-fit: cover;
   }
+}
+
+
+@media (max-width: 851px) {
+  .title {
+    font-size: 20px;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 635px) {
+  .title {
+    font-size: 20px;
+    margin-top: 40px;
+  }
+
+  .text {
+    font-size: 15px
+  }
+
+  // .right {
+  //   .text_box {
+  //     @include sub-header-s;
+  //     max-width: 700px !important;
+  //   }
+
+  // }
+}
+
+@media (max-width: 583px) {
+  .title {
+    font-size: 15px;
+  }
+
+  .text {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 500px) {
+  .title {}
+
+  .top {
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: var(--Spacing-2XL);
+    justify-self: center;
+    margin-top: -50px;
+  }
+
+
+
 }

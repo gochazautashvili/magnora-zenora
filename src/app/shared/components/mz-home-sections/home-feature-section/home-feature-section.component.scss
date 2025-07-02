@@ -43,18 +43,14 @@
   .second {
     display: grid;
     justify-self: start;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr auto;
 
     margin-bottom: var(--Spacing-L);
-    column-gap: var(--Spacing-L);
+    gap: var(--Spacing-L);
 
     .left {
-      align-self: flex-start;
-    }
-
-    .right {
       display: grid;
-      column-gap: var(--Spacing-L);
+      gap: var(--Spacing-L);
       margin-top: var(--Spacing-XL);
       grid-template-columns: auto 1fr;
 
@@ -62,6 +58,10 @@
         margin-top: var(--Spacing-L);
         max-width: 21vw;
       }
+    }
+
+    .right {
+      align-self: flex-start;
     }
 
     .img {
