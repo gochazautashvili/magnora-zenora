@@ -1,0 +1,33 @@
+@use "typography" as *;
+@use "layout" as *;
+
+.container {
+    max-width: 768px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.input-wrapper {
+    display: flex;
+    gap: 2rem;
+}
+.button {
+    margin-top: 3rem;
+}
+.container {
+    padding: 48px;
+    border-radius: 48px;
+    background-color: var(--BG-Section);
+
+    
+    .input {
+        p {
+            color: red; 
+            
+        }
+    }
+    
+    
+
+}
