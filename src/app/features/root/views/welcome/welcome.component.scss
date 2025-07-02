@@ -133,7 +133,7 @@
   gap: 24px;
 
   h1 {
-    @include header-m;
+    @include header-l;
     transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
   }
 
@@ -155,25 +155,11 @@
   }
 }
 
-//
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px) scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-@keyframes fadeInScale {
-  from {
-    opacity: 0;
-    transform: scale(0.8) rotate(-90deg);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1) rotate(0deg);
-  }
+.welcome_banner {
+  position: absolute;
+  z-index: 9999;
+  inset: -40px;
+  width: 110%;
+  height: 110vh;
+  transform: scale(2);
 }

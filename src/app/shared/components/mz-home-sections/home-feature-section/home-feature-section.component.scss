@@ -2,99 +2,162 @@
 @use "layout" as *;
 
 .features {
-  padding: 144px 0;
+  padding-block: var(--Spacing-3XL);
   background: var(--BG-Background, #eff0f5);
 }
 
-// Grid
 .content {
-  @include grid-container;
+  @include container;
+  display: grid;
+
+  .first {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    margin-bottom: var(--Spacing-XL);
+    column-gap: var(--Spacing-L);
+    justify-self: end;
+    max-width: 1200px;
+
+    .left {
+      margin-top: var(--Spacing-L);
+    }
+
+    .right {
+      display: grid;
+      column-gap: var(--Spacing-L);
+      grid-template-columns: repeat(2, minmax(200px, auto));
+
+      .img {
+        max-width: 20dvw;
+        max-height: 360px;
+        aspect-ratio: 300 / 360;
+      }
+
+      .text {
+        margin-bottom: var(--Spacing-L);
+        align-self: flex-end;
+      }
+    }
+  }
+
+  .second {
+    display: grid;
+    justify-self: start;
+    grid-template-columns: auto 1fr;
+
+    margin-bottom: var(--Spacing-L);
+    column-gap: var(--Spacing-L);
+
+    .left {
+      align-self: flex-start;
+    }
+
+    .right {
+      display: grid;
+      column-gap: var(--Spacing-L);
+      margin-top: var(--Spacing-XL);
+      grid-template-columns: auto 1fr;
+
+      .text {
+        margin-top: var(--Spacing-L);
+        max-width: 21vw;
+      }
+    }
+
+    .img {
+      width: 29dvw;
+      max-width: 416px;
+      max-height: 288px;
+    }
+  }
+
+  .third {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    margin-bottom: var(--Spacing-XL);
+    column-gap: var(--Spacing-L);
+
+    .left {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: var(--Spacing-L);
+
+      .img:first-child {
+        justify-self: end;
+        max-width: 184px;
+        max-height: 220px;
+      }
+
+      .img:last-child {
+        max-width: 300px;
+        max-height: 360px;
+      }
+    }
+
+    .right {
+      max-width: 420px;
+      align-self: flex-end;
+      margin-bottom: var(--Spacing-L);
+    }
+  }
+
+  .forth {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: var(--Spacing-L);
+
+    .left {
+      width: 21dvw;
+      max-width: 300px;
+      max-height: 360px;
+      align-self: center;
+    }
+
+    .right {
+      display: grid;
+      row-gap: var(--Spacing-XL);
+
+      .top {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: var(--Spacing-L);
+
+        .text {
+          align-self: flex-end;
+          margin-bottom: var(--Spacing-L);
+        }
+
+        .img {
+          width: 29dvw;
+          max-width: 416px;
+          max-height: 288px;
+        }
+      }
+
+      .cta {
+        display: flex;
+        flex-direction: column;
+
+        .text {
+          @include regular-r;
+
+          margin-top: 4px;
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
 }
 
-//
-.box_1 {
-  margin-top: 48px;
-}
+.img {
+  border-radius: var(--Border-Radius);
+  overflow: hidden;
 
-.box_2 {
-  grid-column: 6 / 9;
-}
-
-.box_3 {
-  grid-column: 9 / 12;
-  align-self: flex-end;
-  margin-bottom: 48px;
-}
-
-.box_4 {
-  grid-column: 1 / 5;
-}
-
-.box_5 {
-  grid-column: 5 / 8;
-  margin-top: 156px;
-}
-
-.box_6 {
-  grid-column: 8 / 12;
-  margin-top: 96px;
-}
-
-.box_7 {
-  grid-column: 2 / 4;
-}
-
-.box_8 {
-  grid-column: 4 / 7;
-}
-
-.box_9 {
-  grid-column: 7 / 11;
-  align-self: flex-end;
-  margin-bottom: 48px;
-}
-
-.box_10 {
-  grid-column: 2 / 5;
-  position: relative;
-  top: 96px;
-}
-
-.box_11 {
-  grid-column: 6 / 10;
-}
-
-.box_12 {
-  grid-column: 10 / 13;
-  position: relative;
-  top: 156px;
-}
-
-.box_13 {
-  grid-column: 6 / 11;
-}
-
-//
-.separator {
-  grid-column: 1 / 13;
-  margin-top: 96px;
-}
-
-.separator_2 {
-  grid-column: 1 / 13;
-  margin-top: 48px;
-}
-
-// CTA
-.cta {
-  display: flex;
-  flex-direction: column;
-
-  .text {
-    @include regular-r;
-
-    margin-top: 4px;
-    margin-bottom: 16px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
@@ -108,10 +171,6 @@
 }
 
 .features.magnora {
-  .box_1 {
-    grid-column: 3 / 6;
-  }
-
   .title {
     color: var(--Typography-100, #252529);
   }
@@ -122,10 +181,6 @@
 }
 
 .features.zenora {
-  .box_1 {
-    grid-column: 2 / 6;
-  }
-
   .title {
     color: var(--Typography-Purple-100, #3c33b8);
   }

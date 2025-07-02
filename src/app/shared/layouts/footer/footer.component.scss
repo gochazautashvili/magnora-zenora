@@ -8,19 +8,31 @@
   padding-top: 50px;
 
   position: relative;
+  min-height: 850px;
+  width: 100%;
 
   .bg-images {
+    position: absolute;
+    bottom: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-
     width: 100%;
-    height: 100%;
+    gap: 20px;
 
     .logo {
       width: 496px;
       height: 496px;
+
+      @media (max-width: 900px) {
+        width: 298px;
+        height: 298px;
+      }
+
+      @media (max-width: 600px) {
+        width: 192px;
+        height: 192px;
+      }
     }
 
     .logo_title {
@@ -57,12 +69,15 @@
 
       h4 {
         @include sub-header-s;
-        color: var(--Typography-100);
       }
 
       p {
         @include regular-r;
-        color: var(--Typography-300);
+      }
+
+      @media (max-width: 900px) {
+        width: 100%;
+        align-items: flex-start;
       }
     }
 
@@ -71,16 +86,38 @@
       align-items: center;
       gap: 16px;
 
+      @media (max-width: 900px) {
+        width: 100%;
+      }
+
       app-input {
         width: 294px;
+
+        @media (max-width: 900px) {
+          width: 100%;
+        }
       }
+
+      @media (max-width: 900px) {
+        flex-direction: column;
+      }
+
+      app-button {
+        @media (max-width: 900px) {
+          width: 100%;
+        }
+      }
+    }
+
+    @media (max-width: 900px) {
+      flex-direction: column;
+      padding: 20px 0;
     }
   }
 
   .info-section {
     display: flex;
     justify-content: space-between;
-    padding-inline: 48px;
 
     .info-name {
       display: flex;
@@ -89,14 +126,13 @@
 
       h5 {
         @include sub-header-s;
-        color: var(--Typography-100);
       }
+
       p {
         font-size: 14px;
         line-height: 16px;
         letter-spacing: 4%;
         font-weight: 400;
-        color: var(--Typography-300);
       }
     }
 
@@ -117,23 +153,139 @@
             @include regular-b;
 
             margin-bottom: 8px;
-            color: var(--Typography-100, #252529);
           }
         }
       }
+
+      @media (max-width: 900px) {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 48px 96px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      width: 100%;
+      flex-direction: column;
+      gap: 48px;
     }
   }
 
   .copyright-section {
     display: flex;
     justify-content: space-between;
-    padding: 48px 48px 98px 48px;
+    padding-top: var(--Spacing-L);
+
     p {
       @include small-r;
-      color: var(--Typography-400);
     }
-    span {
-      color: black;
+  }
+}
+
+.footer.magnora,
+.footer.root {
+  .subscribe-text {
+    h4 {
+      color: var(--Typography-100);
     }
+
+    p {
+      color: var(--Typography-300);
+    }
+  }
+
+  .info-name {
+    h5 {
+      color: var(--Typography-100);
+    }
+
+    p {
+      color: var(--Typography-300);
+    }
+  }
+
+  .info-links {
+    ul {
+      li {
+        a {
+          color: var(--Typography-300);
+        }
+
+        &:first-child a {
+          color: var(--Typography-100, #252529);
+        }
+      }
+    }
+  }
+
+  .copyright-section {
+    p {
+      color: var(--Typography-100, #252529);
+    }
+
+    a {
+      color: var(--Typography-400, #5b5a66);
+
+      span {
+        color: var(--Typography-100, #252529);
+      }
+    }
+  }
+}
+
+.footer.zenora {
+  .subscribe-text {
+    h4 {
+      color: var(--Typography-Purple-100);
+    }
+
+    p {
+      color: var(--Typography-Purple-200);
+    }
+  }
+
+  .info-name {
+    h5 {
+      color: var(--Typography-Purple-100);
+    }
+
+    p {
+      color: var(--Typography-Purple-200);
+    }
+  }
+
+  .info-links {
+    ul {
+      li {
+        a {
+          color: var(--Typography-Purple-200);
+        }
+
+        &:first-child a {
+          color: var(--Typography-Purple-100);
+        }
+      }
+    }
+  }
+
+  .copyright-section {
+    p {
+      color: var(--Typography-Purple-100);
+    }
+
+    a {
+      color: var(--Typography-400, #5b5a66);
+
+      span {
+        color: var(--Typography-Purple-100, #3c33b8);
+      }
+    }
+  }
+
+  @media (max-width: 900px) {
+    gap: 36px;
   }
 }

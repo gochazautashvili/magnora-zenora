@@ -1,0 +1,297 @@
+.contact-form-section {
+  background-color: #eff0f5;
+  padding: clamp(96px, 10vw, 144px) clamp(16px, 5vw, 48px) clamp(72px, 8vw, 96px);
+  width: 100%;
+  min-height: 532px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  .section-title {
+    width: 416px;
+    color: var(--Typography-100, #252529);
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 44px;
+    letter-spacing: 3.2px;
+  }
+
+  .contact-form {
+    display: grid;
+    grid-template-columns: 416px 416px;
+    justify-content: center;
+    gap: 48px;
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      border: none;
+
+      label {
+        width: 100%;
+        color: var(--Typography-300, #4b4b52);
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 16px;
+        letter-spacing: 0.56px;
+      }
+
+      input {
+        width: 100%;
+        padding: 12px 24px;
+        border: none;
+        outline: none;
+        border-radius: 24px;
+        background: var(--BG-Secondary-Section, #dbdce0);
+        box-shadow: -1px -1px 0px var(--BG-Dissabled, #c7c8cc) inset,
+          1px 1px 0px var(--BG-Dissabled, #c7c8cc) inset,
+          0px 0px 12px -2px var(--BG-Dissabled, #c7c8cc) inset;
+        color: var(--Typography-100, #252529);
+        font-family: Outfit;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0.96px;
+
+        &::placeholder {
+          color: var(--Typography-300, #4b4b52);
+        }
+      }
+
+      &:nth-child(5) {
+        grid-column: 1;
+        width: 643px;
+      }
+
+      &:nth-child(6) {
+        grid-column: 2;
+        align-self: end;
+        justify-self: end;
+      }
+
+      button {
+        border: none;
+        color: var(--Typography-White-100, #eff0f5);
+        font-family: inherit;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 0.32px;
+        display: flex;
+        padding: 12px 32px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 48px;
+        background: var(--Button-Primary-BG, rgba(60, 51, 184, 0.72));
+        box-shadow: -1px -1px 0px var(--BG-Dissabled, #c7c8cc) inset,
+          1px 1px 0px var(--BG-Dissabled, #c7c8cc) inset,
+          0px 0px 32px -8px var(
+              --Button-Secondary-BG,
+              rgba(220, 221, 235, 0.64)
+            ) inset;
+        backdrop-filter: blur(12px);
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background: var(--Button-Primary-BG, rgba(60, 51, 184, 0.85));
+          transform: translateY(-1px);
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1439px) and (min-width: 1024px) {
+    .contact-form {
+      grid-template-columns: 380px 380px;
+      gap: 40px;
+
+      .form-group {
+        &:nth-child(5) {
+          width: 580px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1199px) and (min-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+
+    .section-title {
+      width: 100%;
+      text-align: center;
+      font-size: 36px;
+      line-height: 42px;
+      letter-spacing: 2.8px;
+    }
+
+    .contact-form {
+      width: 100%;
+      max-width: 800px;
+    }
+  }
+
+  @media (max-width: 1023px) and (min-width: 769px) {
+    padding: 80px 32px 64px;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+
+    .section-title {
+      width: 100%;
+      text-align: center;
+      font-size: 36px;
+      line-height: 42px;
+      letter-spacing: 2.8px;
+    }
+
+    .contact-form {
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      width: 100%;
+      max-width: 700px;
+
+      .form-group {
+        &:nth-child(5) {
+          grid-column: 1 / -1;
+          width: 100%;
+        }
+
+        &:nth-child(6) {
+          grid-column: 1 / -1;
+          justify-self: center;
+          align-self: stretch;
+
+          button {
+            width: 200px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) and (min-width: 481px) {
+    padding: 72px 24px 56px;
+    flex-direction: column;
+    align-items: stretch;
+
+    .section-title {
+      width: 100%;
+      font-size: 32px;
+      line-height: 38px;
+      letter-spacing: 2.4px;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .contact-form {
+      grid-template-columns: 1fr;
+      gap: 24px;
+
+      .form-group {
+        &:nth-child(5),
+        &:nth-child(6) {
+          grid-column: 1;
+          justify-self: stretch;
+          align-self: stretch;
+          width: 100%;
+        }
+
+        button {
+          width: 100%;
+          justify-content: center;
+          padding: 14px 32px;
+        }
+
+        input {
+          padding: 14px 24px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 64px 16px 48px;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: auto;
+
+    .section-title {
+      width: 100%;
+      font-size: 28px;
+      line-height: 34px;
+      letter-spacing: 2px;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .contact-form {
+      grid-template-columns: 1fr;
+      gap: 20px;
+
+      .form-group {
+        gap: 8px;
+
+        &:nth-child(5),
+        &:nth-child(6) {
+          grid-column: 1;
+          justify-self: stretch;
+          align-self: stretch;
+          width: 100%;
+        }
+
+        label {
+          font-size: 13px;
+          line-height: 15px;
+          letter-spacing: 0.4px;
+        }
+
+        input {
+          padding: 12px 20px;
+          font-size: 15px;
+          border-radius: 20px;
+        }
+
+        button {
+          width: 100%;
+          justify-content: center;
+          padding: 12px 24px;
+          font-size: 15px;
+          border-radius: 40px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 319px) {
+    padding: 48px 12px 36px;
+
+    .section-title {
+      font-size: 24px;
+      line-height: 30px;
+      letter-spacing: 1.6px;
+    }
+
+    .contact-form {
+      gap: 16px;
+
+      .form-group {
+        gap: 6px;
+
+        input {
+          padding: 10px 16px;
+          font-size: 14px;
+        }
+
+        button {
+          padding: 10px 20px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

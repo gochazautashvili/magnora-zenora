@@ -3,21 +3,13 @@
 .btn {
   @include regular-b;
 
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-
-  border: none;
-  outline: none;
-
+  text-wrap-mode: nowrap;
   border-radius: 48px;
   padding: 12px 32px;
   gap: 10px;
 
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
-
-  cursor: pointer;
   transition: all 0.3s;
 
   &.primary {
@@ -54,4 +46,15 @@
         1px 1px 0px 0px var(--BG-Secondary-Section, #dbdce0) inset;
     }
   }
+}
+
+@media (max-width: 900px) {
+  :host {
+    display: block;
+    width: 100%;
+  }
+  
+  button {
+    width: 100%;
+  }  
 }

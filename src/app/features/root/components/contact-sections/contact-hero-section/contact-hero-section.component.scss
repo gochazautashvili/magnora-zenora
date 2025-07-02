@@ -1,0 +1,307 @@
+.contact-hero-section {
+  background: var(--BG-Section, #e5e6eb);
+  padding-block: clamp(80px, 15vw, 196px) clamp(60px, 10vw, 144px);
+  padding-inline: clamp(16px, 5vw, 48px);
+  width: 100%;
+  min-height: 680px; 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  .section-title {
+    width: 880px;
+    color: var(--Typography-100, #252529);
+    font-family: "Familjen Grotesk";
+    font-size: 84px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 88px;
+    letter-spacing: -1.68px;
+
+    span {
+      background: linear-gradient(90deg, var(--Typography-Purple-200, #6262F5) ,var(--Typography-Purple-100, #3C33B8));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+    }
+  }
+
+  .contact-info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .info-block {
+      min-width: 245px;
+      max-width: 416px;
+      min-height: 56px;
+      max-height: 68px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 24px;
+
+      .info-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+
+        p {
+          color: var(--Typography-100, #252529);
+          font-family: Outfit;
+          font-size: 20px;
+          font-weight: 500;
+          line-height: 28px;
+          letter-spacing: 1.6px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1440px) {
+    padding-block: clamp(120px, 18vw, 240px) clamp(80px, 12vw, 180px);
+    padding-inline: clamp(48px, 6vw, 80px);
+    min-height: 800px;
+
+    .section-title {
+      width: 1000px;
+      font-size: 96px;
+      line-height: 100px;
+      letter-spacing: -1.92px;
+    }
+
+    .contact-info {
+      .info-block {
+        min-width: 280px;
+        max-width: 480px;
+        gap: 32px;
+
+        .info-container {
+          gap: 16px;
+
+          p {
+            font-size: 22px;
+            line-height: 30px;
+            letter-spacing: 1.8px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1439px) and (min-width: 1200px) {
+    .section-title {
+      width: 800px;
+      font-size: 76px;
+      line-height: 80px;
+      letter-spacing: -1.52px;
+    }
+
+    .contact-info {
+      .info-block {
+        min-width: 220px;
+        max-width: 380px;
+
+        .info-container {
+          p {
+            font-size: 19px;
+            line-height: 26px;
+            letter-spacing: 1.4px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1199px) and (min-width: 1024px) {
+    padding-block: clamp(80px, 15vw, 196px) clamp(50px, 8vw, 120px) clamp(70px, 12vw, 160px) ;
+    min-height: 600px;
+
+    .section-title {
+      width: 700px;
+      font-size: 68px;
+      line-height: 72px;
+      letter-spacing: -1.36px;
+    }
+
+    .contact-info {
+      .info-block {
+        min-width: 200px;
+        max-width: 320px;
+        gap: 20px;
+
+        .info-container {
+          gap: 10px;
+
+          p {
+            font-size: 18px;
+            line-height: 24px;
+            letter-spacing: 1.2px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1023px) and (min-width: 768px) {
+    padding-block: clamp(130px, 15vw, 196px) clamp(40px, 6vw, 100px) clamp(60px, 10vw, 140px) ;
+    min-height: 520px;
+    align-items: center;
+    text-align: center;
+
+    .section-title {
+      width: 100%;
+      max-width: 600px;
+      font-size: 56px;
+      line-height: 60px;
+      letter-spacing: -1.12px;
+    }
+
+    .contact-info {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 32px;
+
+      .info-block {
+        min-width: 180px;
+        max-width: 280px;
+        flex: 1 1 calc(50% - 16px);
+        gap: 16px;
+
+        .info-container {
+          gap: 8px;
+
+          p {
+            font-size: 17px;
+            line-height: 22px;
+            letter-spacing: 1px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 767px) and (min-width: 481px) {
+    padding: clamp(130px, 15vw, 196px) clamp(30px, 5vw, 80px) clamp(50px, 8vw, 120px);
+    padding-inline: clamp(20px, 4vw, 32px);
+    min-height: 450px;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+
+    .section-title {
+      width: 100%;
+      font-size: 44px;
+      line-height: 48px;
+      letter-spacing: -0.88px;
+    }
+
+    .contact-info {
+      flex-direction: column;
+      gap: 24px;
+
+      .info-block {
+        width: 100%;
+        min-width: auto;
+        max-width: none;
+        justify-content: center;
+        gap: 12px;
+
+        .info-container {
+          gap: 6px;
+
+          p {
+            font-size: 16px;
+            line-height: 20px;
+            letter-spacing: 0.8px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding-block: clamp(130px, 6vw, 150px) clamp(24px, 4vw, 60px);
+    padding-inline: clamp(16px, 3vw, 24px);
+    min-height: 380px;
+    align-items: center;
+    text-align: center;
+    gap: 32px;
+
+    .section-title {
+      width: 100%;
+      font-size: 36px;
+      line-height: 40px;
+      letter-spacing: -0.72px;
+    }
+
+    .contact-info {
+      flex-direction: column;
+      gap: 20px;
+
+      .info-block {
+        width: 100%;
+        min-width: auto;
+        max-width: none;
+        min-height: auto;
+        max-height: none;
+        justify-content: center;
+        gap: 8px;
+
+        .info-container {
+          gap: 4px;
+
+          p {
+            font-size: 15px;
+            line-height: 18px;
+            letter-spacing: 0.6px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 319px) {
+    padding-block: clamp(130px, 5vw, 150px) clamp(20px, 3vw, 48px);
+    padding-inline: clamp(12px, 2vw, 20px);
+    min-height: 320px;
+    gap: 24px;
+
+    .section-title {
+      width: 100%;
+      font-size: 28px;
+      line-height: 32px;
+      letter-spacing: -0.56px;
+    }
+
+    .contact-info {
+      flex-direction: column;
+      gap: 16px;
+
+      .info-block {
+        width: 100%;
+        min-width: auto;
+        max-width: none;
+        min-height: auto;
+        max-height: none;
+        justify-content: center;
+        gap: 6px;
+
+        .info-container {
+          gap: 2px;
+
+          p {
+            font-size: 14px;
+            line-height: 16px;
+            letter-spacing: 0.4px;
+          }
+        }
+      }
+    }
+  }
+}

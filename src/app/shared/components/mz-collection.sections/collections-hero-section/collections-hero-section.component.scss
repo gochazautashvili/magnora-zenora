@@ -1,0 +1,135 @@
+@use "typography" as *;
+@use "layout" as *;
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+
+  padding-bottom: 32px;
+
+  width: 100%;
+  height: 100dvh;
+
+  .video {
+    position: absolute;
+    object-fit: cover;
+    z-index: -1;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+  }
+
+  .content {
+    @include container;
+
+    display: grid;
+    gap: var(--Spacing-xl);
+    grid-template-rows: repeat(4, 1fr);
+
+    height: 100%;
+
+    .top {
+      max-width: 880px;
+      grid-row: 2;
+    }
+
+    .bottom {
+      grid-row: 3;
+
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      .left {
+        max-width: 420px;
+        align-self: flex-end;
+      }
+
+      .right {
+        max-width: 420px;
+        align-self: flex-start;
+      }
+    }
+
+    .title {
+      @include header-l;
+
+      span {
+        background: linear-gradient(
+          93deg,
+          var(--Typography-Purple-100, #3c33b8) 41.88%,
+          var(--Typography-Purple-200, #6262f5) 72.96%
+        );
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
+    }
+
+    .text {
+      @include sub-header-s;
+    }
+
+    .pagination {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-self: flex-end;
+      grid-row: 4;
+      gap: 48px;
+
+      .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 8px;
+        border-radius: 24px;
+        background: var(--BG-Nav-Bar, rgba(239, 240, 245, 0.24));
+        box-shadow: -1px -1px 0px 0px var(--BG-Secondary-Section, #dbdce0) inset,
+          1px 1px 0px 0px var(--BG-Secondary-Section, #dbdce0) inset;
+        -webkit-backdrop-filter: blur(12px);
+        backdrop-filter: blur(12px);
+      }
+
+      .dots {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        .dot {
+          &:first-child {
+            background: var(--BG-Purple-Dark, #3c33b8);
+          }
+
+          width: 12px;
+          height: 12px;
+          aspect-ratio: 1/1;
+          border-radius: 8px;
+          background: var(--BG-Nav-Bar, rgba(239, 240, 245, 0.24));
+        }
+      }
+    }
+  }
+}
+
+.content.magnora {
+  .title {
+    color: var(--Typography-White-100, #eff0f5);
+  }
+
+  .text {
+    color: var(--Typography-White-100, #eff0f5);
+  }
+}
+
+.content.zenora {
+  .title {
+    color: var(--Typography-100, #252529);
+  }
+
+  .text {
+    color: var(--Typography-100, #252529);
+  }
+}

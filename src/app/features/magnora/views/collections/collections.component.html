@@ -1,0 +1,32 @@
+<app-collections-hero-section></app-collections-hero-section>
+
+<section class="collections_section">
+  <div class="tabs_container">
+    <div class="tabs">
+      <button
+        routerLinkActive="active"
+        routerLink="woman"
+        class="button"
+        type="button"
+      >
+        Women
+      </button>
+      <button
+        routerLinkActive="active"
+        routerLink="man"
+        class="button"
+        type="button"
+      >
+        Man
+      </button>
+    </div>
+  </div>
+
+  <section class="tab_content">
+    <router-outlet></router-outlet>
+  </section>
+</section>
+
+<app-home-service-section></app-home-service-section>
+
+<app-collections-cta-section></app-collections-cta-section>

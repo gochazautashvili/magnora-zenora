@@ -1,12 +1,9 @@
 @mixin container {
   width: 100%;
   max-width: 1440px;
-  padding: 0 48px;
-  margin: 0 auto;
 
-  @media screen and (max-width: 900px) {
-    padding: 0 24px;
-  }
+  padding-inline: clamp(1.5rem, 5vw, 3rem); // 16px–48px
+  margin-inline: auto;
 }
 
 @mixin grid_container {

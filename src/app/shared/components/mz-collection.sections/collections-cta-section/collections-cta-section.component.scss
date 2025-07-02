@@ -1,0 +1,47 @@
+@use "typography" as *;
+@use "layout" as *;
+
+.cta_section {
+  @include container;
+
+  display: flex;
+  justify-content: center;
+
+  padding-block: var(--Spacing-3XL);
+
+  .cta {
+    display: flex;
+    align-items: center;
+
+    gap: var(--Spacing-L);
+    max-width: 880px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    h1 {
+      @include sub-header-l;
+    }
+
+    p {
+      @include regular-r;
+    }
+  }
+}
+
+.cta_section.magnora {
+  h1,
+  p {
+    color: var(--Typography-100);
+  }
+}
+
+.cta_section.zenora {
+  h1,
+  p {
+    color: var(--Typography-Purple-100);
+  }
+}
