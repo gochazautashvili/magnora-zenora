@@ -1,298 +1,300 @@
-<div [ngClass]="type" class="collections_section">
-  <div class="first">
-    <h1 class="title">
-      @if(type === "magnora") {
-      {{ "MAGNORA.COLLECTIONS.SUB.TITLE" | translate }}
-      } @else {
-      {{ "ZENORA.COLLECTIONS.SUB.TITLE" | translate }}
-      }
-    </h1>
-
-    <div class="texts">
-      <p class="left text">
-        @if(type === "magnora") {
-        {{ "MAGNORA.COLLECTIONS.SUB.TEXT_1" | translate }}
-        } @else {
-        {{ "ZENORA.COLLECTIONS.SUB.TEXT_1" | translate }}
-        }
-      </p>
-      <p class="right text">
-        @if(type === "magnora") {
-        {{ "MAGNORA.COLLECTIONS.SUB.TEXT_2" | translate }}
-        } @else {
-        {{ "ZENORA.COLLECTIONS.SUB.TEXT_2" | translate }}
-        }
-      </p>
-    </div>
-  </div>
-
-  <div class="box_1 left">
-    <div class="content">
+<div [ngClass]="type" class="section">
+  <div class="collections_section">
+    <div class="first">
       <h1 class="title">
         @if(type === "magnora") {
-        {{
-          genre === "man"
-            ? ("MAGNORA.COLLECTIONS.SUB.BOX_1.MAN.TITLE" | translate)
-            : ("MAGNORA.COLLECTIONS.SUB.BOX_1.WOMEN.TITLE" | translate)
-        }}
+        {{ "MAGNORA.COLLECTIONS.SUB.TITLE" | translate }}
         } @else {
-        {{
-          genre === "man"
-            ? ("ZENORA.COLLECTIONS.SUB.BOX_1.MAN.TITLE" | translate)
-            : ("ZENORA.COLLECTIONS.SUB.BOX_1.WOMEN.TITLE" | translate)
-        }}
+        {{ "ZENORA.COLLECTIONS.SUB.TITLE" | translate }}
         }
       </h1>
-      <p class="text">
-        @if(type === "magnora") {
-        {{
-          genre === "man"
-            ? ("MAGNORA.COLLECTIONS.SUB.BOX_1.MAN.TEXT" | translate)
-            : ("MAGNORA.COLLECTIONS.SUB.BOX_1.WOMEN.TEXT" | translate)
-        }}
-        } @else {
-        {{
-          genre === "man"
-            ? ("ZENORA.COLLECTIONS.SUB.BOX_1.MAN.TEXT" | translate)
-            : ("ZENORA.COLLECTIONS.SUB.BOX_1.WOMEN.TEXT" | translate)
-        }}
-        }
-      </p>
-      <app-button variant="secondary"> Explore This Power </app-button>
-    </div>
-    <div class="img_2">
-      <img
-        width="416"
-        height="290"
-        loading="lazy"
-        alt="Zenora Isis"
-        src="assets/images/magnora-feature (3).png"
-      />
-    </div>
-  </div>
 
-  <div class="box_2 right">
-    <div class="content">
-      <h1 class="title">
-        @if(type === "magnora") {
-        {{
-          genre === "man"
-            ? ("MAGNORA.COLLECTIONS.SUB.BOX_2.MAN.TITLE" | translate)
-            : ("MAGNORA.COLLECTIONS.SUB.BOX_2.WOMEN.TITLE" | translate)
-        }}
-        } @else {
-        {{
-          genre === "man"
-            ? ("ZENORA.COLLECTIONS.SUB.BOX_2.MAN.TITLE" | translate)
-            : ("ZENORA.COLLECTIONS.SUB.BOX_2.WOMEN.TITLE" | translate)
-        }}
-        }
-      </h1>
-      <p class="text">
-        @if(type === "magnora") {
-        {{
-          genre === "man"
-            ? ("MAGNORA.COLLECTIONS.SUB.BOX_2.MAN.TEXT" | translate)
-            : ("MAGNORA.COLLECTIONS.SUB.BOX_2.WOMEN.TEXT" | translate)
-        }}
-        } @else {
-        {{
-          genre === "man"
-            ? ("ZENORA.COLLECTIONS.SUB.BOX_2.MAN.TEXT" | translate)
-            : ("ZENORA.COLLECTIONS.SUB.BOX_2.WOMEN.TEXT" | translate)
-        }}
-        }
-      </p>
-      <app-button variant="secondary">Wear the Intention</app-button>
+      <div class="texts">
+        <p class="left text">
+          @if(type === "magnora") {
+          {{ "MAGNORA.COLLECTIONS.SUB.TEXT_1" | translate }}
+          } @else {
+          {{ "ZENORA.COLLECTIONS.SUB.TEXT_1" | translate }}
+          }
+        </p>
+        <p class="right text">
+          @if(type === "magnora") {
+          {{ "MAGNORA.COLLECTIONS.SUB.TEXT_2" | translate }}
+          } @else {
+          {{ "ZENORA.COLLECTIONS.SUB.TEXT_2" | translate }}
+          }
+        </p>
+      </div>
     </div>
-    <div class="img_1">
-      <img
-        width="300"
-        height="360"
-        loading="lazy"
-        alt="Zenora Isis"
-        src="assets/images/magnora-feature (1).png"
-      />
-    </div>
-  </div>
 
-  <div class="box_3 left">
-    <div class="content">
-      <h1 class="title">
-        @if(type === "magnora") {
-        {{
-          genre === "man"
-            ? ("MAGNORA.COLLECTIONS.SUB.BOX_3.MAN.TITLE" | translate)
-            : ("MAGNORA.COLLECTIONS.SUB.BOX_3.WOMEN.TITLE" | translate)
-        }}
-        } @else {
-        {{
-          genre === "man"
-            ? ("ZENORA.COLLECTIONS.SUB.BOX_3.MAN.TITLE" | translate)
-            : ("ZENORA.COLLECTIONS.SUB.BOX_3.WOMEN.TITLE" | translate)
-        }}
-        }
-      </h1>
-      <p class="text">
-        @if(type === "magnora") {
-        {{
-          genre === "man"
-            ? ("MAGNORA.COLLECTIONS.SUB.BOX_3.MAN.TEXT" | translate)
-            : ("MAGNORA.COLLECTIONS.SUB.BOX_3.WOMEN.TEXT" | translate)
-        }}
-        } @else {
-        {{
-          genre === "man"
-            ? ("ZENORA.COLLECTIONS.SUB.BOX_3.MAN.TEXT" | translate)
-            : ("ZENORA.COLLECTIONS.SUB.BOX_3.WOMEN.TEXT" | translate)
-        }}
-        }
-      </p>
-      <app-button variant="secondary">Choose This Path</app-button>
+    <div class="box_1 left">
+      <div class="content">
+        <h1 class="title">
+          @if(type === "magnora") {
+          {{
+            genre === "man"
+              ? ("MAGNORA.COLLECTIONS.SUB.BOX_1.MAN.TITLE" | translate)
+              : ("MAGNORA.COLLECTIONS.SUB.BOX_1.WOMEN.TITLE" | translate)
+          }}
+          } @else {
+          {{
+            genre === "man"
+              ? ("ZENORA.COLLECTIONS.SUB.BOX_1.MAN.TITLE" | translate)
+              : ("ZENORA.COLLECTIONS.SUB.BOX_1.WOMEN.TITLE" | translate)
+          }}
+          }
+        </h1>
+        <p class="text">
+          @if(type === "magnora") {
+          {{
+            genre === "man"
+              ? ("MAGNORA.COLLECTIONS.SUB.BOX_1.MAN.TEXT" | translate)
+              : ("MAGNORA.COLLECTIONS.SUB.BOX_1.WOMEN.TEXT" | translate)
+          }}
+          } @else {
+          {{
+            genre === "man"
+              ? ("ZENORA.COLLECTIONS.SUB.BOX_1.MAN.TEXT" | translate)
+              : ("ZENORA.COLLECTIONS.SUB.BOX_1.WOMEN.TEXT" | translate)
+          }}
+          }
+        </p>
+        <app-button variant="secondary"> Explore This Power </app-button>
+      </div>
+      <div class="img_2">
+        <img
+          width="416"
+          height="290"
+          loading="lazy"
+          alt="Zenora Isis"
+          src="assets/images/magnora-feature (3).png"
+        />
+      </div>
     </div>
-    <div class="img_1">
-      <img
-        width="300"
-        height="360"
-        loading="lazy"
-        alt="Zenora Isis"
-        src="assets/images/magnora-feature (1).png"
-      />
-    </div>
-  </div>
 
-  <div class="box_4 right">
-    <div class="content">
-      <h1 class="title">
-        @if(type === "magnora") {
-        {{
-          genre === "man"
-            ? ("MAGNORA.COLLECTIONS.SUB.BOX_4.MAN.TITLE" | translate)
-            : ("MAGNORA.COLLECTIONS.SUB.BOX_4.WOMEN.TITLE" | translate)
-        }}
-        } @else {
-        {{
-          genre === "man"
-            ? ("ZENORA.COLLECTIONS.SUB.BOX_4.MAN.TITLE" | translate)
-            : ("ZENORA.COLLECTIONS.SUB.BOX_4.WOMEN.TITLE" | translate)
-        }}
-        }
-      </h1>
-      <p class="text">
-        @if(type === "magnora") {
-        {{
-          genre === "man"
-            ? ("MAGNORA.COLLECTIONS.SUB.BOX_4.MAN.TEXT" | translate)
-            : ("MAGNORA.COLLECTIONS.SUB.BOX_4.WOMEN.TEXT" | translate)
-        }}
-        } @else {
-        {{
-          genre === "man"
-            ? ("ZENORA.COLLECTIONS.SUB.BOX_4.MAN.TEXT" | translate)
-            : ("ZENORA.COLLECTIONS.SUB.BOX_4.WOMEN.TEXT" | translate)
-        }}
-        }
-      </p>
-      <app-button variant="secondary">Select This Symbol</app-button>
+    <div class="box_2 right">
+      <div class="content">
+        <h1 class="title">
+          @if(type === "magnora") {
+          {{
+            genre === "man"
+              ? ("MAGNORA.COLLECTIONS.SUB.BOX_2.MAN.TITLE" | translate)
+              : ("MAGNORA.COLLECTIONS.SUB.BOX_2.WOMEN.TITLE" | translate)
+          }}
+          } @else {
+          {{
+            genre === "man"
+              ? ("ZENORA.COLLECTIONS.SUB.BOX_2.MAN.TITLE" | translate)
+              : ("ZENORA.COLLECTIONS.SUB.BOX_2.WOMEN.TITLE" | translate)
+          }}
+          }
+        </h1>
+        <p class="text">
+          @if(type === "magnora") {
+          {{
+            genre === "man"
+              ? ("MAGNORA.COLLECTIONS.SUB.BOX_2.MAN.TEXT" | translate)
+              : ("MAGNORA.COLLECTIONS.SUB.BOX_2.WOMEN.TEXT" | translate)
+          }}
+          } @else {
+          {{
+            genre === "man"
+              ? ("ZENORA.COLLECTIONS.SUB.BOX_2.MAN.TEXT" | translate)
+              : ("ZENORA.COLLECTIONS.SUB.BOX_2.WOMEN.TEXT" | translate)
+          }}
+          }
+        </p>
+        <app-button variant="secondary">Wear the Intention</app-button>
+      </div>
+      <div class="img_1">
+        <img
+          width="300"
+          height="360"
+          loading="lazy"
+          alt="Zenora Isis"
+          src="assets/images/magnora-feature (1).png"
+        />
+      </div>
     </div>
-    <div class="img_2">
-      <img
-        width="416"
-        height="290"
-        loading="lazy"
-        alt="Zenora Isis"
-        src="assets/images/magnora-feature (3).png"
-      />
-    </div>
-  </div>
 
-  <div class="box_5 left">
-    <div class="content">
-      <h1 class="title">
-        @if(type === "magnora") {
-        {{
-          genre === "man"
-            ? ("MAGNORA.COLLECTIONS.SUB.BOX_5.MAN.TITLE" | translate)
-            : ("MAGNORA.COLLECTIONS.SUB.BOX_5.WOMEN.TITLE" | translate)
-        }}
-        } @else {
-        {{
-          genre === "man"
-            ? ("ZENORA.COLLECTIONS.SUB.BOX_5.MAN.TITLE" | translate)
-            : ("ZENORA.COLLECTIONS.SUB.BOX_5.WOMEN.TITLE" | translate)
-        }}
-        }
-      </h1>
-      <p class="text">
-        @if(type === "magnora") {
-        {{
-          genre === "man"
-            ? ("MAGNORA.COLLECTIONS.SUB.BOX_5.MAN.TEXT" | translate)
-            : ("MAGNORA.COLLECTIONS.SUB.BOX_5.WOMEN.TEXT" | translate)
-        }}
-        } @else {
-        {{
-          genre === "man"
-            ? ("ZENORA.COLLECTIONS.SUB.BOX_5.MAN.TEXT" | translate)
-            : ("ZENORA.COLLECTIONS.SUB.BOX_5.WOMEN.TEXT" | translate)
-        }}
-        }
-      </p>
-      <app-button variant="secondary">Choose This Vibration</app-button>
+    <div class="box_3 left">
+      <div class="content">
+        <h1 class="title">
+          @if(type === "magnora") {
+          {{
+            genre === "man"
+              ? ("MAGNORA.COLLECTIONS.SUB.BOX_3.MAN.TITLE" | translate)
+              : ("MAGNORA.COLLECTIONS.SUB.BOX_3.WOMEN.TITLE" | translate)
+          }}
+          } @else {
+          {{
+            genre === "man"
+              ? ("ZENORA.COLLECTIONS.SUB.BOX_3.MAN.TITLE" | translate)
+              : ("ZENORA.COLLECTIONS.SUB.BOX_3.WOMEN.TITLE" | translate)
+          }}
+          }
+        </h1>
+        <p class="text">
+          @if(type === "magnora") {
+          {{
+            genre === "man"
+              ? ("MAGNORA.COLLECTIONS.SUB.BOX_3.MAN.TEXT" | translate)
+              : ("MAGNORA.COLLECTIONS.SUB.BOX_3.WOMEN.TEXT" | translate)
+          }}
+          } @else {
+          {{
+            genre === "man"
+              ? ("ZENORA.COLLECTIONS.SUB.BOX_3.MAN.TEXT" | translate)
+              : ("ZENORA.COLLECTIONS.SUB.BOX_3.WOMEN.TEXT" | translate)
+          }}
+          }
+        </p>
+        <app-button variant="secondary">Choose This Path</app-button>
+      </div>
+      <div class="img_1">
+        <img
+          width="300"
+          height="360"
+          loading="lazy"
+          alt="Zenora Isis"
+          src="assets/images/magnora-feature (1).png"
+        />
+      </div>
     </div>
-    <div class="img_2">
-      <img
-        width="416"
-        height="290"
-        loading="lazy"
-        alt="Zenora Isis"
-        src="assets/images/magnora-feature (3).png"
-      />
-    </div>
-  </div>
 
-  <div class="box_6 right">
-    <div class="content">
-      <h1 class="title">
-        @if(type === "magnora") {
-        {{
-          genre === "man"
-            ? ("MAGNORA.COLLECTIONS.SUB.BOX_6.MAN.TITLE" | translate)
-            : ("MAGNORA.COLLECTIONS.SUB.BOX_6.WOMEN.TITLE" | translate)
-        }}
-        } @else {
-        {{
-          genre === "man"
-            ? ("ZENORA.COLLECTIONS.SUB.BOX_6.MAN.TITLE" | translate)
-            : ("ZENORA.COLLECTIONS.SUB.BOX_6.WOMEN.TITLE" | translate)
-        }}
-        }
-      </h1>
-      <p class="text">
-        @if(type === "magnora") {
-        {{
-          genre === "man"
-            ? ("MAGNORA.COLLECTIONS.SUB.BOX_6.MAN.TEXT" | translate)
-            : ("MAGNORA.COLLECTIONS.SUB.BOX_6.WOMEN.TEXT" | translate)
-        }}
-        } @else {
-        {{
-          genre === "man"
-            ? ("ZENORA.COLLECTIONS.SUB.BOX_6.MAN.TEXT" | translate)
-            : ("ZENORA.COLLECTIONS.SUB.BOX_6.WOMEN.TEXT" | translate)
-        }}
-        }
-      </p>
-      <app-button variant="secondary">Uncover the Meaning</app-button>
+    <div class="box_4 right">
+      <div class="content">
+        <h1 class="title">
+          @if(type === "magnora") {
+          {{
+            genre === "man"
+              ? ("MAGNORA.COLLECTIONS.SUB.BOX_4.MAN.TITLE" | translate)
+              : ("MAGNORA.COLLECTIONS.SUB.BOX_4.WOMEN.TITLE" | translate)
+          }}
+          } @else {
+          {{
+            genre === "man"
+              ? ("ZENORA.COLLECTIONS.SUB.BOX_4.MAN.TITLE" | translate)
+              : ("ZENORA.COLLECTIONS.SUB.BOX_4.WOMEN.TITLE" | translate)
+          }}
+          }
+        </h1>
+        <p class="text">
+          @if(type === "magnora") {
+          {{
+            genre === "man"
+              ? ("MAGNORA.COLLECTIONS.SUB.BOX_4.MAN.TEXT" | translate)
+              : ("MAGNORA.COLLECTIONS.SUB.BOX_4.WOMEN.TEXT" | translate)
+          }}
+          } @else {
+          {{
+            genre === "man"
+              ? ("ZENORA.COLLECTIONS.SUB.BOX_4.MAN.TEXT" | translate)
+              : ("ZENORA.COLLECTIONS.SUB.BOX_4.WOMEN.TEXT" | translate)
+          }}
+          }
+        </p>
+        <app-button variant="secondary">Select This Symbol</app-button>
+      </div>
+      <div class="img_2">
+        <img
+          width="416"
+          height="290"
+          loading="lazy"
+          alt="Zenora Isis"
+          src="assets/images/magnora-feature (3).png"
+        />
+      </div>
     </div>
-    <div class="img_1">
-      <img
-        width="300"
-        height="360"
-        loading="lazy"
-        alt="Zenora Isis"
-        src="assets/images/magnora-feature (1).png"
-      />
+
+    <div class="box_5 left">
+      <div class="content">
+        <h1 class="title">
+          @if(type === "magnora") {
+          {{
+            genre === "man"
+              ? ("MAGNORA.COLLECTIONS.SUB.BOX_5.MAN.TITLE" | translate)
+              : ("MAGNORA.COLLECTIONS.SUB.BOX_5.WOMEN.TITLE" | translate)
+          }}
+          } @else {
+          {{
+            genre === "man"
+              ? ("ZENORA.COLLECTIONS.SUB.BOX_5.MAN.TITLE" | translate)
+              : ("ZENORA.COLLECTIONS.SUB.BOX_5.WOMEN.TITLE" | translate)
+          }}
+          }
+        </h1>
+        <p class="text">
+          @if(type === "magnora") {
+          {{
+            genre === "man"
+              ? ("MAGNORA.COLLECTIONS.SUB.BOX_5.MAN.TEXT" | translate)
+              : ("MAGNORA.COLLECTIONS.SUB.BOX_5.WOMEN.TEXT" | translate)
+          }}
+          } @else {
+          {{
+            genre === "man"
+              ? ("ZENORA.COLLECTIONS.SUB.BOX_5.MAN.TEXT" | translate)
+              : ("ZENORA.COLLECTIONS.SUB.BOX_5.WOMEN.TEXT" | translate)
+          }}
+          }
+        </p>
+        <app-button variant="secondary">Choose This Vibration</app-button>
+      </div>
+      <div class="img_2">
+        <img
+          width="416"
+          height="290"
+          loading="lazy"
+          alt="Zenora Isis"
+          src="assets/images/magnora-feature (3).png"
+        />
+      </div>
+    </div>
+
+    <div class="box_6 right">
+      <div class="content">
+        <h1 class="title">
+          @if(type === "magnora") {
+          {{
+            genre === "man"
+              ? ("MAGNORA.COLLECTIONS.SUB.BOX_6.MAN.TITLE" | translate)
+              : ("MAGNORA.COLLECTIONS.SUB.BOX_6.WOMEN.TITLE" | translate)
+          }}
+          } @else {
+          {{
+            genre === "man"
+              ? ("ZENORA.COLLECTIONS.SUB.BOX_6.MAN.TITLE" | translate)
+              : ("ZENORA.COLLECTIONS.SUB.BOX_6.WOMEN.TITLE" | translate)
+          }}
+          }
+        </h1>
+        <p class="text">
+          @if(type === "magnora") {
+          {{
+            genre === "man"
+              ? ("MAGNORA.COLLECTIONS.SUB.BOX_6.MAN.TEXT" | translate)
+              : ("MAGNORA.COLLECTIONS.SUB.BOX_6.WOMEN.TEXT" | translate)
+          }}
+          } @else {
+          {{
+            genre === "man"
+              ? ("ZENORA.COLLECTIONS.SUB.BOX_6.MAN.TEXT" | translate)
+              : ("ZENORA.COLLECTIONS.SUB.BOX_6.WOMEN.TEXT" | translate)
+          }}
+          }
+        </p>
+        <app-button variant="secondary">Uncover the Meaning</app-button>
+      </div>
+      <div class="img_1">
+        <img
+          width="300"
+          height="360"
+          loading="lazy"
+          alt="Zenora Isis"
+          src="assets/images/magnora-feature (1).png"
+        />
+      </div>
     </div>
   </div>
 </div>
