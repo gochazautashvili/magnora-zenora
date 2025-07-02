@@ -3,6 +3,10 @@ $mobile: 768px;
 $tablet: 900px;
 $desktop: 1025px;
 
+.hidden {
+  display: none;
+}
+
 @mixin section-styles {
   display: flex;
   width: 40dvw;
@@ -128,10 +132,11 @@ $desktop: 1025px;
 
   .cart-section,
   .account-section {
-    @include section-styles;
     position: absolute;
     top: 148px;
     left: 32px;
+
+    @include section-styles;
     @include section-header-styles;
 
     // Tablet positioning
@@ -780,10 +785,11 @@ $desktop: 1025px;
   }
 
   .menu-section {
-    @include section-styles;
     position: absolute;
     top: 148px;
     right: 32px;
+
+    @include section-styles;
     @include section-header-styles;
 
     // Tablet positioning
@@ -866,10 +872,6 @@ $desktop: 1025px;
       }
     }
   }
-}
-
-.hidden {
-  display: none;
 }
 
 // Additional mobile-specific utilities
