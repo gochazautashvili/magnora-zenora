@@ -6,6 +6,7 @@ import { passwordComplexityValidator, passwordMatchValidator } from '@shared/uti
 
 
 import { FormControl, Validators, ValidatorFn, AbstractControl, FormGroup, ReactiveFormsModule,  ValidationErrors } from '@angular/forms';
+import { AuthService, User } from '../test-auth.service';
 
 
 @Component({
@@ -33,7 +34,7 @@ export default class SignUpFormComponent {
   
     return null;
   }
-  
+  constructor(private authService: AuthService) {}
 
   public getErrorMessage = getFormErrorMessage;
   
@@ -71,9 +72,23 @@ export default class SignUpFormComponent {
       validators: [Validators.required, Validators.minLength(8)],
     }),
   }, { validators: passwordMatchValidator['bind'](this) });
+  onSubmit() {
+    if (this.form.invalid) {
+      this.form.markAllAsTouched();
+      return;
+    }
   
+    const { confirmPassword, ...userData } = this.form.getRawValue(); // exclude confirmPassword
+  
+    this.authService.register(userData as User).subscribe({
+      next: (msg) => {
+        console.log('✅', msg);
+        console.log('Current users:', this.authService.getUsers()); // ⬅️ See users in console
+      },
+      error: (err) => console.error('❌', err.message),
+    });
+  }
 }
-
 interface ISignUpForm {
   firstName: FormControl<string>;
   lastName: FormControl<string>;
