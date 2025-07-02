@@ -1,0 +1,22 @@
+<section [ngClass]="type" class="cta_section">
+  <div class="cta">
+    <div class="content">
+      <h1>
+        @if(type === "magnora") {
+        {{ "MAGNORA.COLLECTIONS.CTA.TITLE" | translate }}
+        } @else {
+        {{ "ZENORA.COLLECTIONS.CTA.TITLE" | translate }}
+        }
+      </h1>
+      <p>
+        @if(type === "magnora") {
+        {{ "MAGNORA.COLLECTIONS.CTA.TEXT" | translate }}
+        } @else {
+        {{ "ZENORA.COLLECTIONS.CTA.TEXT" | translate }}
+        }
+      </p>
+    </div>
+
+    <app-button>Get Personalized Guidance</app-button>
+  </div>
+</section>

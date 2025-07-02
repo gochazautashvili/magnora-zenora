@@ -3,46 +3,83 @@
 
 .section {
   background: var(--BG-Section, #e5e6eb);
-  padding: 192px 0 144px;
+  padding-top: var(--Spacing-4XL);
+  padding-bottom: var(--Spacing-3XL);
 }
 
-.about {
-  @include grid-container;
+.content {
+  @include container;
 }
 
+.top {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: var(--Spacing-2XL);
+  justify-self: center;
+
+  .left {
+    max-width: 36.9dvw;
+  }
+
+  .right {
+    justify-self: end;
+    row-gap: var(--Spacing-L);
+    margin-top: var(--Spacing-L);
+
+    &.img {
+      max-width: 300px;
+      max-height: 208px;
+    }
+  }
+}
+
+.bottom {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: var(--Spacing-L);
+
+  .left {
+    justify-self: end;
+    align-self: flex-end;
+
+    &.img {
+      width: 21dvw;
+      max-width: 300px;
+      max-height: 360px;
+    }
+  }
+
+  .right {
+    display: grid;
+    margin-bottom: var(--Spacing-L);
+
+    .text_box:first-child {
+      justify-self: center;
+      transform: translateY(-48px);
+    }
+
+    .text_box:last-child {
+      align-self: flex-end;
+    }
+
+    .text_box {
+      max-width: 28dvw;
+    }
+  }
+}
+
+// Text styles
 .title {
   @include sub-header-l;
+  color: var(--Typography-100, #252529);
 }
 
-// Grid
-.box_1 {
-  grid-column: 2 / 7;
-}
-
-.box_2 {
-  grid-column: 9 / 12;
-}
-
-.box_3 {
-  grid-column: 8 / 12;
-  margin-top: 48px;
-}
-
-.box_4 {
-  grid-column: 3 / 6;
-}
-
-.box_5 {
-  grid-column: 6 / 10;
-  align-self: flex-end;
-  margin-bottom: 48px;
-}
-
-//
-p {
+.text {
   @include sub-header-s;
+  color: var(--Typography-300, #4b4b52);
 }
 
+// Dynamic styles
 .about.magnora {
   .title {
     color: var(--Typography-100, #252529);
@@ -60,5 +97,17 @@ p {
 
   p {
     color: var(--Typography-Purple-100, #3c33b8);
+  }
+}
+
+// Global styles
+.img {
+  border-radius: 12px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }

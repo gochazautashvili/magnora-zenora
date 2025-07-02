@@ -1,31 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("./styles/_variables.scss");
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@import url("https://fonts.cdnfonts.com/css/mersad");
 
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0;
-}
-
-li,
-ol {
-  list-style: none;
-}
-
-html,
-body {
-  font-family: "Outfit";
-  background: var(--BG-Background, #eff0f5);
-}
+// Styles
+@import url("./styles/variables.scss");
+@import url("./styles/language.scss");
+@import url("./styles/overlay.scss");
+@import url("./styles/global.scss");

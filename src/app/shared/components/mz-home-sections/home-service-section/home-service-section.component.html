@@ -23,9 +23,13 @@
       @for (service of type === 'magnora' ? magnora_services : zenora_services;
       track $index) {
       <div class="service-card">
-
-        <img [src]="service.image" alt="" />
-        
+        <img
+          width="532"
+          height="665"
+          loading="lazy"
+          alt="service image"
+          [src]="service.image"
+        />
         <div class="service-card-box">
           <h3>{{ service.title | translate }}</h3>
           <p>{{ service.description | translate }}</p>

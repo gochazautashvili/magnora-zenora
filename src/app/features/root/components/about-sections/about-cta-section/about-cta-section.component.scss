@@ -1,0 +1,171 @@
+body {
+  margin-left: 48px;
+  margin-right: 48px;
+
+  .main-div {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    gap: 48px;
+    margin-top: 144px;
+    margin-bottom: 144px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+
+    h2 {
+      color: var(--Typography-100, #252529);
+      font-family: Outfit;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 36px;
+      letter-spacing: 2.56px;
+    }
+
+    p {
+      color: var(--Typography-100, #252529);
+      font-family: Outfit;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0.96px;
+      width: 100%;
+      margin-top: 12px;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-rows: auto auto;
+      gap: 12px;
+
+      .btn1 {
+        display: flex;
+        padding: 12px 32px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        align-self: stretch;
+        border-radius: 48px;
+        border: none;
+        background: var(--Button-Primary-BG, rgba(60, 51, 184, 0.72));
+        box-shadow: -1px -1px 0px 0px var(--BG-Dissabled, #c7c8cc) inset,
+          1px 1px 0px 0px var(--BG-Dissabled, #c7c8cc) inset,
+          0px 0px 32px -8px var(
+              --Button-Secondary-BG,
+              rgba(220, 221, 235, 0.64)
+            ) inset;
+        -webkit-backdrop-filter: blur(12px);
+        backdrop-filter: blur(12px);
+
+        a {
+          color: var(--Typography-White-100, #eff0f5);
+          font-family: Outfit;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 24px;
+          letter-spacing: 0.32px;
+          text-decoration: none;
+        }
+      }
+
+      .btn2 {
+        display: flex;
+        padding: 12px 32px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        align-self: stretch;
+        border-radius: 48px;
+        background: var(--Button-Secondary-BG, rgba(220, 221, 235, 0.64));
+        box-shadow: -1px -1px 0px 0px var(--BG-Secondary-Section, #dbdce0) inset,
+          1px 1px 0px 0px var(--BG-Secondary-Section, #dbdce0) inset;
+        -webkit-backdrop-filter: blur(12px);
+        backdrop-filter: blur(12px);
+        border: none;
+
+        a {
+          color: var(--Typography-200, #38383d);
+          font-family: Outfit;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 24px;
+          letter-spacing: 0.32px;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 820px) {
+    .main-div {
+      grid-template-columns: 1fr;
+      gap: 32px;
+      margin: 100px auto;
+      padding: 24px;
+
+      .texts {
+        h2 {
+          font-size: 28px;
+          letter-spacing: 2px;
+          line-height: 34px;
+        }
+
+        p {
+          font-size: 15px;
+          line-height: 22px;
+          letter-spacing: 0.8px;
+        }
+      }
+
+      .buttons {
+        grid-template-rows: auto auto;
+
+        button {
+          padding: 14px 24px;
+          font-size: 17px;
+          letter-spacing: 0.35px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    margin-left: 16px;
+    margin-right: 16px;
+
+    .main-div {
+      grid-template-columns: 1fr;
+      gap: 24px;
+      margin: 80px auto;
+      padding: 16px;
+
+      .texts {
+        h2 {
+          font-size: 24px;
+          letter-spacing: 1.5px;
+          line-height: 30px;
+        }
+
+        p {
+          font-size: 14px;
+          line-height: 20px;
+          letter-spacing: 0.8px;
+        }
+      }
+
+      .buttons {
+        grid-template-rows: auto auto;
+
+        button {
+          padding: 14px 0;
+          font-size: 18px;
+          letter-spacing: 0.4px;
+        }
+      }
+    }
+  }
+}
