@@ -30,19 +30,35 @@
     <div class="content">
       <h1 class="title">
         @if(type === "magnora") {
-        {{ "MAGNORA.COLLECTIONS.SUB.BOX_1.TITLE" | translate }}
+        {{
+          genre === "man"
+            ? ("MAGNORA.COLLECTIONS.SUB.BOX_1.MAN.TITLE" | translate)
+            : ("MAGNORA.COLLECTIONS.SUB.BOX_1.WOMEN.TITLE" | translate)
+        }}
         } @else {
-        {{ "ZENORA.COLLECTIONS.SUB.BOX_1.TITLE" | translate }}
+        {{
+          genre === "man"
+            ? ("ZENORA.COLLECTIONS.SUB.BOX_1.MAN.TITLE" | translate)
+            : ("ZENORA.COLLECTIONS.SUB.BOX_1.WOMEN.TITLE" | translate)
+        }}
         }
       </h1>
       <p class="text">
         @if(type === "magnora") {
-        {{ "MAGNORA.COLLECTIONS.SUB.BOX_1.TEXT" | translate }}
+        {{
+          genre === "man"
+            ? ("MAGNORA.COLLECTIONS.SUB.BOX_1.MAN.TEXT" | translate)
+            : ("MAGNORA.COLLECTIONS.SUB.BOX_1.WOMEN.TEXT" | translate)
+        }}
         } @else {
-        {{ "ZENORA.COLLECTIONS.SUB.BOX_1.TEXT" | translate }}
+        {{
+          genre === "man"
+            ? ("ZENORA.COLLECTIONS.SUB.BOX_1.MAN.TEXT" | translate)
+            : ("ZENORA.COLLECTIONS.SUB.BOX_1.WOMEN.TEXT" | translate)
+        }}
         }
       </p>
-      <app-button variant="secondary">Explore This Power</app-button>
+      <app-button variant="secondary"> Explore This Power </app-button>
     </div>
     <div class="img_2">
       <img
@@ -59,16 +75,32 @@
     <div class="content">
       <h1 class="title">
         @if(type === "magnora") {
-        {{ "MAGNORA.COLLECTIONS.SUB.BOX_2.TITLE" | translate }}
+        {{
+          genre === "man"
+            ? ("MAGNORA.COLLECTIONS.SUB.BOX_2.MAN.TITLE" | translate)
+            : ("MAGNORA.COLLECTIONS.SUB.BOX_2.WOMEN.TITLE" | translate)
+        }}
         } @else {
-        {{ "ZENORA.COLLECTIONS.SUB.BOX_2.TITLE" | translate }}
+        {{
+          genre === "man"
+            ? ("ZENORA.COLLECTIONS.SUB.BOX_2.MAN.TITLE" | translate)
+            : ("ZENORA.COLLECTIONS.SUB.BOX_2.WOMEN.TITLE" | translate)
+        }}
         }
       </h1>
       <p class="text">
         @if(type === "magnora") {
-        {{ "MAGNORA.COLLECTIONS.SUB.BOX_2.TEXT" | translate }}
+        {{
+          genre === "man"
+            ? ("MAGNORA.COLLECTIONS.SUB.BOX_2.MAN.TEXT" | translate)
+            : ("MAGNORA.COLLECTIONS.SUB.BOX_2.WOMEN.TEXT" | translate)
+        }}
         } @else {
-        {{ "ZENORA.COLLECTIONS.SUB.BOX_2.TEXT" | translate }}
+        {{
+          genre === "man"
+            ? ("ZENORA.COLLECTIONS.SUB.BOX_2.MAN.TEXT" | translate)
+            : ("ZENORA.COLLECTIONS.SUB.BOX_2.WOMEN.TEXT" | translate)
+        }}
         }
       </p>
       <app-button variant="secondary">Wear the Intention</app-button>
@@ -88,16 +120,32 @@
     <div class="content">
       <h1 class="title">
         @if(type === "magnora") {
-        {{ "MAGNORA.COLLECTIONS.SUB.BOX_3.TITLE" | translate }}
+        {{
+          genre === "man"
+            ? ("MAGNORA.COLLECTIONS.SUB.BOX_3.MAN.TITLE" | translate)
+            : ("MAGNORA.COLLECTIONS.SUB.BOX_3.WOMEN.TITLE" | translate)
+        }}
         } @else {
-        {{ "ZENORA.COLLECTIONS.SUB.BOX_3.TITLE" | translate }}
+        {{
+          genre === "man"
+            ? ("ZENORA.COLLECTIONS.SUB.BOX_3.MAN.TITLE" | translate)
+            : ("ZENORA.COLLECTIONS.SUB.BOX_3.WOMEN.TITLE" | translate)
+        }}
         }
       </h1>
       <p class="text">
         @if(type === "magnora") {
-        {{ "MAGNORA.COLLECTIONS.SUB.BOX_3.TEXT" | translate }}
+        {{
+          genre === "man"
+            ? ("MAGNORA.COLLECTIONS.SUB.BOX_3.MAN.TEXT" | translate)
+            : ("MAGNORA.COLLECTIONS.SUB.BOX_3.WOMEN.TEXT" | translate)
+        }}
         } @else {
-        {{ "ZENORA.COLLECTIONS.SUB.BOX_3.TEXT" | translate }}
+        {{
+          genre === "man"
+            ? ("ZENORA.COLLECTIONS.SUB.BOX_3.MAN.TEXT" | translate)
+            : ("ZENORA.COLLECTIONS.SUB.BOX_3.WOMEN.TEXT" | translate)
+        }}
         }
       </p>
       <app-button variant="secondary">Choose This Path</app-button>
@@ -117,16 +165,32 @@
     <div class="content">
       <h1 class="title">
         @if(type === "magnora") {
-        {{ "MAGNORA.COLLECTIONS.SUB.BOX_4.TITLE" | translate }}
+        {{
+          genre === "man"
+            ? ("MAGNORA.COLLECTIONS.SUB.BOX_4.MAN.TITLE" | translate)
+            : ("MAGNORA.COLLECTIONS.SUB.BOX_4.WOMEN.TITLE" | translate)
+        }}
         } @else {
-        {{ "ZENORA.COLLECTIONS.SUB.BOX_4.TITLE" | translate }}
+        {{
+          genre === "man"
+            ? ("ZENORA.COLLECTIONS.SUB.BOX_4.MAN.TITLE" | translate)
+            : ("ZENORA.COLLECTIONS.SUB.BOX_4.WOMEN.TITLE" | translate)
+        }}
         }
       </h1>
       <p class="text">
         @if(type === "magnora") {
-        {{ "MAGNORA.COLLECTIONS.SUB.BOX_4.TEXT" | translate }}
+        {{
+          genre === "man"
+            ? ("MAGNORA.COLLECTIONS.SUB.BOX_4.MAN.TEXT" | translate)
+            : ("MAGNORA.COLLECTIONS.SUB.BOX_4.WOMEN.TEXT" | translate)
+        }}
         } @else {
-        {{ "ZENORA.COLLECTIONS.SUB.BOX_4.TEXT" | translate }}
+        {{
+          genre === "man"
+            ? ("ZENORA.COLLECTIONS.SUB.BOX_4.MAN.TEXT" | translate)
+            : ("ZENORA.COLLECTIONS.SUB.BOX_4.WOMEN.TEXT" | translate)
+        }}
         }
       </p>
       <app-button variant="secondary">Select This Symbol</app-button>
@@ -146,16 +210,32 @@
     <div class="content">
       <h1 class="title">
         @if(type === "magnora") {
-        {{ "MAGNORA.COLLECTIONS.SUB.BOX_5.TITLE" | translate }}
+        {{
+          genre === "man"
+            ? ("MAGNORA.COLLECTIONS.SUB.BOX_5.MAN.TITLE" | translate)
+            : ("MAGNORA.COLLECTIONS.SUB.BOX_5.WOMEN.TITLE" | translate)
+        }}
         } @else {
-        {{ "ZENORA.COLLECTIONS.SUB.BOX_5.TITLE" | translate }}
+        {{
+          genre === "man"
+            ? ("ZENORA.COLLECTIONS.SUB.BOX_5.MAN.TITLE" | translate)
+            : ("ZENORA.COLLECTIONS.SUB.BOX_5.WOMEN.TITLE" | translate)
+        }}
         }
       </h1>
       <p class="text">
         @if(type === "magnora") {
-        {{ "MAGNORA.COLLECTIONS.SUB.BOX_5.TEXT" | translate }}
+        {{
+          genre === "man"
+            ? ("MAGNORA.COLLECTIONS.SUB.BOX_5.MAN.TEXT" | translate)
+            : ("MAGNORA.COLLECTIONS.SUB.BOX_5.WOMEN.TEXT" | translate)
+        }}
         } @else {
-        {{ "ZENORA.COLLECTIONS.SUB.BOX_5.TEXT" | translate }}
+        {{
+          genre === "man"
+            ? ("ZENORA.COLLECTIONS.SUB.BOX_5.MAN.TEXT" | translate)
+            : ("ZENORA.COLLECTIONS.SUB.BOX_5.WOMEN.TEXT" | translate)
+        }}
         }
       </p>
       <app-button variant="secondary">Choose This Vibration</app-button>
@@ -175,16 +255,32 @@
     <div class="content">
       <h1 class="title">
         @if(type === "magnora") {
-        {{ "MAGNORA.COLLECTIONS.SUB.BOX_6.TITLE" | translate }}
+        {{
+          genre === "man"
+            ? ("MAGNORA.COLLECTIONS.SUB.BOX_6.MAN.TITLE" | translate)
+            : ("MAGNORA.COLLECTIONS.SUB.BOX_6.WOMEN.TITLE" | translate)
+        }}
         } @else {
-        {{ "ZENORA.COLLECTIONS.SUB.BOX_6.TITLE" | translate }}
+        {{
+          genre === "man"
+            ? ("ZENORA.COLLECTIONS.SUB.BOX_6.MAN.TITLE" | translate)
+            : ("ZENORA.COLLECTIONS.SUB.BOX_6.WOMEN.TITLE" | translate)
+        }}
         }
       </h1>
       <p class="text">
         @if(type === "magnora") {
-        {{ "MAGNORA.COLLECTIONS.SUB.BOX_6.TEXT" | translate }}
+        {{
+          genre === "man"
+            ? ("MAGNORA.COLLECTIONS.SUB.BOX_6.MAN.TEXT" | translate)
+            : ("MAGNORA.COLLECTIONS.SUB.BOX_6.WOMEN.TEXT" | translate)
+        }}
         } @else {
-        {{ "ZENORA.COLLECTIONS.SUB.BOX_6.TEXT" | translate }}
+        {{
+          genre === "man"
+            ? ("ZENORA.COLLECTIONS.SUB.BOX_6.MAN.TEXT" | translate)
+            : ("ZENORA.COLLECTIONS.SUB.BOX_6.WOMEN.TEXT" | translate)
+        }}
         }
       </p>
       <app-button variant="secondary">Uncover the Meaning</app-button>

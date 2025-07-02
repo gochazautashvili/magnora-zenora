@@ -12,4 +12,5 @@ import { ButtonComponent } from '@shared/ui';
 })
 export class CollectionsSectionComponent {
   @Input() type: 'magnora' | 'zenora' = 'magnora';
+  @Input() genre: 'man' | 'women' = 'man';
 }
