@@ -67,12 +67,14 @@
 
         @media (max-width: 900px) {
           min-width: 100%;
-          display: flex;
-          flex-direction: column;
 
           app-button {
             width: 100%;
           }
+        }
+
+        @media (max-width: 650px) {
+          flex-direction: column;
         }
       }
     }
