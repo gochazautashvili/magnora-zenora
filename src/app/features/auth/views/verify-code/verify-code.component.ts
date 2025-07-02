@@ -28,7 +28,10 @@ export default class VerifyCodeComponent {
   }
   
   digits: string[] = [];
-  otpArray: number[] = [];
+  otpArray: number[] = [1,2,3,4,5,6];
+
+
+ 
 
   ngOnInit() {
     this.digits = new Array(this.length).fill('');
@@ -60,7 +63,7 @@ export default class VerifyCodeComponent {
         this.focusInput(index + 1);
       }, 10);
     }
-
+    
     this.emitOtpChange();
   }
 
