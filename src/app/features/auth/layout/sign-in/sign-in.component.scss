@@ -2,7 +2,7 @@
 @use "typography" as *;
 
 
-.sign_up_section {
+.sign_in_section {
     height: 100vh;
     
     display: flex;
@@ -24,7 +24,7 @@
     }
 }
 
-.sign_up_texts {
+.sign_in_texts {
     width: 100%;
     max-width: 416px;
     margin-top: 3rem;
