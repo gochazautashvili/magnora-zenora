@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, HostListener, inject, Input } from '@angular/core';
 
 import { LanguageService } from '@core/i18n/language.service';
+import { OverlayService } from '@shared/services/overlay.service';
 
 @Component({
   selector: 'app-navbar',
@@ -12,6 +13,8 @@ import { LanguageService } from '@core/i18n/language.service';
 export class NavbarComponent {
   @Input() type: 'magnora' | 'zenora' | 'root' = 'root';
   isMobile: boolean = window.innerWidth <= 768;
+
+  constructor(public overlayService: OverlayService) {}
 
   public translate = inject(LanguageService);
 
@@ -42,5 +45,10 @@ export class NavbarComponent {
   @HostListener('window:resize')
   onResize() {
     this.isMobile = window.innerWidth <= 768;
+  }
+
+  openOverlay(message: string) {
+    this.overlayService.toggleOverlay(true);
+    this.overlayService.sendMessage(message);
   }
 }

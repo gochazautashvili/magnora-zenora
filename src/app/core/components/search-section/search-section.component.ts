@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { trigger, transition, style, animate } from '@angular/animations';
+import { OverlayService } from '@shared/services/overlay.service';
 
 @Component({
   selector: 'app-search-section',
@@ -32,11 +33,13 @@ export class SearchSectionComponent implements OnInit {
   topValue!: number;
   searchQuery: string = '';
 
+  constructor(public overlayService: OverlayService) {}
+
   ngOnInit(): void {
     this.topValue = this.isMobile ? 24 : 172;
   }
 
-  clearInput(): void {
-    this.searchQuery = '';
+  closeOverlaySearchBar(): void {
+    this.overlayService.toggleOverlay(false);
   }
 }
