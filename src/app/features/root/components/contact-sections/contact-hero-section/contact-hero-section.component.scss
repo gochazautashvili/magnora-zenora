@@ -1,26 +1,27 @@
+@use "typography" as *;
+
 .contact-hero-section {
   background: var(--BG-Section, #e5e6eb);
   padding-block: clamp(80px, 15vw, 196px) clamp(60px, 10vw, 144px);
   padding-inline: clamp(16px, 5vw, 48px);
   width: 100%;
-  min-height: 680px; 
+  min-height: 680px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
 
   .section-title {
-    width: 880px;
+    @include header-l;
     color: var(--Typography-100, #252529);
-    font-family: "Familjen Grotesk";
-    font-size: 84px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 88px;
-    letter-spacing: -1.68px;
+    width: 880px;
 
     span {
-      background: linear-gradient(90deg, var(--Typography-Purple-200, #6262F5) ,var(--Typography-Purple-100, #3C33B8));
+      background: linear-gradient(
+        90deg,
+        var(--Typography-Purple-200, #6262f5),
+        var(--Typography-Purple-100, #3c33b8)
+      );
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -52,12 +53,8 @@
         gap: 12px;
 
         p {
+          @include sub-header-s;
           color: var(--Typography-100, #252529);
-          font-family: Outfit;
-          font-size: 20px;
-          font-weight: 500;
-          line-height: 28px;
-          letter-spacing: 1.6px;
         }
       }
     }
@@ -70,9 +67,6 @@
 
     .section-title {
       width: 800px;
-      font-size: 96px;
-      line-height: 100px;
-      letter-spacing: -1.92px;
     }
 
     .contact-info {
@@ -83,12 +77,6 @@
 
         .info-container {
           gap: 16px;
-
-          p {
-            font-size: 22px;
-            line-height: 30px;
-            letter-spacing: 1.8px;
-          }
         }
       }
     }
@@ -97,36 +85,23 @@
   @media (max-width: 1439px) and (min-width: 1200px) {
     .section-title {
       width: 600px;
-      font-size: 76px;
-      line-height: 80px;
-      letter-spacing: -1.52px;
     }
 
     .contact-info {
       .info-block {
         min-width: 220px;
         max-width: 380px;
-
-        .info-container {
-          p {
-            font-size: 19px;
-            line-height: 26px;
-            letter-spacing: 1.4px;
-          }
-        }
       }
     }
   }
 
   @media (max-width: 1199px) and (min-width: 1024px) {
-    padding-block: clamp(80px, 15vw, 196px) clamp(50px, 8vw, 120px) clamp(70px, 12vw, 160px) ;
+    padding-block: clamp(80px, 15vw, 196px) clamp(50px, 8vw, 120px)
+      clamp(70px, 12vw, 160px);
     min-height: 600px;
 
     .section-title {
       width: 500px;
-      font-size: 68px;
-      line-height: 72px;
-      letter-spacing: -1.36px;
     }
 
     .contact-info {
@@ -137,19 +112,14 @@
 
         .info-container {
           gap: 10px;
-
-          p {
-            font-size: 18px;
-            line-height: 24px;
-            letter-spacing: 1.2px;
-          }
         }
       }
     }
   }
 
   @media (max-width: 1023px) and (min-width: 768px) {
-    padding-block: clamp(130px, 15vw, 196px) clamp(40px, 6vw, 100px) clamp(60px, 10vw, 140px) ;
+    padding-block: clamp(130px, 15vw, 196px) clamp(40px, 6vw, 100px)
+      clamp(60px, 10vw, 140px);
     min-height: 520px;
     align-items: center;
     text-align: center;
@@ -157,9 +127,6 @@
     .section-title {
       width: 100%;
       max-width: 400px;
-      font-size: 56px;
-      line-height: 60px;
-      letter-spacing: -1.12px;
       margin-bottom: 48px;
     }
 
@@ -176,19 +143,14 @@
 
         .info-container {
           gap: 8px;
-
-          p {
-            font-size: 17px;
-            line-height: 22px;
-            letter-spacing: 1px;
-          }
         }
       }
     }
   }
 
   @media (max-width: 767px) and (min-width: 481px) {
-    padding: clamp(130px, 15vw, 196px) clamp(30px, 5vw, 80px) clamp(50px, 8vw, 120px);
+    padding: clamp(130px, 15vw, 196px) clamp(30px, 5vw, 80px)
+      clamp(50px, 8vw, 120px);
     padding-inline: clamp(20px, 4vw, 32px);
     min-height: 450px;
     align-items: center;
@@ -198,9 +160,6 @@
     .section-title {
       width: 100%;
       max-width: 350px;
-      font-size: 44px;
-      line-height: 48px;
-      letter-spacing: -0.88px;
     }
 
     .contact-info {
@@ -220,12 +179,6 @@
 
         .info-container {
           gap: 6px;
-
-          p {
-            font-size: 16px;
-            line-height: 20px;
-            letter-spacing: 0.8px;
-          }
         }
       }
     }
@@ -242,9 +195,6 @@
     .section-title {
       width: 100%;
       max-width: 300px;
-      font-size: 36px;
-      line-height: 40px;
-      letter-spacing: -0.72px;
     }
 
     .contact-info {
@@ -262,12 +212,6 @@
 
         .info-container {
           gap: 4px;
-
-          p {
-            font-size: 15px;
-            line-height: 18px;
-            letter-spacing: 0.6px;
-          }
         }
       }
     }
@@ -301,12 +245,6 @@
 
         .info-container {
           gap: 2px;
-
-          p {
-            font-size: 14px;
-            line-height: 16px;
-            letter-spacing: 0.4px;
-          }
         }
       }
     }

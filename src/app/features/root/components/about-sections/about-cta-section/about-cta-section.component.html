@@ -1,12 +1,14 @@
-<body>
-    <div class="main-div">
-    <div class="texts">
-        <h2>Ready to Choose Your Path?</h2>
-        <p>Whether you're drawn to power or peace, Ora helps you align with the energy <br> you're meant to wear.</p>
-    </div>
-    <div class="buttons">
-        <button class="btn1"><a href="">Explore Magnora</a> </button>
-        <button class="btn2"><a href="">Explore Zenora</a></button>
-    </div>
+<div class="main-div">
+  <div class="texts">
+    <h2>{{ "ORA.ABOUT.CTA.TITLE" | translate }}</h2>
+    <p>
+      {{ "ORA.ABOUT.CTA.TEXT" | translate }}
+    </p>
+  </div>
+  <div class="buttons">
+    <app-button size="full" routerLink="/">Explore Magnora</app-button>
+    <app-button size="full" routerLink="/" variant="secondary">
+      Explore Zenora
+    </app-button>
+  </div>
 </div>
-</body>

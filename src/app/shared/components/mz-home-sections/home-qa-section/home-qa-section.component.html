@@ -22,19 +22,20 @@
 
       <!-- this component loops, manage it from expansion-panels ts -->
       <mat-accordion class="accordion">
-        @for (panel of type === 'magnora' ? magnora_qa : zenora_qa; track $index) {
-          <mat-expansion-panel>
-            <mat-expansion-panel-header>
-              <mat-panel-title>{{ panel.title | translate }}</mat-panel-title>
-            </mat-expansion-panel-header>
+        @for (panel of type === 'magnora' ? magnora_qa : zenora_qa; track
+        $index) {
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>{{ panel.title | translate }}</mat-panel-title>
+          </mat-expansion-panel-header>
 
-            <div class="mat-panel-body">
-              <span class="separator"></span>
-              <p>
-                {{ panel.content | translate }}
-              </p>
-            </div>
-          </mat-expansion-panel>
+          <div class="mat-panel-body">
+            <span class="separator"></span>
+            <p>
+              {{ panel.content | translate }}
+            </p>
+          </div>
+        </mat-expansion-panel>
         }
       </mat-accordion>
     </div>
@@ -81,7 +82,7 @@
           }
         </p>
       </div>
-      <app-button class="btn">Contact Us</app-button>
+      <app-button routerLink="/contact" class="btn"> Contact Us </app-button>
     </div>
   </div>
 </section>

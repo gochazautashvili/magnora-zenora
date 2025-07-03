@@ -4,10 +4,17 @@ import { Component, Input } from '@angular/core';
 
 import { ButtonComponent } from '@shared/ui/button/button.component';
 import { TranslateModule } from '@ngx-translate/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home-qa-section',
-  imports: [MatExpansionModule, CommonModule, ButtonComponent, TranslateModule],
+  imports: [
+    MatExpansionModule,
+    TranslateModule,
+    ButtonComponent,
+    CommonModule,
+    RouterModule,
+  ],
   templateUrl: './home-qa-section.component.html',
   styleUrl: './home-qa-section.component.scss',
 })

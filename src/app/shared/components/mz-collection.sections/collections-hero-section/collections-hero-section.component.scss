@@ -112,7 +112,7 @@
           transition: background 0.3s;
           cursor: pointer;
 
-          &:first-child {
+          &.active {
             background: var(--BG-Purple-Dark, #3c33b8);
           }
 
