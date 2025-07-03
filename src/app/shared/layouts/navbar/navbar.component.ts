@@ -15,10 +15,9 @@ export class NavbarComponent {
   isMobile: boolean = window.innerWidth <= 768;
 
   currentActiveSection: string = '';
+  isMenuOpen: boolean = false; 
 
   constructor(public overlayService: OverlayService) {}
-
-  isMenuOpen = false;
 
   public translate = inject(LanguageService);
 
@@ -52,21 +51,23 @@ export class NavbarComponent {
   }
 
   openOverlay(message: string) {
-    this.isMenuOpen = !this.isMenuOpen;
     const isCurrentlyOpen = this.overlayService.isOverlayOpen();
+    const isSameSection = this.currentActiveSection === message;
 
-    if (isCurrentlyOpen && this.currentActiveSection === message) {
-      // Same button clicked twice - close the overlay
+    if (isSameSection && isCurrentlyOpen) {
+      // Close overlay
       this.overlayService.toggleOverlay(false);
       this.currentActiveSection = '';
-    } else {
-      // Different button clicked or overlay is closed - open/keep open and change section
-      if (!isCurrentlyOpen) {
-        this.overlayService.toggleOverlay(true);
-      }
 
+      if (message === 'menu') this.isMenuOpen = false;
+    } else {
+      // Open overlay with new section
       this.overlayService.sendMessage(message);
+      this.overlayService.toggleOverlay(true);
       this.currentActiveSection = message;
+
+      // Toggle menu icon only if menu was opened
+      this.isMenuOpen = message === 'menu';
     }
   }
 }

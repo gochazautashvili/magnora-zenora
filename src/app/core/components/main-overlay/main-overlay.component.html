@@ -8,6 +8,7 @@
   <ng-container *ngIf="openSectionName === 'cart'">
     <div
       class="cart-section"
+      (click)="$event.stopPropagation()"
       [@sectionSlide]="openSectionName"
       (@sectionSlide.done)="onSectionAnimationDone($event)">
 
@@ -274,6 +275,7 @@
   <ng-container *ngIf="openSectionName === 'account'">
     <div
       class="account-section"
+      (click)="$event.stopPropagation()"
       [@sectionSlide]="openSectionName"
       (@sectionSlide.done)="onSectionAnimationDone($event)">
 
@@ -477,6 +479,7 @@
   <ng-container *ngIf="openSectionName === 'menu'">
     <div
       class="menu-section"
+      (click)="$event.stopPropagation()"
       [@menuSlide]="openSectionName"
       (@menuSlide.done)="onSectionAnimationDone($event)">
 
@@ -504,7 +507,7 @@
   </ng-container>
 
   <ng-container *ngIf="openSectionName === 'search'">
-    <div [@searchFade]="openSectionName">
+    <div [@searchFade]="openSectionName" (click)="$event.stopPropagation()">
       <app-search-section [isMobile]="false" />
     </div>
   </ng-container>
