@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-collection-details-products',
@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './collection-details-products.component.scss'
 })
 export class CollectionDetailsProductsComponent {
-
+  @Input() filter: boolean = true;
   products = [ 
     {
       img : 'assets/images/product-test.jpg',
