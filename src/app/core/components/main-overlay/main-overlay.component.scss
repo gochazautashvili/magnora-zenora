@@ -136,6 +136,7 @@ $desktop: 1025px;
     position: absolute;
     top: 148px;
     left: 32px;
+    z-index: 3;
 
     @include section-styles;
     @include section-header-styles;
@@ -356,12 +357,13 @@ $desktop: 1025px;
       }
 
       &::-webkit-scrollbar-thumb {
-        background: #888;
+        background: rgba(160, 160, 180, 0.3); // soft bluish-gray
         border-radius: 4px;
+        backdrop-filter: blur(4px);
       }
-
+      
       &::-webkit-scrollbar-thumb:hover {
-        background: #555;
+        background: rgba(120, 120, 160, 0.4); // slightly darker on hover
       }
     }
 
@@ -789,6 +791,7 @@ $desktop: 1025px;
     position: absolute;
     top: 148px;
     right: 32px;
+    z-index: 3;
 
     @include section-styles;
     @include section-header-styles;

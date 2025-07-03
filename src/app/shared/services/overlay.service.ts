@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
-import { Subject, BehaviorSubject } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class OverlayService {
   // Use Subject for one-time events
-  private messageSubject = new Subject<string>();
+  private messageSubject = new BehaviorSubject<string>("");
   public message$ = this.messageSubject.asObservable();
 
   // Use BehaviorSubject for state that needs initial value
@@ -22,8 +22,13 @@ export class OverlayService {
     this.overlayStateSubject.next(isOpen);
   }
 
-  // Get current state
-  getCurrentOverlayState(): boolean {
+  // Add this method to check current overlay state
+  isOverlayOpen(): boolean {
     return this.overlayStateSubject.value;
+  }
+
+  // Add this method to get current message/section
+  getCurrentMessage(): string {
+    return this.messageSubject.value;
   }
 }
