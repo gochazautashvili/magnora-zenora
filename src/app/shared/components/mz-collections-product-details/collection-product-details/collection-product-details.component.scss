@@ -39,6 +39,7 @@ section {
             display: flex;
             align-items: center;
             gap: 10px;
+            cursor: pointer;
 
             p {
                 @include sub-header-s;
