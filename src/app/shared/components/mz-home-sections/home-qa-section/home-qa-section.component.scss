@@ -130,37 +130,6 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
-
-  .mat-expansion-panel {
-    width: 100%;
-    max-width: 658px;
-    border-radius: 36px;
-    background: var(--BG-Section, #e5e6eb);
-    box-shadow: -1px -1px 0px 0px var(--BG-Dissabled, #c7c8cc) inset,
-      1px 1px 0px 0px var(--BG-Dissabled, #c7c8cc) inset,
-      0px 0px 24px 0px var(--BG-Dissabled, #c7c8cc) inset;
-  }
-
-  .mat-expansion-panel-header {
-    background: var(--BG-Secondary-Section, #dbdce0);
-    padding: 12px 36px 12px 32px;
-    transition: all 0.5s;
-    border-radius: 36px;
-    height: 72px;
-
-    box-shadow: -1px -1px 0px 0px var(--BG-Dissabled, #c7c8cc) inset,
-      1px 1px 0px 0px var(--BG-Dissabled, #c7c8cc) inset;
-
-    &:hover {
-      background-color: var(--BG-Section);
-      transition: 0.5s;
-
-    h5 {
-      @include sub-header-s;
-    }
-    p {
-      @include regular-r;
-    }
   }
 }
 
@@ -254,8 +223,5 @@
     p {
       color: var(--Typography-Purple-100, #3c33b8);
     }
-  }
-}
-  
   }
 }
