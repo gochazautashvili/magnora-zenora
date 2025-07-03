@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { SearchSectionComponent } from '../search-section/search-section.component';
 import { OverlayService } from '@shared/services/overlay.service';
 import { Subscription } from 'rxjs';
@@ -256,6 +256,7 @@ import {
   ],
 })
 export class MainOverlayComponent implements OnInit, OnDestroy {
+  @Input() type!: string;
   isOverlayOpen: boolean = false;
   isAuthenticated: boolean = true;
   openSectionName: string = '';
