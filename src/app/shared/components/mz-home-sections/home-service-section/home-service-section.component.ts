@@ -1,6 +1,7 @@
 import { TranslateModule } from '@ngx-translate/core';
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ISectionType } from '@shared/types/enums';
 
 interface ServiceCard {
   image: string;
@@ -15,7 +16,7 @@ interface ServiceCard {
   styleUrl: './home-service-section.component.scss',
 })
 export class HomeServiceSectionComponent {
-  @Input() type: 'magnora' | 'zenora' = 'magnora';
+  @Input() type: ISectionType = 'magnora';
 
   public magnora_services: ServiceCard[] = [
     {

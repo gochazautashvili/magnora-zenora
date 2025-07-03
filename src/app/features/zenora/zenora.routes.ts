@@ -4,11 +4,18 @@ const routes: Routes = [
   {
     path: 'zenora',
     loadComponent: () => import('./layout/zenora-layout.component'),
-
     children: [
       { path: '', loadComponent: () => import('./views/home/home.component') },
-      { path: 'collections-details', loadComponent: () => import('./views/collections-detail/collections-detail.component') },
-
+      {
+        path: 'collection/details/:id',
+        loadComponent: () =>
+          import('./views/collections-detail/collections-detail.component'),
+      },
+      {
+        path: 'product/details/:id',
+        loadComponent: () =>
+          import('./views/product-details/product-details.component'),
+      },
       {
         path: 'collections',
         loadComponent: () =>
@@ -35,10 +42,6 @@ const routes: Routes = [
           },
         ],
       },
-      {
-        path: 'product-details/:id',
-        loadComponent: () => import('../../shared/components/mz-collections-product-details/collection-product-details/collection-product-details.component')
-      }
     ],
   },
 ];
