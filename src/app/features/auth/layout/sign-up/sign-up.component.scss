@@ -1,51 +1,67 @@
 @use "layout" as *;
 @use "typography" as *;
 
-
 .sign_up_section {
-    height: 100vh;
-    
-    display: flex;
-    justify-content: center;
-    @include container;
-    
-    .grid-container {
-        display: grid;
-        grid-template-columns: 1fr 1.84fr;
-        grid-column-gap: 2.5rem;
-        padding-top: 13rem;
+  min-height: 100vh;
 
+  display: flex;
+  justify-content: center;
+  @include container;
 
-        .outlet {
-            width: 100%;
-            max-width: 764px;
-            
-        }
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1.84fr;
+    grid-column-gap: 2.5rem;
+    padding-top: 13rem;
+
+    @media screen and (max-width: 1000px) {
+      grid-template-columns: 1fr;
+      grid-row-gap: 2.5rem;
+      padding-top: 8rem;
     }
+
+    .outlet {
+      width: 100%;
+      max-width: 764px;
+      margin-bottom: 64px;
+    }
+  }
 }
 
 .sign_up_texts {
-    width: 100%;
-    max-width: 416px;
-    margin-top: 3rem;
-    div {
-        h2 {
-            @include sub-header-l;
-        }
-        p {
-            @include sub-header-s;
-            color: var(--Typography-300);
-            margin-top: 12px;
-        }
-    }
+  width: 100%;
+  max-width: 416px;
+  margin-top: 3rem;
 
+  @media screen and (max-width: 1000px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 90%;
+    margin-inline: auto;
+  }
+
+  div {
+    h2 {
+      @include sub-header-l;
+    }
     p {
-        @include regular-b;
-        margin-top: 40px;
+      @include sub-header-s;
+      color: var(--Typography-300);
+      margin-top: 12px;
     }
-    span {
-        @include regular-r;
-        color: var(--Typography-Purple-100);
-        margin-right: 12px;
-    }
+  }
+
+  p {
+    @include regular-b;
+    cursor: pointer;
+    margin-top: 40px;
+  }
+
+  span {
+    @include regular-r;
+    color: var(--Typography-Purple-100);
+    margin-right: 12px;
+  }
 }

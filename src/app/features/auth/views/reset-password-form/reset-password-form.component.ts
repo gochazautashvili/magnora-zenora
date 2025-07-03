@@ -3,36 +3,42 @@ import { Location } from '@angular/common';
 import { ButtonComponent } from '@shared/ui';
 import { FormInputComponent } from '@shared/ui/form-input/form-input.component';
 import { getFormErrorMessage } from '@shared/utils/errors';
-import { FormControl, Validators, FormGroup, ReactiveFormsModule, EmailValidator} from '@angular/forms';
-
-
-
+import {
+  ReactiveFormsModule,
+  FormControl,
+  Validators,
+  FormGroup,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-reset-password-form',
   imports: [ButtonComponent, FormInputComponent, ReactiveFormsModule],
   templateUrl: './reset-password-form.component.html',
-  styleUrl: './reset-password-form.component.scss'
+  styleUrl: './reset-password-form.component.scss',
 })
 export default class ResetPasswordFormComponent {
   constructor(private location: Location) {}
+
   goBack() {
     this.location.back();
   }
 
   public getErrorMessage = getFormErrorMessage;
 
-
   protected form = new FormGroup<IResetPasswordForm>({
     email: new FormControl('', {
       nonNullable: true,
       validators: [Validators.required, Validators.email],
     }),
-  })
+  });
+
+  public submit() {
+    if (!this.form.valid) {
+      this.form.markAllAsTouched();
+    }
+  }
 }
+
 interface IResetPasswordForm {
-    email : FormControl<string>;
+  email: FormControl<string>;
 }
-
-
-

@@ -17,7 +17,7 @@ export class AuthService {
   private users: IUser[] = [];
 
   register(user: IUser): Observable<string> {
-    const exists = this.users.some(u => u.email === user.email);
+    const exists = this.users.some((u) => u.email === user.email);
     if (exists) {
       return throwError(() => new Error('User already exists'));
     }
@@ -27,8 +27,9 @@ export class AuthService {
   }
 
   login(email: string, password: string): Observable<string> {
-    
-    const user = this.users.find(u => u.email === email && u.password === password);
+    const user = this.users.find(
+      (u) => u.email === email && u.password === password
+    );
     if (user) {
       return of('Login successful');
     }

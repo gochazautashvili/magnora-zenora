@@ -175,7 +175,7 @@ $desktop: 1025px;
       gap: 24px;
 
       &.magnora {
-        color: #C7C8CC;
+        color: #c7c8cc;
       }
 
       @media (max-width: $tablet) {
@@ -381,9 +381,10 @@ $desktop: 1025px;
       &::-webkit-scrollbar-thumb {
         background: rgba(160, 160, 180, 0.3); // soft bluish-gray
         border-radius: 4px;
+        -webkit-backdrop-filter: blur(4px);
         backdrop-filter: blur(4px);
       }
-      
+
       &::-webkit-scrollbar-thumb:hover {
         background: rgba(120, 120, 160, 0.4); // slightly darker on hover
       }
@@ -455,7 +456,7 @@ $desktop: 1025px;
         gap: 8px;
 
         &.magnora {
-          color: #C7C8CC;
+          color: #c7c8cc;
         }
 
         @media (max-width: $mobile) {
@@ -594,7 +595,7 @@ $desktop: 1025px;
           }
 
           &.magnora {
-            color: #C7C8CC;
+            color: #c7c8cc;
           }
         }
       }
@@ -682,7 +683,7 @@ $desktop: 1025px;
             color: var(--Typography-White-100, #eff0f5);
 
             a {
-              color: #C7C8CC;
+              color: #c7c8cc;
             }
           }
         }
@@ -885,7 +886,7 @@ $desktop: 1025px;
       }
 
       &.magnora {
-        color: #C7C8CC;
+        color: #c7c8cc;
       }
 
       .list-item {
@@ -949,16 +950,16 @@ $desktop: 1025px;
   .main-overlay {
     // Ensure proper touch scrolling on mobile
     -webkit-overflow-scrolling: touch;
-    
+
     // Prevent zoom on double tap
     touch-action: manipulation;
   }
-  
+
   // Hide scrollbars on mobile for cleaner look
   .product-list::-webkit-scrollbar {
     display: none;
   }
-  
+
   .product-list {
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -974,11 +975,11 @@ $desktop: 1025px;
     top: 50%;
     transform: translate(-50%, -50%);
   }
-  
+
   .product-list {
     max-height: 60dvh;
   }
-  
+
   .account-management {
     max-height: 65dvh;
   }

@@ -4,12 +4,13 @@
 section {
   display: flex;
   align-items: end;
-  padding: 196px 48px 0px;
+  padding-block: 192px;
 
   .grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     @include container;
+
+    grid-template-columns: 1fr 1fr;
     padding-bottom: 70px;
     gap: 50px;
 
@@ -47,7 +48,7 @@ section {
     }
 
     .image-wraper {
-      width: 648px;
+      max-width: 648px;
 
       img {
         width: 100%;
@@ -176,7 +177,6 @@ section {
 
   .image-wraper {
     width: 100%;
-    max-width: 340px;
     height: auto;
     margin: 0;
     padding: 0;
@@ -296,7 +296,6 @@ section {
 
   .image-wraper {
     width: 100%;
-    max-width: 260px;
     display: flex;
     justify-content: center;
 

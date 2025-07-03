@@ -6,13 +6,25 @@
       [ngClass]="type"
       [(ngModel)]="searchQuery"
       name="searchQuery"
-      placeholder="Search for a product" />
-    <button type="button" [ngClass]="type" (click)="closeOverlaySearchBar()">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-        viewBox="0 0 16 16" fill="none">
+      placeholder="Search for a product"
+    />
+    <button
+      title="button"
+      type="button"
+      [ngClass]="type"
+      (click)="closeOverlaySearchBar()"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        viewBox="0 0 16 16"
+        fill="none"
+      >
         <path
           d="M15.2806 14.2193C15.3503 14.289 15.4056 14.3717 15.4433 14.4628C15.481 14.5538 15.5004 14.6514 15.5004 14.7499C15.5004 14.8485 15.481 14.9461 15.4433 15.0371C15.4056 15.1281 15.3503 15.2109 15.2806 15.2806C15.2109 15.3502 15.1282 15.4055 15.0372 15.4432C14.9461 15.4809 14.8485 15.5003 14.75 15.5003C14.6514 15.5003 14.5539 15.4809 14.4628 15.4432C14.3718 15.4055 14.289 15.3502 14.2194 15.2806L7.99999 9.06024L1.78061 15.2806C1.63988 15.4213 1.44901 15.5003 1.24999 15.5003C1.05097 15.5003 0.860095 15.4213 0.719365 15.2806C0.578634 15.1398 0.499573 14.949 0.499573 14.7499C0.499573 14.5509 0.578634 14.36 0.719365 14.2193L6.93968 7.99993L0.719365 1.78055C0.578634 1.63982 0.499573 1.44895 0.499573 1.24993C0.499573 1.05091 0.578634 0.860034 0.719365 0.719304C0.860095 0.578573 1.05097 0.499512 1.24999 0.499512C1.44901 0.499512 1.63988 0.578573 1.78061 0.719304L7.99999 6.93962L14.2194 0.719304C14.3601 0.578573 14.551 0.499512 14.75 0.499512C14.949 0.499512 15.1399 0.578573 15.2806 0.719304C15.4213 0.860034 15.5004 1.05091 15.5004 1.24993C15.5004 1.44895 15.4213 1.63982 15.2806 1.78055L9.0603 7.99993L15.2806 14.2193Z"
-          fill="currentColor" />
+          fill="currentColor"
+        />
       </svg>
     </button>
   </div>
@@ -20,19 +32,29 @@
     <div class="divider"></div>
     <div class="results-container" @fadeInOut>
       <div class="product-card">
-        <img src="assets/images/ca42ce959afd902bec1bd16b39e6e75cabaf669b.jpg"
-          alt="Product Image" class="product-image">
+        <img
+          src="assets/images/ca42ce959afd902bec1bd16b39e6e75cabaf669b.jpg"
+          alt="Product Image"
+          class="product-image"
+        />
         <div class="product-info">
           <h4 class="product-title" [ngClass]="type">Product Title</h4>
-          <p class="product-description" [ngClass]="type">Product Description</p>
+          <p class="product-description" [ngClass]="type">
+            Product Description
+          </p>
         </div>
       </div>
       <div class="product-card">
-        <img src="assets/images/68e5899d73f13e5c3ceb9e6cf38daeee88bca3f5.jpg"
-          alt="Product Image" class="product-image">
+        <img
+          src="assets/images/68e5899d73f13e5c3ceb9e6cf38daeee88bca3f5.jpg"
+          alt="Product Image"
+          class="product-image"
+        />
         <div class="product-info">
           <h4 class="product-title" [ngClass]="type">Product Title</h4>
-          <p class="product-description" [ngClass]="type">Product Description</p>
+          <p class="product-description" [ngClass]="type">
+            Product Description
+          </p>
         </div>
       </div>
     </div>
