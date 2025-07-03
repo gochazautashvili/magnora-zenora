@@ -23,6 +23,7 @@ import { OverlayService } from '@shared/services/overlay.service';
 })
 export class SearchSectionComponent implements OnInit {
   @Input() isMobile!: boolean;
+  @Input() type!: string;
 
   topValue!: number;
   searchQuery: string = '';
