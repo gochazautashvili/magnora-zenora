@@ -3,6 +3,7 @@
 
 .home-service {
   padding-block: var(--Spacing-3XL);
+
   .content {
     @include container;
     max-width: 1112px;

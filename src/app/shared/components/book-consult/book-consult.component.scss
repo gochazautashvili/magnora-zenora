@@ -1,0 +1,61 @@
+@use "typography" as *;
+@use "layout" as *;
+
+.main-div {
+    display: flex;
+    padding: 144px 280px;
+    align-items: center;
+    gap: 48px;
+    align-self: stretch;
+
+
+    .question {
+        @include sub-header-l;
+        margin-bottom: 10px;
+    }
+
+    .answer {
+        @include regular-r;
+    }
+
+
+    @media (max-width: 1024px) {
+        padding: 96px 120px;
+        gap: 32px;
+    }
+
+    @media (max-width: 1130px) {
+        flex-direction: column;
+        align-items: center;
+        padding: 72px 48px;
+        text-align: center;
+
+        .text {
+            text-align: center;
+        }
+
+        .button {
+            margin-top: 24px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        padding: 48px 24px;
+
+        .question {
+            font-size: 18px;
+        }
+
+        .answer {
+            font-size: 14px;
+        }
+
+        .button {
+            width: 100%;
+
+            app-button {
+                width: 100%;
+            }
+        }
+    }
+}

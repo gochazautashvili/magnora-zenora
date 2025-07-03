@@ -18,4 +18,10 @@ export class SuccessMessageService {
   sendMessage(message: string){
     this.successMessage.next(message);
   }
+  sendIcon(message: string){
+    this.successMessage.next(message);
+  }
+  sendAdditionalMessage(message: string){
+    this.additionalMessage.next(message);
+}
 }

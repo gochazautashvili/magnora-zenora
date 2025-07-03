@@ -2,7 +2,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of, throwError } from 'rxjs';
 
-export interface User {
+export interface IUser {
   firstName: string;
   lastName: string;
   email: string;
@@ -14,9 +14,9 @@ export interface User {
   providedIn: 'root',
 })
 export class AuthService {
-  private users: User[] = [];
+  private users: IUser[] = [];
 
-  register(user: User): Observable<string> {
+  register(user: IUser): Observable<string> {
     const exists = this.users.some(u => u.email === user.email);
     if (exists) {
       return throwError(() => new Error('User already exists'));
@@ -35,7 +35,7 @@ export class AuthService {
     return throwError(() => new Error('Invalid credentials'));
   }
 
-  getUsers(): User[] {
+  getUsers(): IUser[] {
     return this.users;
   }
 }
