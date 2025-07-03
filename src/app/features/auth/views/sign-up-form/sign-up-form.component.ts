@@ -6,9 +6,7 @@ import { passwordComplexityValidator, passwordMatchValidator } from '@shared/uti
 
 
 import { FormControl, Validators, ValidatorFn, AbstractControl, FormGroup, ReactiveFormsModule,  ValidationErrors } from '@angular/forms';
-import { AuthService, User } from '../test-auth.service';
-
-
+import { AuthService, IUser } from '../test-auth.service';
 @Component({
   selector: 'app-sign-up-form',
   imports: [ReactiveFormsModule, FormInputComponent, ButtonComponent],
@@ -80,7 +78,7 @@ export default class SignUpFormComponent {
   
     const { confirmPassword, ...userData } = this.form.getRawValue(); // exclude confirmPassword
   
-    this.authService.register(userData as User).subscribe({
+    this.authService.register(userData as IUser).subscribe({
       next: (msg) => {
         console.log('✅', msg);
         console.log('Current users:', this.authService.getUsers()); // ⬅️ See users in console
