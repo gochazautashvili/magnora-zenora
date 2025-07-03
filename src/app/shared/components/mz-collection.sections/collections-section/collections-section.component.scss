@@ -1,4 +1,10 @@
 @use "typography" as *;
+@use "layout" as *;
+
+.collections_section {
+  @include container;
+  padding-block: var(--Spacing-L);
+}
 
 .first {
   display: grid;
@@ -14,6 +20,11 @@
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
     row-gap: var(--Spacing-L);
+
+    @media screen and (max-width: 500px) {
+      display: flex;
+      flex-direction: column;
+    }
 
     .left {
       grid-row: 2;
@@ -46,6 +57,7 @@
 //
 .left {
   display: flex;
+  text-align: end;
   align-items: end;
   justify-content: end;
   gap: var(--Spacing-L);
@@ -81,11 +93,13 @@
 //
 .img_1 {
   max-width: 21dvw;
+  min-width: 150px;
   max-height: 360px;
 }
 
 .img_2 {
   max-width: 28dvw;
+  min-width: 200px;
   max-height: 289px;
 }
 
@@ -101,17 +115,19 @@
   }
 }
 
-.collections_section.magnora {
+.section.magnora {
+  background: var(--bg-magnora-section, #09070d);
+
   .title {
-    color: var(--Typography-100, #252529);
+    color: var(--Typography-White-100, #eff0f5);
   }
 
   .text {
-    color: var(--Typography-200, #252529);
+    color: var(--Typography-White-300, #c7c8cc);
   }
 }
 
-.collections_section.zenora {
+.section.zenora {
   .title {
     color: var(--Typography-Purple-100, #3c33b8);
   }
@@ -120,3 +136,60 @@
     color: var(--Typography-Purple-200, #6262f5);
   }
 }
+
+//
+
+@media screen and (max-width: 900px) {
+  .collections_section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .first {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .content {
+    app-button {
+      width: auto;
+    }
+  }
+
+  .box_2 {
+    position: static;
+    transform: translateY(0px);
+  }
+
+  .box_3 {
+    padding: 0;
+  }
+
+  .box_6 {
+    transform: translateY(0px);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .left,
+  .right {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+
+    .content {
+      width: 100%;
+      align-items: center;
+    }
+
+    .img_1,
+    .img_2 {
+      aspect-ratio: 1 / 1;
+      max-width: 100%;
+    }
+  }
+}
+
+//

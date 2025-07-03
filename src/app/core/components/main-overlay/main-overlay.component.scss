@@ -23,6 +23,7 @@ $desktop: 1025px;
   background: var(--BG-Nav-Bar, rgba(239, 240, 245, 0.24));
   box-shadow: -1px -1px 0px 0px var(--BG-Dissabled, #c7c8cc) inset,
     1px 1px 0px 0px var(--BG-Dissabled, #c7c8cc) inset;
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
 
   // Tablet styles
@@ -831,14 +832,16 @@ $desktop: 1025px;
           text-align: center;
         }
 
+
         .page-link {
           position: relative;
           text-decoration: none;
-          color: var(--Typography-200, #38383D);
+          color: var(--Typography-200, #38383d);
           font-size: 40px;
           font-weight: 500;
           line-height: 44px;
           letter-spacing: 3.2px;
+
 
           @media (max-width: $tablet) {
             font-size: 32px;
@@ -853,7 +856,7 @@ $desktop: 1025px;
           }
 
           &::after {
-            content: '';
+            content: "";
             position: absolute;
             left: 0;
             bottom: -2px;

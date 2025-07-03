@@ -9,5 +9,5 @@ import { CommonModule } from '@angular/common';
 })
 export class ButtonComponent {
   @Input() type = 'button';
-  @Input() variant: 'primary' | 'secondary' = 'primary';
+  @Input() variant: 'primary' | 'secondary' | 'dark' = 'primary';
 }
