@@ -137,3 +137,20 @@ input {
     }
   }
 }
+
+
+
+
+@media (max-width: 768px) {
+  .errorMessage {
+    margin-top: 0.2rem;
+  }
+}
+
+@media (max-width:950px) {
+  .errorMessage {
+    margin-top: 0.1rem;
+ 
+  
+  }
+}
