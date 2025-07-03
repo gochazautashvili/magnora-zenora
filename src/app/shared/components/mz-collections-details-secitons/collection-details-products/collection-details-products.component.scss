@@ -1,6 +1,11 @@
 @use "typography" as *;
 @use "layout" as *;
 
+
+.bi {
+    width: 100px;
+    height: 100px;
+}
 section {
     padding: 100px 20px 20px 20px;
     height: auto;
@@ -20,6 +25,7 @@ section {
         img {
             width: 10px;
             height: 17px;
+            cursor: pointer;
         }
         .filter-wrapper {
             display: flex;
@@ -62,8 +68,8 @@ section {
             }
             .heart-img {
                 position: absolute;
-                top: 0px;
-                right: 0px;
+                top: 10px;
+                right: 10px;
                 cursor: pointer;
 
                 background-color: var(--BG-Secondary-Section);
@@ -75,9 +81,14 @@ section {
                 align-items: center;
                 justify-content: center;
                 
-                svg {
-                   width: 28px;
-                   height: 24px;
+                i {
+                   width: min-content;
+                   height: min-content;
+                   display: flex;
+                   justify-content: center;
+                   align-items: center;
+                   transition: color 0.3s ease;
+                   cursor: pointer;
                }
              
             }
@@ -104,33 +115,10 @@ section {
             .description {
                 color: var(--Typography-Purple-200);
             }
-
-            button {
-                height: 48px;
-                border-radius: 48px;
-                margin-top: 10px;
-           
-                padding : 12px 32px;
-
-                background: var(--Button-Secondary-BG);
-             
-
-                font-family: Outfit;
-                font-weight: 600;
-                font-size: 16px;
-                line-height: 24px;
-                letter-spacing: 2%;
-                color: var(--Typography-200);
-                transition: 0.2s;
-
-
+            .button ::ng-deep button {
+                width: 100%;
             }
-            button:hover {
-                transition: 0.2s;
-                box-shadow: 1px 1px 0px 0px var(--BG-Secondary-Section) inset;
-                backdrop-filter: blur(24px)
-
-            }
+          
         }
        }
             
