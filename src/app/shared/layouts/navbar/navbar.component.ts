@@ -16,7 +16,9 @@ export class NavbarComponent {
 
   currentActiveSection: string = '';
 
-  constructor(public overlayService: OverlayService) { }
+  constructor(public overlayService: OverlayService) {}
+
+  isMenuOpen = false;
 
   public translate = inject(LanguageService);
 
@@ -50,8 +52,9 @@ export class NavbarComponent {
   }
 
   openOverlay(message: string) {
+    this.isMenuOpen = !this.isMenuOpen;
     const isCurrentlyOpen = this.overlayService.isOverlayOpen();
-    
+
     if (isCurrentlyOpen && this.currentActiveSection === message) {
       // Same button clicked twice - close the overlay
       this.overlayService.toggleOverlay(false);
@@ -61,7 +64,7 @@ export class NavbarComponent {
       if (!isCurrentlyOpen) {
         this.overlayService.toggleOverlay(true);
       }
-      
+
       this.overlayService.sendMessage(message);
       this.currentActiveSection = message;
     }

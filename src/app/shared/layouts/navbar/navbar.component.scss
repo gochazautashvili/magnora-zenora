@@ -67,6 +67,19 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
+
+    .line {
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    &.open {
+      .line1 {
+        transform: rotate(45deg) translate(6.4px, 6.4px);
+      }
+      .line2 {
+        transform: rotate(-45deg) translate(6.4px, -6.4px);
+      }
+    }
   }
 }
 

@@ -78,8 +78,9 @@
         Search
       </div>
       <div class="box" (click)="openOverlay('menu')">
-        <div class="menu">
+        <div class="menu" [ngClass]="{ open: isMenuOpen }">
           <svg
+            class="line line1"
             xmlns="http://www.w3.org/2000/svg"
             width="30"
             height="2"
@@ -95,6 +96,7 @@
           </svg>
 
           <svg
+            class="line line2"
             xmlns="http://www.w3.org/2000/svg"
             width="30"
             height="2"
