@@ -12,7 +12,6 @@ import {
   selector: 'app-home',
   imports: [
     HomeQaSectionComponent,
-    HomeQaSectionComponent,
     HomeHeroSectionComponent,
     HomeAboutSectionComponent,
     HomeFeatureSectionComponent,
