@@ -3,10 +3,14 @@
 
 
 .sign_in_section {
-    height: 100vh;
+    height: auto;
+    min-height: 100vh;
+
     
     display: flex;
     justify-content: center;
+    padding-bottom: 100px;
+
     @include container;
     
     .grid-container {
@@ -47,5 +51,22 @@
         @include regular-r;
         color: var(--Typography-Purple-100);
         margin-right: 12px;
+    }
+}
+
+
+
+@media (max-width:768px) {
+    .sign_in_section {
+     
+        
+        .grid-container {
+            grid-template-columns: 1fr;
+            grid-row-gap: 2rem;
+            padding-top: 7rem;
+    
+    
+           
+        }
     }
 }

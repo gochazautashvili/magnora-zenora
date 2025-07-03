@@ -9,7 +9,8 @@
 
 
 .input-wrapper {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
 }
 .button {
@@ -27,7 +28,23 @@
             
         }
     }
-    
-    
 
 }
+
+
+@media (max-width : 950px) {
+    .container {
+        padding: 24px;
+    }
+    .input-wrapper {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+
+    }
+    .button {
+        margin-top: 2rem;
+    }
+}
+
+
+
