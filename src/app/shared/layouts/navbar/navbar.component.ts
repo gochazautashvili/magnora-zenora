@@ -14,7 +14,9 @@ export class NavbarComponent {
   @Input() type: 'magnora' | 'zenora' | 'root' = 'root';
   isMobile: boolean = window.innerWidth <= 768;
 
-  constructor(public overlayService: OverlayService) {}
+  currentActiveSection: string = '';
+
+  constructor(public overlayService: OverlayService) { }
 
   public translate = inject(LanguageService);
 
@@ -48,7 +50,20 @@ export class NavbarComponent {
   }
 
   openOverlay(message: string) {
-    this.overlayService.toggleOverlay(true);
-    this.overlayService.sendMessage(message);
+    const isCurrentlyOpen = this.overlayService.isOverlayOpen();
+    
+    if (isCurrentlyOpen && this.currentActiveSection === message) {
+      // Same button clicked twice - close the overlay
+      this.overlayService.toggleOverlay(false);
+      this.currentActiveSection = '';
+    } else {
+      // Different button clicked or overlay is closed - open/keep open and change section
+      if (!isCurrentlyOpen) {
+        this.overlayService.toggleOverlay(true);
+      }
+      
+      this.overlayService.sendMessage(message);
+      this.currentActiveSection = message;
+    }
   }
 }

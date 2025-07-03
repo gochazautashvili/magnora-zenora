@@ -1,4 +1,4 @@
-<div class="main-overlay" [ngStyle]="{ display: isOverlayOpen ? 'block' : 'none' }">
+<div class="main-overlay" [ngStyle]="{ display: isOverlayOpen ? 'block' : 'none' }" (click)="closeOverlay()">
   <ng-container *ngIf="openSectionName === 'cart'">
     <div class="cart-section">
       <div class="section-header">
