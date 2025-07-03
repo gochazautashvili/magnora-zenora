@@ -1,9 +1,26 @@
-<div class="main-overlay" [ngStyle]="{ display: isOverlayOpen ? 'block' : 'none' }" (click)="closeOverlay()">
+<div
+  class="main-overlay"
+  *ngIf="isOverlayOpen"
+  [@overlayFade]
+  (@overlayFade.done)="onOverlayAnimationDone($event)"
+  (click)="closeOverlay()">
+
   <ng-container *ngIf="openSectionName === 'cart'">
-    <div class="cart-section">
-      <div class="section-header">
+    <div
+      class="cart-section"
+      [@sectionSlide]="openSectionName"
+      (@sectionSlide.done)="onSectionAnimationDone($event)">
+
+      <div class="section-header" [@headerSlide]>
         <h4 class="header-text">Your Cart</h4>
-        <button type="button" class="close-button" (click)="closeOverlay()">
+        <button
+          type="button"
+          class="close-button"
+          [@buttonPress]="getButtonState('close-cart')"
+          (mousedown)="onButtonPress('close-cart')"
+          (mouseup)="onButtonRelease('close-cart')"
+          (mouseleave)="onButtonRelease('close-cart')"
+          (click)="closeOverlay()">
           <div class="close-icon">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -20,11 +37,11 @@
         </button>
       </div>
 
-      <div class="divider"></div>
-      
+      <div class="divider" [@headerSlide]></div>
+
       <ng-container *ngIf="mockCart.length > 0">
-        <div class="product-list">
-          <div class="product-card">
+        <div class="product-list" [@contentStagger]>
+          <div class="product-card" [@productSlide]>
             <div class="product-details">
               <img
                 src="assets/images/ca42ce959afd902bec1bd16b39e6e75cabaf669b.jpg"
@@ -36,8 +53,14 @@
                   150<span class="price-currency">$</span>
                 </p>
                 <div class="product-quantity-incrementor">
-                  <button title="decrement" type="button"
-                    class="decrement">
+                  <button
+                    title="decrement"
+                    type="button"
+                    class="decrement"
+                    [@buttonPress]="getButtonState('decrement-1')"
+                    (mousedown)="onButtonPress('decrement-1')"
+                    (mouseup)="onButtonRelease('decrement-1')"
+                    (mouseleave)="onButtonRelease('decrement-1')">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -50,8 +73,14 @@
                     </svg>
                   </button>
                   <p class="product-quantity">1</p>
-                  <button title="increment" type="button"
-                    class="increment">
+                  <button
+                    title="increment"
+                    type="button"
+                    class="increment"
+                    [@buttonPress]="getButtonState('increment-1')"
+                    (mousedown)="onButtonPress('increment-1')"
+                    (mouseup)="onButtonRelease('increment-1')"
+                    (mouseleave)="onButtonRelease('increment-1')">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -66,7 +95,13 @@
                 </div>
               </div>
             </div>
-            <button type="button" class="delete-product-btn">
+            <button
+              type="button"
+              class="delete-product-btn"
+              [@buttonPress]="getButtonState('delete-1')"
+              (mousedown)="onButtonPress('delete-1')"
+              (mouseup)="onButtonRelease('delete-1')"
+              (mouseleave)="onButtonRelease('delete-1')">
               <div class="delete-icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -82,7 +117,8 @@
               <p class="delete-text">Remove</p>
             </button>
           </div>
-          <div class="product-card">
+
+          <div class="product-card" [@productSlide]>
             <div class="product-details">
               <img
                 src="assets/images/68e5899d73f13e5c3ceb9e6cf38daeee88bca3f5.jpg"
@@ -94,8 +130,14 @@
                   200<span class="price-currency">$</span>
                 </p>
                 <div class="product-quantity-incrementor">
-                  <button title="decrement" type="button"
-                    class="decrement">
+                  <button
+                    title="decrement"
+                    type="button"
+                    class="decrement"
+                    [@buttonPress]="getButtonState('decrement-2')"
+                    (mousedown)="onButtonPress('decrement-2')"
+                    (mouseup)="onButtonRelease('decrement-2')"
+                    (mouseleave)="onButtonRelease('decrement-2')">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -108,8 +150,14 @@
                     </svg>
                   </button>
                   <p class="product-quantity">1</p>
-                  <button title="increment" type="button"
-                    class="increment">
+                  <button
+                    title="increment"
+                    type="button"
+                    class="increment"
+                    [@buttonPress]="getButtonState('increment-2')"
+                    (mousedown)="onButtonPress('increment-2')"
+                    (mouseup)="onButtonRelease('increment-2')"
+                    (mouseleave)="onButtonRelease('increment-2')">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -124,7 +172,13 @@
                 </div>
               </div>
             </div>
-            <button type="button" class="delete-product-btn">
+            <button
+              type="button"
+              class="delete-product-btn"
+              [@buttonPress]="getButtonState('delete-2')"
+              (mousedown)="onButtonPress('delete-2')"
+              (mouseup)="onButtonRelease('delete-2')"
+              (mouseleave)="onButtonRelease('delete-2')">
               <div class="delete-icon">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -141,8 +195,10 @@
             </button>
           </div>
         </div>
-        <div class="divider"></div>
-        <div class="cart-summary">
+
+        <div class="divider" [@headerSlide]></div>
+
+        <div class="cart-summary" [@contentStagger]>
           <div class="total-cost">
             <div class="total-cost-info">
               <h4 class="total-label">Cart Totals:</h4>
@@ -159,43 +215,78 @@
               <h5 class="detail-value">10$</h5>
             </div>
           </div>
-          <button type="button" class="checkout-btn">Go to Checkout</button>
+          <button
+            type="button"
+            class="checkout-btn"
+            [@buttonPress]="getButtonState('checkout')"
+            (mousedown)="onButtonPress('checkout')"
+            (mouseup)="onButtonRelease('checkout')"
+            (mouseleave)="onButtonRelease('checkout')">
+            Go to Checkout
+          </button>
         </div>
       </ng-container>
-  
+
       <ng-container *ngIf="!isAuthenticated">
-        <div class="auth-required-message">
+        <div class="auth-required-message" [@contentStagger]>
           <div class="message-container">
-            <h3 class="message-heading">Let’s Pick Up Where You Left Off</h3>
-            <p class="message-content">You need to be logged in to view or manage
+            <h3 class="message-heading">Let's Pick Up Where You Left Off</h3>
+            <p class="message-content">You need to be logged in to view or
+              manage
               your cart. Sign in to access your saved pieces</p>
           </div>
           <div class="actions">
-            <button type="button">Log In to Continue</button>
+            <button
+              type="button"
+              [@buttonPress]="getButtonState('login-cart')"
+              (mousedown)="onButtonPress('login-cart')"
+              (mouseup)="onButtonRelease('login-cart')"
+              (mouseleave)="onButtonRelease('login-cart')">
+              Log In to Continue
+            </button>
             <p>Don't have an Account? <a href="/sign-up">Sign Up</a></p>
           </div>
         </div>
       </ng-container>
 
       <ng-container *ngIf="mockCart.length === 0">
-        <div class="cart-empty-state">
+        <div class="cart-empty-state" [@contentStagger]>
           <div class="message-container">
             <h3 class="message-heading">Your Cart is Empty — For Now</h3>
             <p class="message-content">Explore our collection and find the piece
               that aligns with your purpose.</p>
           </div>
           <div class="actions">
-            <button type="button">Browse Collection</button>
+            <button
+              type="button"
+              [@buttonPress]="getButtonState('browse')"
+              (mousedown)="onButtonPress('browse')"
+              (mouseup)="onButtonRelease('browse')"
+              (mouseleave)="onButtonRelease('browse')">
+              Browse Collection
+            </button>
           </div>
         </div>
       </ng-container>
     </div>
   </ng-container>
+
   <ng-container *ngIf="openSectionName === 'account'">
-    <div class="account-section">
-      <div class="section-header">
+    <div
+      class="account-section"
+      [@sectionSlide]="openSectionName"
+      (@sectionSlide.done)="onSectionAnimationDone($event)">
+
+      <div class="section-header" [@headerSlide]>
         <h4 class="header-text">Your Account</h4>
-        <button type="button" class="close-button" (click)="closeOverlay()">
+        <button
+          type="button"
+          class="close-button"
+          [@buttonPress]="getButtonState('close-account')"
+          (mousedown)="onButtonPress('close-account')"
+          (mouseup)="onButtonRelease('close-account')"
+          (mouseleave)="onButtonRelease('close-account')"
+          (click)="closeOverlay()">
           <div class="close-icon">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -212,24 +303,31 @@
         </button>
       </div>
 
-      <div class="divider"></div>
-  
+      <div class="divider" [@headerSlide]></div>
+
       <ng-container *ngIf="!isAuthenticated else authenticatedContent">
-        <div class="auth-required-message">
+        <div class="auth-required-message" [@contentStagger]>
           <div class="message-container">
             <h3 class="message-heading">Access Your Magnora Journey</h3>
             <p class="message-content">Log in to view your saved pieces, manage
               your orders, and receive personalized energy insights.</p>
           </div>
           <div class="actions">
-            <button type="button">Log In</button>
+            <button
+              type="button"
+              [@buttonPress]="getButtonState('login-account')"
+              (mousedown)="onButtonPress('login-account')"
+              (mouseup)="onButtonRelease('login-account')"
+              (mouseleave)="onButtonRelease('login-account')">
+              Log In
+            </button>
             <p>Don't have an Account? <a href="/sign-up">Sign Up</a></p>
           </div>
         </div>
       </ng-container>
 
       <ng-template #authenticatedContent>
-        <div class="account-management">
+        <div class="account-management" [@contentStagger]>
           <div class="welcome-back-section">
             <img class="profile-image"
               src="assets/images/ca42ce959afd902bec1bd16b39e6e75cabaf669b.jpg"
@@ -237,7 +335,7 @@
             <h3 class="welcome-message">Welcome back, Name!</h3>
           </div>
           <div class="management-options">
-            <div class="option">
+            <div class="option" [@productSlide]>
               <div class="option-info">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
                   viewBox="0 0 32 32" fill="none">
@@ -247,7 +345,13 @@
                 </svg>
                 <p class="title">Personal Information</p>
               </div>
-              <button type="button" class="option-edit-button">
+              <button
+                type="button"
+                class="option-edit-button"
+                [@buttonPress]="getButtonState('edit-personal')"
+                (mousedown)="onButtonPress('edit-personal')"
+                (mouseup)="onButtonRelease('edit-personal')"
+                (mouseleave)="onButtonRelease('edit-personal')">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                   viewBox="0 0 24 24" fill="none">
                   <path
@@ -257,7 +361,7 @@
                 <span class="button name">Edit</span>
               </button>
             </div>
-            <div class="option">
+            <div class="option" [@productSlide]>
               <div class="option-info">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
                   viewBox="0 0 32 32" fill="none">
@@ -268,7 +372,7 @@
                 <p class="title">Favorites</p>
               </div>
             </div>
-            <div class="option">
+            <div class="option" [@productSlide]>
               <div class="option-info">
                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="25"
                   viewBox="0 0 26 25" fill="none">
@@ -279,7 +383,7 @@
                 <p class="title">Gift Cards & Discounts</p>
               </div>
             </div>
-            <div class="option">
+            <div class="option" [@productSlide]>
               <div class="option-info">
                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="22"
                   viewBox="0 0 26 22" fill="none">
@@ -289,7 +393,13 @@
                 </svg>
                 <p class="title">Shipping Address</p>
               </div>
-              <button type="button" class="option-edit-button">
+              <button
+                type="button"
+                class="option-edit-button"
+                [@buttonPress]="getButtonState('edit-address')"
+                (mousedown)="onButtonPress('edit-address')"
+                (mouseup)="onButtonRelease('edit-address')"
+                (mouseleave)="onButtonRelease('edit-address')">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                   viewBox="0 0 24 24" fill="none">
                   <path
@@ -299,7 +409,7 @@
                 <span class="button name">Edit</span>
               </button>
             </div>
-            <div class="option">
+            <div class="option" [@productSlide]>
               <div class="option-info">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="22"
                   viewBox="0 0 25 22" fill="none">
@@ -309,7 +419,11 @@
                 </svg>
                 <p class="title">Billing Info</p>
               </div>
-              <button type="button" class="option-edit-button">
+              <button type="button" class="option-edit-button"
+                [@buttonPress]="getButtonState('edit-billing')"
+                (mousedown)="onButtonPress('edit-billing')"
+                (mouseup)="onButtonRelease('edit-billing')"
+                (mouseleave)="onButtonRelease('edit-billing')">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                   viewBox="0 0 24 24" fill="none">
                   <path
@@ -319,7 +433,7 @@
                 <span class="button name">Edit</span>
               </button>
             </div>
-            <div class="option">
+            <div class="option" [@productSlide]>
               <div class="option-info">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24"
                   viewBox="0 0 25 24" fill="none">
@@ -329,7 +443,11 @@
                 </svg>
                 <p class="title">Order History</p>
               </div>
-              <button type="button" class="option-edit-button">
+              <button type="button" class="option-edit-button"
+                [@buttonPress]="getButtonState('edit-history')"
+                (mousedown)="onButtonPress('edit-history')"
+                (mouseup)="onButtonRelease('edit-history')"
+                (mouseleave)="onButtonRelease('edit-history')">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                   viewBox="0 0 24 24" fill="none">
                   <path
@@ -339,7 +457,7 @@
                 <span class="button name">Edit</span>
               </button>
             </div>
-            <div class="option">
+            <div class="option" [@productSlide]>
               <div class="option-info">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="23"
                   viewBox="0 0 30 23" fill="none">
@@ -355,11 +473,23 @@
       </ng-template>
     </div>
   </ng-container>
+
   <ng-container *ngIf="openSectionName === 'menu'">
-    <div class="menu-section">
-      <div class="section-header">
+    <div
+      class="menu-section"
+      [@menuSlide]="openSectionName"
+      (@menuSlide.done)="onSectionAnimationDone($event)">
+
+      <div class="section-header" [@headerSlide]>
         <h4 class="header-text">Menu</h4>
-        <button type="button" class="close-button" (click)="closeOverlay()">
+        <button
+          type="button"
+          class="close-button"
+          [@buttonPress]="getButtonState('close-menu')"
+          (mousedown)="onButtonPress('close-menu')"
+          (mouseup)="onButtonRelease('close-menu')"
+          (mouseleave)="onButtonRelease('close-menu')"
+          (click)="closeOverlay()">
           <div class="close-icon">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -375,13 +505,15 @@
           <p class="close-text">Close</p>
         </button>
       </div>
-      <div class="divider"></div>
-      <ul class="pages-list">
+
+      <div class="divider" [@headerSlide]></div>
+
+      <ul class="pages-list" [@menuItemsStagger]>
         <li class="list-item">
-          <a href="" class="page-link">Home</a>
+          <a href class="page-link">Home</a>
         </li>
         <li class="list-item">
-          <a href="" class="page-link">Collections</a>
+          <a href class="page-link">Collections</a>
         </li>
         <li class="list-item">
           <a href="/about" class="page-link">About</a>
@@ -392,7 +524,10 @@
       </ul>
     </div>
   </ng-container>
+
   <ng-container *ngIf="openSectionName === 'search'">
-    <app-search-section [isMobile]="false" />
+    <div [@searchFade]="openSectionName">
+      <app-search-section [isMobile]="false" />
+    </div>
   </ng-container>
 </div>
