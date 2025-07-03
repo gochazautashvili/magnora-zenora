@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 
 import { ButtonComponent } from '@shared/ui';
 import { RouterModule } from '@angular/router';
+import { ISectionType } from '@shared/types/enums';
 
 @Component({
   selector: 'app-home-hero-section',
@@ -12,5 +13,5 @@ import { RouterModule } from '@angular/router';
   styleUrl: './home-hero-section.component.scss',
 })
 export class HomeHeroSectionComponent {
-  @Input() type: 'magnora' | 'zenora' = 'magnora';
+  @Input() type: ISectionType = 'magnora';
 }

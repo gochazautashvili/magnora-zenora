@@ -11,6 +11,16 @@ export const routes: Routes = [
         loadComponent: () => import('./views/home/home.component'),
       },
       {
+        path: 'collection/details/:id',
+        loadComponent: () =>
+          import('./views/collections-detail/collections-detail.component'),
+      },
+      {
+        path: 'product/details/:id',
+        loadComponent: () =>
+          import('./views/product-details/product-details.component'),
+      },
+      {
         path: 'collections',
         loadComponent: () =>
           import('./views/collections/collections.component'),

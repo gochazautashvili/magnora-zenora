@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
+import { ISectionType } from '@shared/types/enums';
 
 import { ButtonComponent } from '@shared/ui';
 
@@ -12,5 +13,5 @@ import { ButtonComponent } from '@shared/ui';
   styleUrl: './home-feature-section.component.scss',
 })
 export class HomeFeatureSectionComponent {
-  @Input() type: 'magnora' | 'zenora' = 'magnora';
+  @Input() type: ISectionType = 'magnora';
 }

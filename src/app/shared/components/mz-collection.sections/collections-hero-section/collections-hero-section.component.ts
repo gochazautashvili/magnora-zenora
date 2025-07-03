@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
+import { ISectionType } from '@shared/types/enums';
 
 @Component({
   selector: 'app-collections-hero-section',
@@ -9,11 +10,25 @@ import { CommonModule } from '@angular/common';
   styleUrl: './collections-hero-section.component.scss',
 })
 export class CollectionsHeroSectionComponent implements OnInit {
-  @Input() type: 'magnora' | 'zenora' = 'magnora';
+  @Input() type: ISectionType = 'magnora';
 
   public activeIndex = 0;
 
   public gallery = [
+    {
+      title: '',
+      type: 'image',
+      text_1: 'MAGNORA.COLLECTIONS.HERO.TEXT_1',
+      text_2: 'MAGNORA.COLLECTIONS.HERO.TEXT_2',
+      url: 'assets/images/magnora-hero-banner.png',
+    },
+    {
+      title: '',
+      type: 'image',
+      text_1: 'MAGNORA.COLLECTIONS.HERO.TEXT_1',
+      text_2: 'MAGNORA.COLLECTIONS.HERO.TEXT_2',
+      url: 'assets/images/magnora-hero-banner.png',
+    },
     {
       title: '',
       type: 'image',
