@@ -33,6 +33,10 @@ const routes: Routes = [
           },
         ],
       },
+      {
+        path: 'product-details/:id',
+        loadComponent: () => import('../../shared/components/mz-collections-product-details/collection-product-details/collection-product-details.component')
+      }
     ],
   },
 ];
