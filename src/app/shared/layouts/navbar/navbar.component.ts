@@ -40,19 +40,6 @@ export class NavbarComponent {
     }
   }
 
-  get navbarLogoLink(): string {
-    switch (this.type) {
-      case 'root':
-        return '/';
-      case 'magnora':
-        return '/magnora';
-      case 'zenora':
-        return '/zenora';
-      default:
-        return '';
-    }
-  }
-
   @HostListener('window:resize')
   onResize() {
     this.isMobile = window.innerWidth <= 768;

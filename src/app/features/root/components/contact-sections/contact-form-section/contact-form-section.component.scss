@@ -1,6 +1,9 @@
+@use "typography" as *;
+
 .contact-form-section {
   background-color: #eff0f5;
-  padding: clamp(96px, 10vw, 144px) clamp(16px, 5vw, 48px) clamp(72px, 8vw, 96px);
+  padding: clamp(96px, 10vw, 144px) clamp(16px, 5vw, 48px)
+    clamp(72px, 8vw, 96px);
   width: 100%;
   min-height: 532px;
   display: flex;
@@ -8,12 +11,10 @@
   justify-content: space-between;
 
   .section-title {
+    @include header-s;
+
     width: 416px;
     color: var(--Typography-100, #252529);
-    font-size: 40px;
-    font-weight: 500;
-    line-height: 44px;
-    letter-spacing: 3.2px;
   }
 
   .contact-form {
@@ -90,6 +91,7 @@
               --Button-Secondary-BG,
               rgba(220, 221, 235, 0.64)
             ) inset;
+        -webkit-backdrop-filter: blur(12px);
         backdrop-filter: blur(12px);
         cursor: pointer;
         transition: all 0.3s ease;

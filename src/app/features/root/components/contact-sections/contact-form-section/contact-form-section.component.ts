@@ -1,16 +1,23 @@
 import { Component } from '@angular/core';
-import { FormInputComponent } from '../../../../../shared/ui/form-input/form-input.component';
-import { ButtonComponent } from '../../../../../shared/ui/button/button.component';
 import {
   FormControl,
   FormGroup,
   Validators,
   ReactiveFormsModule,
 } from '@angular/forms';
+import { TranslateModule } from '@ngx-translate/core';
+
+import { ButtonComponent } from '@shared/ui';
+import { FormInputComponent } from '@shared/ui/form-input/form-input.component';
 
 @Component({
   selector: 'app-contact-form-section',
-  imports: [FormInputComponent, ButtonComponent, ReactiveFormsModule],
+  imports: [
+    ReactiveFormsModule,
+    FormInputComponent,
+    ButtonComponent,
+    TranslateModule,
+  ],
   templateUrl: './contact-form-section.component.html',
   styleUrl: './contact-form-section.component.scss',
 })

@@ -7,13 +7,15 @@
           Exclusive drops, offers, and energy insights — straight to your inbox.
         </p>
       </div>
-      <div class="subscribe-inp-btn-group">
+      <form (submit)="submit()" class="subscribe-inp-btn-group">
         <app-input
           [variant]="type === 'magnora' ? 'magnora' : 'normal'"
           placeholder="Example@gmail.com"
+          [(ngModel)]="email"
+          name="Email"
         ></app-input>
-        <app-button>Subscribe</app-button>
-      </div>
+        <app-button type="submit">Subscribe</app-button>
+      </form>
     </div>
 
     <div class="info-section">

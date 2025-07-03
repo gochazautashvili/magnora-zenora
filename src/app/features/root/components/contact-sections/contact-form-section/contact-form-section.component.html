@@ -1,6 +1,6 @@
 <section class="contact-form-section">
   <h1 class="section-title">
-    Or Get in Touch with
+    {{ "ORA.CONTACT.CONTACT_FORM.TITLE" | translate }}
   </h1>
   <form [formGroup]="contactForm" class="contact-form" (ngSubmit)="onSubmit()">
     <fieldset class="form-group">
@@ -8,7 +8,13 @@
         formControlName="firstName"
         label="First Name"
         placeholder="John"
-        [status]="contactForm.controls.firstName.valid ? 'success' : (contactForm.controls.firstName.touched ? 'error' : 'normal')" 
+        [status]="
+          contactForm.controls.firstName.valid
+            ? 'success'
+            : contactForm.controls.firstName.touched
+            ? 'error'
+            : 'normal'
+        "
       />
     </fieldset>
     <fieldset class="form-group">
@@ -16,7 +22,13 @@
         formControlName="lastName"
         label="Last Name"
         placeholder="Smith"
-        [status]="contactForm.controls.lastName.valid ? 'success' : (contactForm.controls.lastName.touched ? 'error' : 'normal')" 
+        [status]="
+          contactForm.controls.lastName.valid
+            ? 'success'
+            : contactForm.controls.lastName.touched
+            ? 'error'
+            : 'normal'
+        "
       />
     </fieldset>
     <fieldset class="form-group">
@@ -25,7 +37,13 @@
         label="Email"
         type="email"
         placeholder="Example@gmail.com"
-        [status]="contactForm.controls.email.valid ? 'success' : (contactForm.controls.email.touched ? 'error' : 'normal')" 
+        [status]="
+          contactForm.controls.email.valid
+            ? 'success'
+            : contactForm.controls.email.touched
+            ? 'error'
+            : 'normal'
+        "
       />
     </fieldset>
     <fieldset class="form-group">
@@ -34,15 +52,27 @@
         label="Phone Number"
         type="tel"
         placeholder="+995 568 09 65 43"
-        [status]="contactForm.controls.phoneNumber.valid ? 'success' : (contactForm.controls.phoneNumber.touched ? 'error' : 'normal')"
+        [status]="
+          contactForm.controls.phoneNumber.valid
+            ? 'success'
+            : contactForm.controls.phoneNumber.touched
+            ? 'error'
+            : 'normal'
+        "
       />
     </fieldset>
     <fieldset class="form-group">
-      <app-form-input 
+      <app-form-input
         formControlName="message"
-        label="Message" 
-        placeholder="Here Goes Your Interest" 
-        [status]="contactForm.controls.message.valid ? 'success' : (contactForm.controls.message.touched ? 'error' : 'normal')"
+        label="Message"
+        placeholder="Here Goes Your Interest"
+        [status]="
+          contactForm.controls.message.valid
+            ? 'success'
+            : contactForm.controls.message.touched
+            ? 'error'
+            : 'normal'
+        "
       />
     </fieldset>
     <fieldset class="form-group">
