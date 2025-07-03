@@ -36,14 +36,16 @@
   }
 }
 
-.cta_section.magnora {
+.section.magnora {
+  background: var(--bg-magnora-section, #09070d);
+
   h1,
   p {
-    color: var(--Typography-100);
+    color: var(--Typography-White-100, #eff0f5);
   }
 }
 
-.cta_section.zenora {
+.section.zenora {
   h1,
   p {
     color: var(--Typography-Purple-100);

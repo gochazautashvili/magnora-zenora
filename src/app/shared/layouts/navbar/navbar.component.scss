@@ -37,6 +37,10 @@
   gap: 32px;
 }
 
+.center img {
+  cursor: pointer;
+}
+
 .right {
   justify-self: end;
 }
@@ -91,6 +95,20 @@
 
     .box:nth-child(2) {
       display: none;
+    }
+  }
+}
+
+//
+.header.magnora {
+  .nav {
+    background: var(--bg-magnora-nav-bar, rgba(7, 5, 10, 0.24));
+    box-shadow: -1px -1px 0px 0px #2e2e3d inset, 1px 1px 0px 0px #2e2e3d inset;
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+
+    .box {
+      color: var(--Typography-White-100, #eff0f5);
     }
   }
 }

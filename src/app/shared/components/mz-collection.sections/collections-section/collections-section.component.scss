@@ -1,4 +1,10 @@
 @use "typography" as *;
+@use "layout" as *;
+
+.collections_section {
+  @include container;
+  padding-block: var(--Spacing-L);
+}
 
 .first {
   display: grid;
@@ -109,17 +115,19 @@
   }
 }
 
-.collections_section.magnora {
+.section.magnora {
+  background: var(--bg-magnora-section, #09070d);
+
   .title {
-    color: var(--Typography-100, #252529);
+    color: var(--Typography-White-100, #eff0f5);
   }
 
   .text {
-    color: var(--Typography-200, #252529);
+    color: var(--Typography-White-300, #c7c8cc);
   }
 }
 
-.collections_section.zenora {
+.section.zenora {
   .title {
     color: var(--Typography-Purple-100, #3c33b8);
   }
@@ -183,3 +191,5 @@
     }
   }
 }
+
+//

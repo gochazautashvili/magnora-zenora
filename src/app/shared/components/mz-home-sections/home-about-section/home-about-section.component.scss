@@ -2,7 +2,6 @@
 @use "layout" as *;
 
 .section {
-  background: var(--BG-Section, #e5e6eb);
   padding-top: var(--Spacing-4XL);
   padding-bottom: var(--Spacing-3XL);
 }
@@ -71,32 +70,37 @@
 // Text styles
 .title {
   @include sub-header-l;
-  color: var(--Typography-100, #252529);
 }
 
 .text {
   @include sub-header-s;
-  color: var(--Typography-300, #4b4b52);
 }
 
 // Dynamic styles
-.about.magnora {
+.section.magnora {
+  background: var(--bg-magnora-section);
+  color: white;
+
   .title {
-    color: var(--Typography-100, #252529);
+    color: var(--Typography-White-100);
+  }
+
+  .text {
+    color: var(--Typography-White-300);
   }
 
   p {
-    color: var(--Typography-300, #4b4b52);
+    color: var(--Typography-300);
   }
 }
 
-.about.zenora {
+.section.zenora {
   .title {
-    color: var(--Typography-Purple-100, #3c33b8);
+    color: var(--Typography-Purple-100);
   }
 
-  p {
-    color: var(--Typography-Purple-100, #3c33b8);
+  .text {
+    color: var(--Typography-Purple-100);
   }
 }
 

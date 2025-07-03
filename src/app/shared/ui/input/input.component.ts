@@ -8,7 +8,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './input.component.scss',
 })
 export class InputComponent {
-  @Input() status: 'normal' | 'success' | 'error' = 'normal';
+  @Input() status: 'normal' | 'success' | 'error' | 'magnora' = 'normal';
+  @Input() variant: 'normal' | 'magnora' = 'normal';
   @Input() placeholder?: string = '';
   @Input() disabled: boolean = false;
   @Input() type: string = 'text';

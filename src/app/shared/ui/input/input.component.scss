@@ -67,4 +67,17 @@
       color: var(--Indicator-Success, #1aa323);
     }
   }
+
+  &.magnora {
+    color: var(--Typography-White-400, #88838f);
+    background: var(--bg-magnora-dissabled, #17171f);
+    box-shadow: -1px -1px 0px 0px #2e2e3d inset, 1px 1px 0px 0px #2e2e3d inset,
+      0px 0px 32px -8px rgba(46, 46, 61, 0.64) inset;
+    -webkit-backdrop-filter: blur(24px);
+    backdrop-filter: blur(24px);
+
+    &::placeholder {
+      color: var(--Typography-White-400, #88838f);
+    }
+  }
 }

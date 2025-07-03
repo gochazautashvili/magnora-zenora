@@ -1,10 +1,7 @@
 @use "typography" as *;
 @use "layout" as *;
 
-
-
 .home-service {
-  background-color: var(--BG-Section);
   padding-block: var(--Spacing-3XL);
   .content {
     @include container;
@@ -15,7 +12,6 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
-
 
     h2 {
       @include header-s;
@@ -34,7 +30,6 @@
     column-gap: var(--Spacing-L);
     margin-top: var(--Spacing-XL);
 
-
     .service-card {
       display: flex;
       flex-direction: column;
@@ -44,9 +39,8 @@
         width: 100%;
         height: auto;
         display: block;
-        object-fit: cover; 
+        object-fit: cover;
       }
-
 
       .service-card-box {
         display: flex;
@@ -66,13 +60,38 @@
 
       p {
         @include regular-r;
-        color: var(--Typography-300);
       }
     }
   }
 }
 
+.home-service.magnora {
+  background: var(--bg-magnora-section, #09070d);
+
+  .service-header {
+    h2 {
+      color: var(--Typography-White-100, #eff0f5);
+    }
+
+    p {
+      color: var(--Typography-White-300, #c7c8cc);
+    }
+  }
+
+  .service-image-cards .service-card {
+    h3 {
+      color: var(--Typography-White-100, #eff0f5);
+    }
+
+    p {
+      color: var(--Typography-White-300, #c7c8cc);
+    }
+  }
+}
+
 .home-service.zenora {
+  background-color: var(--BG-Section);
+
   .service-header {
     h2 {
       color: var(--Typography-Purple-100, #3c33b8);
@@ -94,15 +113,12 @@
   }
 }
 
-
 @media (max-width: 780px) {
   .home-service {
-
     .service-header {
       display: flex;
       flex-direction: column;
       gap: 24px;
-
 
       h2 {
         @include sub-header-l;
@@ -120,7 +136,6 @@
       row-gap: var(--Spacing-XL);
       column-gap: var(--Spacing-L);
       margin-top: var(--Spacing-XL);
-
 
       .service-card {
         width: 400px;
@@ -145,16 +160,12 @@
   }
 }
 
-
-
 @media (max-width: 500px) {
   .home-service {
-
     .service-header {
       display: flex;
       flex-direction: column;
       gap: 24px;
-
 
       h2 {
         @include sub-header-l;
@@ -172,7 +183,6 @@
       row-gap: var(--Spacing-XL);
       column-gap: var(--Spacing-L);
       margin-top: var(--Spacing-XL);
-
 
       .service-card {
         width: 400px;
@@ -192,15 +202,15 @@
           border-radius: 12px;
           object-fit: cover;
         }
-        
-      h3 {
-        @include sub-header-s;
-      }
 
-      p {
-        @include regular-r;
-        color: var(--Typography-300);
-      }
+        h3 {
+          @include sub-header-s;
+        }
+
+        p {
+          @include regular-r;
+          color: var(--Typography-300);
+        }
       }
     }
   }

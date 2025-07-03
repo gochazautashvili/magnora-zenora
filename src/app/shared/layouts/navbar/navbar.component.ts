@@ -1,12 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component, HostListener, inject, Input } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 import { LanguageService } from '@core/i18n/language.service';
 import { OverlayService } from '@shared/services/overlay.service';
 
 @Component({
   selector: 'app-navbar',
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
 })
@@ -37,6 +38,19 @@ export class NavbarComponent {
         return 'assets/icons/magnora-navbar-logo.png';
       case 'zenora':
         return 'assets/icons/zenora-navbar-logo.png';
+      default:
+        return '';
+    }
+  }
+
+  get navbarLogoLink(): string {
+    switch (this.type) {
+      case 'root':
+        return '/';
+      case 'magnora':
+        return '/magnora';
+      case 'zenora':
+        return '/zenora';
       default:
         return '';
     }
