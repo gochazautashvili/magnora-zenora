@@ -45,6 +45,14 @@ export class NavbarComponent {
     }
   }
 
+  get currentLanguage(): string {
+    if (localStorage.getItem("language")?.toString() === 'en') {
+      return "Georgian";
+    }
+
+    return "English";
+  }
+
   @HostListener('window:resize')
   onResize() {
     this.isMobile = window.innerWidth <= 768;
