@@ -138,3 +138,12 @@
     max-width: 16px;
     pointer-events: none;
   }
+
+
+
+
+  @media (max-width:550px) {
+    .otp-inputs {
+      gap: 0px;
+    }
+  }

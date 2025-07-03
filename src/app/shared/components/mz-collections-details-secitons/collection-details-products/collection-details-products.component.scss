@@ -1,6 +1,11 @@
 @use "typography" as *;
 @use "layout" as *;
 
+
+.bi {
+    width: 100px;
+    height: 100px;
+}
 section {
     padding: 100px 20px 20px 20px;
     height: auto;
@@ -20,6 +25,7 @@ section {
         img {
             width: 10px;
             height: 17px;
+            cursor: pointer;
         }
         .filter-wrapper {
             display: flex;
@@ -62,8 +68,8 @@ section {
             }
             .heart-img {
                 position: absolute;
-                top: 0px;
-                right: 0px;
+                top: 10px;
+                right: 10px;
                 cursor: pointer;
 
                 background-color: var(--BG-Secondary-Section);
@@ -75,9 +81,14 @@ section {
                 align-items: center;
                 justify-content: center;
                 
-                svg {
-                   width: 28px;
-                   height: 24px;
+                i {
+                   width: min-content;
+                   height: min-content;
+                   display: flex;
+                   justify-content: center;
+                   align-items: center;
+                   transition: color 0.3s ease;
+                   cursor: pointer;
                }
              
             }
@@ -89,48 +100,125 @@ section {
             grid-template-columns: 1fr;
             flex-direction: column;
             gap: 0.5rem;
+        
             .header {
                 @include sub-header-s;
                 font-family: outfit;
                 color: var(--Typography-Purple-100);
                 
-                display: flex;
+                display: grid;
+                grid-template-columns: 11fr 1fr;
+                
                 justify-content: space-between;
                 align-items: center;
-                height: 28px;
             }
             .description {
                 color: var(--Typography-Purple-200);
             }
-
-            button {
-                height: 48px;
-                border-radius: 48px;
-                margin-top: 10px;
-           
-                padding : 12px 32px;
-
-                background: var(--Button-Secondary-BG);
-             
-
-                font-family: Outfit;
-                font-weight: 600;
-                font-size: 16px;
-                line-height: 24px;
-                letter-spacing: 2%;
-                color: var(--Typography-200);
-                transition: 0.2s;
-
-
+            .button ::ng-deep button {
+                width: 100%;
             }
-            button:hover {
-                transition: 0.2s;
-                box-shadow: 1px 1px 0px 0px var(--BG-Secondary-Section) inset;
-                backdrop-filter: blur(24px)
-
-            }
+          
         }
        }
             
+    }
+}
+
+@media (max-width: 900px) {
+    .grid-container {
+        .product {
+            .texts {
+                .header {
+
+                    h3 {
+                        font-size: 16px;
+                        line-height: 24px;
+                    }
+                    p{
+                        grid-row: 2;
+                        
+                    }
+                }
+                .description {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) { 
+    .grid-container {
+        .products-wrapper {
+            grid-template-columns: repeat(2,1fr);
+            
+        .product {
+            .img {
+                .product-image{
+                img {
+                    height: auto;
+                    max-height: 189px !important;
+                }
+            }
+        }
+            .texts {
+                    button {
+                        font-size: 14px;
+                    }
+                    .header {
+                        h3 {
+                            font-size: 14px;
+                        }
+                    }
+                   
+                }
+            .description {
+                p {
+                    font-size: 13px;
+                    line-height: 15px;
+                }
+            }
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .grid-container {
+        .products-wrapper {
+            grid-template-columns: repeat(1,1fr);
+
+            .product {
+                .img {
+                    .product-image{
+                    img {
+                        height: auto;
+                        max-height: 239px !important;
+                    }
+                }
+            }
+
+            .texts {
+                button {
+                    font-size: 14px;
+                }
+                .header {
+
+                    h3 {
+                        font-size: 16px;
+                    }
+                }
+               
+            }
+            .description {
+                p {
+                    font-size: 14px;
+                    line-height: 15px;
+                }
+            }
+        }
+    }
     }
 }
