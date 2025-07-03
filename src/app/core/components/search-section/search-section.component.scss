@@ -11,10 +11,10 @@
   padding: 16px 24px;
   border-radius: 32px;
   background: var(--BG-Nav-Bar, rgba(239, 240, 245, 0.24));
-  box-shadow: 
-    -1px -1px 0px 0px var(--BG-Dissabled, #c7c8cc) inset,
+  box-shadow: -1px -1px 0px 0px var(--BG-Dissabled, #c7c8cc) inset,
     1px 1px 0px 0px var(--BG-Dissabled, #c7c8cc) inset;
   color: var(--Typography-100, #252529);
+  -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
 
   &.magnora {
@@ -34,11 +34,11 @@
     input {
       flex: 1;
       background-color: transparent;
-      background-image: url('assets/icons/search.svg');
+      background-image: url("assets/icons/search.svg");
       background-position: 0 center;
       background-repeat: no-repeat;
       background-size: 24px 24px;
-      padding-left: 48px;  
+      padding-left: 48px;
       border: none;
       outline: none;
       color: inherit;
@@ -49,7 +49,7 @@
       letter-spacing: 0.96px;
 
       &.magnora {
-        background-image: url('assets/icons/search-white.svg');
+        background-image: url("assets/icons/search-white.svg");
       }
 
       &::placeholder {
@@ -127,7 +127,7 @@
         }
 
         .product-description {
-          color: var(--Typography-200, #38383D);
+          color: var(--Typography-200, #38383d);
           font-size: 16px;
           font-weight: 400;
           line-height: 24px; /* 150% */
