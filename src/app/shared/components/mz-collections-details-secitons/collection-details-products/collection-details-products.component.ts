@@ -1,8 +1,9 @@
+import { NgIf } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-collection-details-products',
-  imports: [],
+  imports: [NgIf],
   templateUrl: './collection-details-products.component.html',
   styleUrl: './collection-details-products.component.scss'
 })

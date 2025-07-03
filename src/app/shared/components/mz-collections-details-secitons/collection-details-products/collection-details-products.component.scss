@@ -89,15 +89,17 @@ section {
             grid-template-columns: 1fr;
             flex-direction: column;
             gap: 0.5rem;
+        
             .header {
                 @include sub-header-s;
                 font-family: outfit;
                 color: var(--Typography-Purple-100);
                 
-                display: flex;
+                display: grid;
+                grid-template-columns: 11fr 1fr;
+                
                 justify-content: space-between;
                 align-items: center;
-                height: 28px;
             }
             .description {
                 color: var(--Typography-Purple-200);
@@ -132,5 +134,103 @@ section {
         }
        }
             
+    }
+}
+
+@media (max-width: 900px) {
+    .grid-container {
+        .product {
+            .texts {
+                .header {
+
+                    h3 {
+                        font-size: 16px;
+                        line-height: 24px;
+                    }
+                    p{
+                        grid-row: 2;
+                        
+                    }
+                }
+                .description {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) { 
+    .grid-container {
+        .products-wrapper {
+            grid-template-columns: repeat(2,1fr);
+            
+        .product {
+            .img {
+                .product-image{
+                img {
+                    height: auto;
+                    max-height: 189px !important;
+                }
+            }
+        }
+            .texts {
+                    button {
+                        font-size: 14px;
+                    }
+                    .header {
+                        h3 {
+                            font-size: 14px;
+                        }
+                    }
+                   
+                }
+            .description {
+                p {
+                    font-size: 13px;
+                    line-height: 15px;
+                }
+            }
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .grid-container {
+        .products-wrapper {
+            grid-template-columns: repeat(1,1fr);
+
+            .product {
+                .img {
+                    .product-image{
+                    img {
+                        height: auto;
+                        max-height: 239px !important;
+                    }
+                }
+            }
+
+            .texts {
+                button {
+                    font-size: 14px;
+                }
+                .header {
+
+                    h3 {
+                        font-size: 16px;
+                    }
+                }
+               
+            }
+            .description {
+                p {
+                    font-size: 14px;
+                    line-height: 15px;
+                }
+            }
+        }
+    }
     }
 }

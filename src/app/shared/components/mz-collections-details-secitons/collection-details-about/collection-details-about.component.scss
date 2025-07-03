@@ -18,7 +18,9 @@
             display: flex;
             flex-direction: column;
             gap: 150px;    
-                    
+            .mobile-tablet {
+                display: none;
+            }
             h1 {
     
                 @include header-l;
@@ -40,6 +42,35 @@
                 @include sub-header-s;
                 color: var(--Typography-Purple-100);
                 max-width: 300px;
+            }
+        }
+    }
+}
+
+
+
+// tablet
+@media (max-width: 768px) {
+    .about-section {
+        padding-top: 150px;
+        .grid-wrapper {
+            grid-template-columns: 1fr;
+            align-items: end;
+            .section-header-texts{
+                gap: 0px;
+                margin-bottom: 50px;
+                p {
+                    margin: 0px;
+                    margin-top: 15px;
+                }
+                .mobile-tablet {
+                    display: block;
+                    margin-top: 268px;
+                }
+              
+            }
+            .desktop {
+                display: none;
             }
         }
     }
