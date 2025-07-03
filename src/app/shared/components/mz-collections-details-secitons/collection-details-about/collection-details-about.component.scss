@@ -2,17 +2,45 @@
 @use "layout" as *;
 
 .about-section{
-    @include container;
-    display: grid;
-    grid-template-columns: 1.8fr 1fr;
+
     min-height: 90vh;
     height: 100%;
-    padding-top: 15%;
-    .section-header-texts {
-        @include sub-header-l;
+    padding-top: 12%;
 
-        span {
-            color: var(--Typography-Purple-100);
+    .grid-wrapper {
+
+        @include container;
+        display: grid;
+        grid-template-columns: 2.5fr 1fr;
+        align-items: end;
+
+        .section-header-texts {
+            display: flex;
+            flex-direction: column;
+            gap: 150px;    
+                    
+            h1 {
+    
+                @include header-l;
+                span {
+                    color: var(--Typography-Purple-100);
+                }
+            }
+            p {
+                @include sub-header-s;
+                color: var(--Typography-Purple-100);
+                max-width: 416px;
+                margin-left: 6rem;
+            }
+        }
+        .texts {
+            padding-bottom: 2rem;
+
+            p {
+                @include sub-header-s;
+                color: var(--Typography-Purple-100);
+                max-width: 300px;
+            }
         }
     }
 }

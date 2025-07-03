@@ -4,9 +4,11 @@ const routes: Routes = [
   {
     path: 'zenora',
     loadComponent: () => import('./layout/zenora-layout.component'),
+
     children: [
       { path: '', loadComponent: () => import('./views/home/home.component') },
-      { path: 'collections', loadComponent: () => import('../../shared/components/mz-collections-details-secitons/collection-details-about/collection-details-about.component') },
+      { path: 'collections-details', loadComponent: () => import('./views/collections-detail/collections-detail.component') },
+
       {
         path: 'collections',
         loadComponent: () =>
