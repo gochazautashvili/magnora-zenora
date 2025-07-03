@@ -7,7 +7,6 @@ import { Component, Input } from '@angular/core';
   styleUrl: './collection-details-products.component.scss'
 })
 export class CollectionDetailsProductsComponent {
-  @Input() filter: boolean = true;
   products = [ 
     {
       img : 'assets/images/product-test.jpg',
