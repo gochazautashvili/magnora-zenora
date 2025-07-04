@@ -21,7 +21,7 @@
     display: grid;
     grid-template-columns: 1fr 41.1dvw;
     justify-content: center;
-    gap: 48px;
+    gap: var(--Spacing-L);
 
     @media (max-width: 900px) {
       width: 100%;
@@ -36,10 +36,16 @@
 
       h2 {
         @include header-s;
+
+        @media screen and (max-width: 400px) {
+          font-size: var(--FONT-SIZE-SHS);
+        }
       }
 
       p {
         @include sub-header-s;
+
+        font-size: var(--FONT-SIZE-RR);
       }
     }
 
@@ -130,6 +136,14 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
+
+    .title {
+      @include sub-header-s;
+    }
+
+    .text {
+      @include regular-r;
+    }
   }
 }
 

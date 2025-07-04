@@ -13,6 +13,11 @@
 
   .title {
     @include header-s;
+
+    @media screen and (max-width: 400px) {
+      font-size: var(--FONT-SIZE-SHL);
+      text-align: center;
+    }
   }
 
   .texts {
@@ -36,6 +41,11 @@
 
     .text {
       @include sub-header-s;
+
+      @media screen and (max-width: 400px) {
+        font-size: var(--FONT-SIZE-SR);
+        text-align: center;
+      }
     }
   }
 }
@@ -83,10 +93,20 @@
 
   .title {
     @include sub-header-l;
+
+    @media screen and (max-width: 400px) {
+      font-size: var(--FONT-SIZE-SHS);
+      text-align: center;
+    }
   }
 
   .text {
     @include sub-header-s;
+
+    @media screen and (max-width: 400px) {
+      font-size: var(--FONT-SIZE-RR);
+      text-align: center;
+    }
   }
 }
 

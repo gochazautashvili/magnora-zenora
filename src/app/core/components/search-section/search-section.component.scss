@@ -2,11 +2,11 @@
 
 .search-bar-section {
   position: absolute;
-  left: 0;
-  right: 0;
+  left: 24px;
+  right: 24px;
   margin: 0 auto;
   z-index: 3;
-  width: 648px;
+  max-width: 648px;
   min-height: 56px;
   padding: 16px 24px;
   border-radius: 32px;
@@ -17,6 +17,14 @@
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
 
+  @media screen and (max-width: 400px) {
+    padding-inline: 12px;
+    border-radius: 20px;
+
+    left: 12px;
+    right: 12px;
+  }
+
   &.magnora {
     background: var(--bg-magnora-nav-bar, rgba(7, 5, 10, 0.24));
     box-shadow: -1px -1px 0px 0px #2e2e3d inset, 1px 1px 0px 0px #2e2e3d inset;
@@ -26,10 +34,15 @@
   .input-container {
     width: 100%;
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: space-between;
     color: inherit;
     gap: 24px;
+
+    @media screen and (max-width: 400px) {
+      gap: 0px;
+    }
 
     input {
       flex: 1;
@@ -48,6 +61,11 @@
       line-height: 24px; /* 150% */
       letter-spacing: 0.96px;
 
+      @media screen and (max-width: 400px) {
+        padding-left: 2px;
+        background-image: none !important;
+      }
+
       &.magnora {
         background-image: url("assets/icons/search-white.svg");
       }
@@ -64,6 +82,14 @@
       height: 24px;
       flex-shrink: 0;
       color: inherit;
+
+      @media screen and (max-width: 400px) {
+        width: 20px;
+        height: 20px;
+
+        position: absolute;
+        right: 0;
+      }
 
       &.magnora {
         color: #c7c8cc;

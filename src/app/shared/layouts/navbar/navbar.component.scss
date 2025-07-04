@@ -1,20 +1,15 @@
 @use "layout" as *;
 
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-
   @include container;
-}
 
-.nav {
   display: grid;
   align-items: center;
-  grid-template-columns: 1fr auto 1fr;
+
+  width: auto;
   padding: 12px 48px 20px;
   position: fixed;
+  height: 92px;
 
   top: 32px;
   left: 32px;
@@ -27,6 +22,21 @@
     1px 1px 0px 0px var(--BG-Dissabled, #c7c8cc) inset;
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
+
+  @media screen and (max-width: 600px) {
+    top: auto;
+    bottom: 32px;
+    left: 18px;
+    right: 18px;
+
+    padding: 8px 24px;
+  }
+}
+
+.nav {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr auto 1fr;
 }
 
 .left,
@@ -88,13 +98,6 @@
 }
 
 @media (max-width: 900px) {
-  .nav {
-    padding: 8px 24px 16px;
-    top: 24px;
-    left: 12px;
-    right: 12px;
-  }
-
   .left {
     .box:first-child {
       display: none;
@@ -114,14 +117,20 @@
 
 //
 .header.magnora {
-  .nav {
-    background: var(--bg-magnora-nav-bar, rgba(7, 5, 10, 0.24));
-    box-shadow: -1px -1px 0px 0px #2e2e3d inset, 1px 1px 0px 0px #2e2e3d inset;
-    -webkit-backdrop-filter: blur(12px);
-    backdrop-filter: blur(12px);
+  background: var(--bg-magnora-nav-bar, rgba(7, 5, 10, 0.24));
+  box-shadow: -1px -1px 0px 0px #2e2e3d inset, 1px 1px 0px 0px #2e2e3d inset;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
 
-    .box {
-      color: var(--Typography-White-100, #eff0f5);
-    }
+  .box {
+    color: var(--Typography-White-100, #eff0f5);
+  }
+}
+
+.search {
+  display: none;
+
+  @media screen and (max-width: 900px) {
+    display: flex;
   }
 }

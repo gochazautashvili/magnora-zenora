@@ -60,11 +60,7 @@
 }
 
 .left {
-  background: linear-gradient(
-    139deg,
-    var(--BG-Purple-Light, #584fdb) 0%,
-    var(--BG-Purple-Dark, #3c33b8) 100%
-  );
+  background: var(--bg-magora-background);
 
   h1 {
     color: var(--BG-Background, #eff0f5);

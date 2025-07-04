@@ -1,3 +1,9 @@
+<app-search-section
+  class="search"
+  type="magnora"
+  [isMobile]="true"
+></app-search-section>
+
 <header [ngClass]="type" class="header">
   <nav class="nav">
     <div class="left">
@@ -37,10 +43,10 @@
 
     <div class="center">
       <img
-      *ngIf="navbarLogo"
-      [src]="navbarLogo"
-      alt="navbar logo"
-      routerLink="/"
+        *ngIf="navbarLogo"
+        [src]="navbarLogo"
+        alt="navbar logo"
+        routerLink="/"
       />
     </div>
 
