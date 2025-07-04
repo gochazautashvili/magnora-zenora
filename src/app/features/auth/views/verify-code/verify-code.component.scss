@@ -1,14 +1,12 @@
 @use "typography" as *;
 
-
 .container {
   background-color: var(--BG-Section);
   padding: 3rem;
   border-radius: 48px;
 }
 
-
-// titles 
+// titles
 
 .titles {
   width: 100%;
@@ -19,6 +17,7 @@
   .go-back {
     display: flex;
     align-items: center;
+    cursor: pointer;
     gap: 1rem;
 
     img {
@@ -41,14 +40,12 @@
     h3 {
       @include sub-header-l;
       color: var(--Typography-100);
-
     }
     p {
       @include regular-r;
       color: var(--Typography-200);
     }
   }
-
 }
 
 .resend-code-texts {
@@ -64,59 +61,54 @@
 
   .p-2 {
     @include regular-b;
-    color: var(--Typography-100)
+    color: var(--Typography-100);
   }
 }
-
-
-
-
-
 
 // otp input styles
 
 .otp-container {
-    margin-top: 3rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-  }
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
 
-  .otp-inputs {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-  }
+.otp-inputs {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
 
-  .otp-input {
-    width: 100%; // max-width is 48px
-    height: 52px;
-    text-align: center;
-    font-size: 18px;
-    font-weight: 600;
-    border: 2px solid #e1e5e9;
-    border-radius: 12px;
-    background-color: var(--BG-Secondary-Section);
-    transition: all 0.2s ease;
-    outline: none;
-  }
+.otp-input {
+  width: 100%; // max-width is 48px
+  height: 52px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  border: 2px solid #e1e5e9;
+  border-radius: 12px;
+  background-color: var(--BG-Secondary-Section);
+  transition: all 0.2s ease;
+  outline: none;
+}
 
-  // filled
-  .otp-input.filled {
-  }
+// filled
+.otp-input.filled {
+}
 
-  .otp-input:disabled {
-    background-color: #f9fafb;
-    cursor: not-allowed;
-    opacity: 0.6;
-  }
+.otp-input:disabled {
+  background-color: #f9fafb;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
 
-  .error-message {
-    color: #ef4444;
-    font-size: 14px;
-    text-align: center;
-  }
+.error-message {
+  color: #ef4444;
+  font-size: 14px;
+  text-align: center;
+}
 
   // input bottom lines
   .otp-wrapper {
