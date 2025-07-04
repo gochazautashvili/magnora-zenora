@@ -1,8 +1,12 @@
 <section class="hero">
-  <video autoplay loop muted class="video">
-    <source src="assets/videos/magnora-hero-video.mp4" type="video/mp4" />
+  @if(gallery[activeIndex].type === "image") {
+  <img class="banner" alt="magnora banner" [src]="gallery[activeIndex].url" />
+  } @else {
+  <video autoplay loop muted class="banner">
+    <source [src]="gallery[activeIndex].url" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
+  }
 
   <div [ngClass]="type" class="content">
     <!--  -->
@@ -26,28 +30,20 @@
     <div class="bottom">
       <div class="left">
         <p class="text">
-          @if(type === "magnora") {
-          {{ "MAGNORA.COLLECTIONS.HERO.TEXT_1" | translate }}
-          } @else {
-          {{ "ZENORA.COLLECTIONS.HERO.TEXT_1" | translate }}
-          }
+          {{ gallery[activeIndex].text_1 | translate }}
         </p>
       </div>
 
       <div class="rigth">
         <p class="text">
-          @if(type === "magnora") {
-          {{ "MAGNORA.COLLECTIONS.HERO.TEXT_2" | translate }}
-          } @else {
-          {{ "ZENORA.COLLECTIONS.HERO.TEXT_2" | translate }}
-          }
+          {{ gallery[activeIndex].text_2 | translate }}
         </p>
       </div>
     </div>
 
     <!--  -->
     <div class="pagination">
-      <button title="Prev banner" class="icon">
+      <button (click)="prevPage()" title="Prev banner" class="icon">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="32"
@@ -63,13 +59,16 @@
       </button>
 
       <div class="dots">
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
+        @for (item of gallery; track $index; let i = $index) {
+        <span
+          class="dot"
+          (click)="setPageIndex(i)"
+          [ngClass]="i === activeIndex ? 'active' : ''"
+        ></span>
+        }
       </div>
 
-      <button title="next banner" class="icon">
+      <button (click)="nextPage()" title="next banner" class="icon">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="32"

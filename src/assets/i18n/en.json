@@ -87,28 +87,64 @@
         "TEXT_1": "Jewelry crafted from high-vibration crystals and infused with ancient feminine energy.",
         "TEXT_2": "Each collection channels specific intentions like love, intuition, protection, and abundance.",
         "BOX_1": {
-          "TITLE": "Zenora Isis",
-          "TEXT": "Protection and Wisdom"
+          "MAN": {
+            "TITLE": "Zenora Venus",
+            "TEXT": "Love and Femine Grace"
+          },
+          "WOMEN": {
+            "TITLE": "Zenora Zeus",
+            "TEXT": "Leadership and Authority"
+          }
         },
         "BOX_2": {
-          "TITLE": "Zenora Venus",
-          "TEXT": "Love and Femine Grace"
+          "MAN": {
+            "TITLE": " Zenora Odin",
+            "TEXT": "Wisdom and Cosmic Magic"
+          },
+          "WOMEN": {
+            "TITLE": "Zenora Venus",
+            "TEXT": "Love and Femine Grace"
+          }
         },
         "BOX_3": {
-          "TITLE": "Zenora Selene",
-          "TEXT": "Moon Energy, Intuition and Balance"
+          "MAN": {
+            "TITLE": "Zenora Hades",
+            "TEXT": "Shadow Power and Hidden Influence"
+          },
+          "WOMEN": {
+            "TITLE": "Zenora Selene",
+            "TEXT": "Moon Energy, Intuition and Balance"
+          }
         },
         "BOX_4": {
-          "TITLE": "Zenora Freya",
-          "TEXT": "Freedom and Power"
+          "MAN": {
+            "TITLE": "Zenora Hermes",
+            "TEXT": "Communication and Strategy"
+          },
+          "WOMEN": {
+            "TITLE": "Zenora Freya",
+            "TEXT": "Freedom and Power"
+          }
         },
         "BOX_5": {
-          "TITLE": "Zenora Dali",
-          "TEXT": "Nature’s Force and Wild Spirit"
+          "MAN": {
+            "TITLE": " Zenora Ra",
+            "TEXT": "Solar Energy and Vitality"
+          },
+          "WOMEN": {
+            "TITLE": "Zenora Dali",
+            "TEXT": "Nature’s Force and Wild Spirit"
+          }
         },
         "BOX_6": {
-          "TITLE": "Zenora Mandragora",
-          "TEXT": "Herbal Healing and Alchemy"
+          "MAN": {
+            "TITLE": "Zenora Odin",
+            "TEXT": "Wisdom and Cosmic Magic"
+          },
+          "WOMEN": {
+            "TITLE": "Zenora Mandragora",
+            "TEXT": "Herbal Healing and Alchemy"
+          }
         }
       },
       "CTA": {
@@ -188,48 +224,162 @@
         }
       }
     },
-    "HERO": {
-      "TITLE": {
-        "TEXT_1": "Explore",
-        "SPAN_1": "the Power",
-        "TEXT_2": "Within",
-        "SPAN_2": "Each Collection"
+    "COLLECTIONS": {
+      "HERO": {
+        "TITLE": {
+          "TEXT_1": "Explore",
+          "SPAN_1": "the Power",
+          "TEXT_2": "Within",
+          "SPAN_2": "Each Collection"
+        },
+        "TEXT_1": "Zenora is more than jewelry — it’s an energetic code. Discover pieces designed to align you with strength, love, success, and protection.",
+        "TEXT_2": "Each Zenora collection blends sacred symbols, natural crystals, and purpose-driven design — timeless tools to align your energy and transform your reality."
       },
-      "TEXT_1": "Zenora is more than jewelry — it’s an energetic code. Discover pieces designed to align you with strength, love, success, and protection.",
-      "TEXT_2": "Each Zenora collection blends sacred symbols, natural crystals, and purpose-driven design — timeless tools to align your energy and transform your reality."
-    },
-    "SUB": {
-      "TITLE": "Zenora Crystal Collections",
-      "TEXT_1": "Jewelry crafted from high-vibration crystals and infused with ancient feminine energy.",
-      "TEXT_2": "Each collection channels specific intentions like love, intuition, protection, and abundance.",
-      "BOX_1": {
-        "TITLE": "Zenora Isis",
-        "TEXT": "Protection and Wisdom"
+      "SUB": {
+        "TITLE": "Zenora Crystal Collections",
+        "TEXT_1": "Jewelry crafted from high-vibration crystals and infused with ancient feminine energy.",
+        "TEXT_2": "Each collection channels specific intentions like love, intuition, protection, and abundance.",
+        "BOX_1": {
+          "MAN": {
+            "TITLE": "Zenora Venus",
+            "TEXT": "Love and Femine Grace"
+          },
+          "WOMEN": {
+            "TITLE": "Zenora Zeus",
+            "TEXT": "Leadership and Authority"
+          }
+        },
+        "BOX_2": {
+          "MAN": {
+            "TITLE": " Zenora Odin",
+            "TEXT": "Wisdom and Cosmic Magic"
+          },
+          "WOMEN": {
+            "TITLE": "Zenora Venus",
+            "TEXT": "Love and Femine Grace"
+          }
+        },
+        "BOX_3": {
+          "MAN": {
+            "TITLE": "Zenora Hades",
+            "TEXT": "Shadow Power and Hidden Influence"
+          },
+          "WOMEN": {
+            "TITLE": "Zenora Selene",
+            "TEXT": "Moon Energy, Intuition and Balance"
+          }
+        },
+        "BOX_4": {
+          "MAN": {
+            "TITLE": "Zenora Hermes",
+            "TEXT": "Communication and Strategy"
+          },
+          "WOMEN": {
+            "TITLE": "Zenora Freya",
+            "TEXT": "Freedom and Power"
+          }
+        },
+        "BOX_5": {
+          "MAN": {
+            "TITLE": " Zenora Ra",
+            "TEXT": "Solar Energy and Vitality"
+          },
+          "WOMEN": {
+            "TITLE": "Zenora Dali",
+            "TEXT": "Nature’s Force and Wild Spirit"
+          }
+        },
+        "BOX_6": {
+          "MAN": {
+            "TITLE": "Zenora Odin",
+            "TEXT": "Wisdom and Cosmic Magic"
+          },
+          "WOMEN": {
+            "TITLE": "Zenora Mandragora",
+            "TEXT": "Herbal Healing and Alchemy"
+          }
+        }
       },
-      "BOX_2": {
-        "TITLE": "Zenora Venus",
-        "TEXT": "Love and Femine Grace"
+      "CTA": {
+        "TITLE": "Not Sure What You Need? Let’s Discover It Together.",
+        "TEXT": "Book a consultation to find the crystal, symbol, or intention that aligns with your path — guided with care and clarity."
+      }
+    }
+  },
+  "ORA": {
+    "ABOUT": {
+      "HERO": {
+        "TITLE": {
+          "TITLE_1": "Jewelry with",
+          "TITLE_2": "Purpose, Energy, and Identity."
+        },
+        "TEXT_1": "Ora unites ancient symbolism and modern intention to create two distinct paths",
+        "TEXT_2": "Magnora for power and transformation, Zenora for healing and renewal"
       },
-      "BOX_3": {
-        "TITLE": "Zenora Selene",
-        "TEXT": "Moon Energy, Intuition and Balance"
+      "ABOUT": {
+        "TITLE_1": "Magnora - Luxury. Power. Transformation.",
+        "TITLE_2": "Zenora - Tranquility. Renewal. Inner Balance.",
+        "TEXT_1": "Magnora is crafted for those who seek elegance with purpose — high-end jewelry infused with ancient symbols, energetic codes, and timeless strength.",
+        "TEXT_2": "Zenora is rooted in spiritual harmony, nature’s energy, and emotional clarity. Designed to heal, guide, and reconnect you with your inner self.",
+        "DESCRIPTION": "At Ora, we merge natural crystals, sacred symbolism, and holistic design into meaningful collections that align with your energy and story. Whether you're drawn to Magnora’s bold presence or Zenora’s calming flow, your path begins with intention — and leads through energy."
       },
-      "BOX_4": {
-        "TITLE": "Zenora Freya",
-        "TEXT": "Freedom and Power"
-      },
-      "BOX_5": {
-        "TITLE": "Zenora Dali",
-        "TEXT": "Nature’s Force and Wild Spirit"
-      },
-      "BOX_6": {
-        "TITLE": "Zenora Mandragora",
-        "TEXT": "Herbal Healing and Alchemy"
+      "CTA": {
+        "TITLE": "Ready to Choose Your Path?",
+        "TEXT": "Whether you're drawn to power or peace, Ora helps you align with the energy you're meant to wear."
       }
     },
-    "CTA": {
-      "TITLE": "Not Sure What You Need? Let’s Discover It Together.",
-      "TEXT": "Book a consultation to find the crystal, symbol, or intention that aligns with your path — guided with care and clarity."
+    "CONTACT": {
+      "TITLE": {
+        "TITLE_1": "Here to",
+        "SPAN_1": "Listen.",
+        "TITLE_2": "Ready to",
+        "SPAN_2": "Guide."
+      },
+      "TEXT": "Whether you need guidance, support, or collaboration — we’re here to connect.",
+      "CONTACT_FORM": {
+        "TITLE": "Or Get in Touch with"
+      },
+      "STEPS": {
+        "TITLE": "What are the next steps?",
+        "BOX_1": {
+          "TITLE": "Message Received",
+          "TEXT": "We’ve received your message and it's safely in our system. You’ll also get a confirmation email, so you know it reached us."
+        },
+        "BOX_2": {
+          "TITLE": "Thoughtful Review",
+          "TEXT": "Our team is reading your request with care and intention. Whether it’s a question or collaboration, we consider each message personally."
+        },
+        "BOX_3": {
+          "TITLE": "Response Within 24 - 48 Hours",
+          "TEXT": "You’ll hear from us shortly. Expect a helpful, human reply from our team within 1–2 business days."
+        }
+      }
+    }
+  },
+  "AUTH": {
+    "SIGN_UP": {
+      "TITLE": "Create Your Account",
+      "TEXT": "Start your journey with access to energy-matched recommendations, saved pieces, and exclusive offerings.",
+      "QUESTION": {
+        "TEXT": "Already have an account?",
+        "SPAN": "Log In"
+      }
+    },
+    "SIGN_IN": {
+      "TITLE": "Welcome Back",
+      "TEXT": "Continue your journey with your saved energy, favorites, and orders — all in one place.",
+      "QUESTION": {
+        "TEXT": "Don’t have an account?",
+        "SPAN": "Sign Up"
+      }
+    },
+    "RESET_PASSWORD": {
+      "TITLE": "Reset Your Password",
+      "TEXT": "Enter your email and we’ll send you a one-time code to verify your identity.",
+      "QUESTION": {
+        "TEXT": "Don’t have an account?",
+        "SPAN": "Sign Up"
+      }
     }
   }
 }

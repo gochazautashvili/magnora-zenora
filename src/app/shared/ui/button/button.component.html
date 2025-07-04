@@ -1,3 +1,8 @@
-<button title="button" [ngClass]="variant" [type]="type" class="btn" (click)="onClick()">
+<button
+  [ngClass]="variant + ' ' + size"
+  title="button"
+  [type]="type"
+  class="btn"
+>
   <ng-content></ng-content>
 </button>

@@ -1,8 +1,16 @@
 <section class="hero">
-  <video autoplay loop muted class="video">
+  @if(type === 'magnora'){
+  <img
+    class="banner"
+    alt="magnora banner"
+    src="assets/images/magnora-hero-banner.png"
+  />
+  } @else {
+  <video autoplay loop muted class="banner">
     <source src="assets/videos/magnora-hero-video.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>
+  }
 
   <div [ngClass]="type" class="content">
     <div class="title">
@@ -27,8 +35,13 @@
         }
       </h3>
       <div class="btns">
-        <app-button>Get started</app-button>
-        <app-button variant="secondary">See Our Product</app-button>
+        <app-button routerLink="/auth/sign-up">Get started</app-button>
+        <app-button
+          routerLink="collections"
+          [variant]="type === 'magnora' ? 'dark' : 'secondary'"
+        >
+          See Our Product
+        </app-button>
       </div>
     </div>
   </div>

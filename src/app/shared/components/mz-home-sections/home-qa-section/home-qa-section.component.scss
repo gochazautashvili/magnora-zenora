@@ -3,7 +3,6 @@
 
 .qa-section {
   padding-block: var(--Spacing-3XL);
-  background-color: var(--BG-Background);
 
   .qa-section-container {
     @include container;
@@ -28,7 +27,6 @@
       width: 100%;
       display: flex;
       flex-direction: column;
-
     }
 
     .answer-texts {
@@ -132,74 +130,71 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
-
-  .mat-expansion-panel {
-    width: 100%;
-    max-width: 658px;
-    border-radius: 36px;
-    background: var(--BG-Section, #e5e6eb);
-    box-shadow: -1px -1px 0px 0px var(--BG-Dissabled, #c7c8cc) inset,
-      1px 1px 0px 0px var(--BG-Dissabled, #c7c8cc) inset,
-      0px 0px 24px 0px var(--BG-Dissabled, #c7c8cc) inset;
-  }
-
-  .mat-expansion-panel-header {
-    background: var(--BG-Secondary-Section, #dbdce0);
-    padding: 12px 36px 12px 32px;
-    transition: all 0.5s;
-    border-radius: 36px;
-    height: 72px;
-
-    box-shadow: -1px -1px 0px 0px var(--BG-Dissabled, #c7c8cc) inset,
-      1px 1px 0px 0px var(--BG-Dissabled, #c7c8cc) inset;
-
-    &:hover {
-      background-color: var(--BG-Section);
-      transition: 0.5s;
-
-    h5 {
-      @include sub-header-s;
-    }
-    p {
-      @include regular-r;
-    }
   }
 }
 
 // magnora - zenora
 .qa-section.magnora {
+  background: var(--bg-magnora-section);
+
   .answer-texts {
     h2 {
-      color: var(--Typography-100, #252529);
+      color: var(--Typography-White-100, #eff0f5);
     }
 
     p {
-      color: var(--Typography-300);
+      color: var(--Typography-White-300, #c7c8cc);
     }
   }
 
   .mat-accordion.accordion {
-    .mat-expansion-panel-header-title {
-      color: var(--Typography-100, #252529);
+    .mat-expansion-panel-header {
+      background: var(--bg-magnora-secondary-section, #0e0b14);
+      box-shadow: -1px -1px 0px 0px #2e2e3d inset, 1px 1px 0px 0px #2e2e3d inset,
+        0px 0px 24px 0px #2e2e3d inset;
+
+      &:hover {
+        background: var(--bg-magnora-secondary-section, #0e0b14d7);
+      }
     }
 
-    .mat-panel-body p {
-      color: var(--Typography-300, #4b4b52);
+    .mat-expansion-panel-header-title {
+      color: var(--Typography-White-100, #eff0f5);
+    }
+
+    .mat-expansion-panel {
+      background: var(--bg-magnora-secondary-section, #0e0b14);
+      box-shadow: -1px -1px 0px 0px #2e2e3d inset, 1px 1px 0px 0px #2e2e3d inset,
+        0px 0px 24px 0px #2e2e3d inset;
+    }
+
+    .mat-panel-body {
+      background: var(--bg-magnora-secondary-section, #0e0b14);
+
+      p {
+        color: var(--Typography-White-300, #c7c8cc);
+      }
+
+      .separator {
+        background: var(--bg-magnora-dissabled, #17171f);
+      }
     }
   }
 
   .contact-text {
     h5 {
-      color: var(--Typography-100, #252529);
+      color: var(--Typography-White-100, #eff0f5);
     }
 
     p {
-      color: var(--Typography-100, #252529);
+      color: var(--Typography-White-100, #eff0f5);
     }
   }
 }
 
 .qa-section.zenora {
+  background-color: var(--BG-Background);
+
   .answer-texts {
     h2 {
       color: var(--Typography-Purple-100, #3c33b8);
@@ -228,8 +223,5 @@
     p {
       color: var(--Typography-Purple-100, #3c33b8);
     }
-  }
-}
-  
   }
 }

@@ -46,6 +46,25 @@
         1px 1px 0px 0px var(--BG-Secondary-Section, #dbdce0) inset;
     }
   }
+
+  &.dark {
+    color: var(--Typography-White-200, #dbdce0);
+    background: var(--Button-Secondary-BG-Dark, rgba(14, 11, 20, 0.64));
+    box-shadow: -1px -1px 0px 0px var(--BG-Secondary-Section, #dbdce0) inset,
+      1px 1px 0px 0px var(--BG-Secondary-Section, #dbdce0) inset;
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+
+    &:hover {
+      box-shadow: 0px 0px 16px 0px var(--BG-Section, #e5e6eb) inset,
+        -1px -1px 0px 0px var(--BG-Secondary-Section, #dbdce0) inset,
+        1px 1px 0px 0px var(--BG-Secondary-Section, #dbdce0) inset;
+    }
+  }
+
+  &.full {
+    width: 100%;
+  }
 }
 
 @media (max-width: 900px) {
@@ -53,8 +72,8 @@
     display: block;
     width: 100%;
   }
-  
+
   button {
     width: 100%;
-  }  
+  }
 }

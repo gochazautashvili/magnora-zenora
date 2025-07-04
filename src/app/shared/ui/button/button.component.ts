@@ -9,11 +9,6 @@ import { CommonModule } from '@angular/common';
 })
 export class ButtonComponent {
   @Input() type = 'button';
-  @Input() variant: 'primary' | 'secondary' = 'primary';
-
-  @Output() clicked = new EventEmitter<void>();
-
-  onClick() {
-    this.clicked.emit();
-  }
+  @Input() size: 'full' | 'normal' = 'normal';
+  @Input() variant: 'primary' | 'secondary' | 'dark' = 'primary';
 }

@@ -1,8 +1,13 @@
 <input
+  [name]="name"
   class="input"
   title="Input"
   [type]="type"
+  [value]="value"
+  (blur)="onBlur()"
   [ngClass]="status"
+  [ngClass]="variant"
   [disabled]="disabled"
+  (input)="onInput($event)"
   [placeholder]="placeholder"
 />

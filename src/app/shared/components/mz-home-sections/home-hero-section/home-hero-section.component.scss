@@ -13,7 +13,7 @@
   height: 100dvh;
   z-index: 1;
 
-  .video {
+  .banner {
     position: absolute;
     object-fit: cover;
     z-index: -1;
@@ -67,12 +67,14 @@
 
         @media (max-width: 900px) {
           min-width: 100%;
-          display: flex;
-          flex-direction: column;
 
           app-button {
             width: 100%;
           }
+        }
+
+        @media (max-width: 650px) {
+          flex-direction: column;
         }
       }
     }

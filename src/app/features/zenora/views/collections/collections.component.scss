@@ -30,10 +30,11 @@
         justify-content: center;
         width: 144px;
 
+        background: none;
         padding: 8px 32px;
         border-radius: 24px;
-        color: var(--Typography-300, #4b4b52);
         transition: all 0.3s;
+        color: var(--Typography-300, #4b4b52);
 
         &.active {
           color: var(--Typography-100, #252529);
@@ -47,9 +48,9 @@
       }
     }
   }
-}
 
-.tab_content {
-  @include container;
-  padding-block: var(--Spacing-L);
+  .tab_content {
+    @include container;
+    padding-block: var(--Spacing-L);
+  }
 }

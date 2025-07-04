@@ -1,0 +1,99 @@
+@use "typography" as *;
+@use "layout" as *;
+
+.about-section {
+  min-height: 90vh;
+  height: 100%;
+  padding-top: 12%;
+
+  .grid-wrapper {
+    @include container;
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    align-items: end;
+
+    .section-header-texts {
+      display: flex;
+      flex-direction: column;
+      gap: 150px;
+      .mobile-tablet {
+        display: none;
+      }
+      h1 {
+        @include header-l;
+        span {
+          color: var(--Typography-Purple-100);
+        }
+      }
+      p {
+        @include sub-header-s;
+        color: var(--Typography-Purple-100);
+        max-width: 416px;
+        margin-left: 6rem;
+      }
+    }
+    .texts {
+      padding-bottom: 2rem;
+
+      p {
+        @include sub-header-s;
+        color: var(--Typography-Purple-100);
+        max-width: 300px;
+      }
+    }
+  }
+}
+
+// tablet
+@media (max-width: 768px) {
+  .about-section {
+    padding-top: 150px;
+    .grid-wrapper {
+      grid-template-columns: 1fr;
+      align-items: end;
+      .section-header-texts {
+        gap: 0px;
+        margin-bottom: 50px;
+        p {
+          margin: 0px;
+          margin-top: 15px;
+        }
+        .mobile-tablet {
+          display: block;
+          margin-top: 268px;
+        }
+      }
+      .desktop {
+        display: none;
+      }
+    }
+  }
+}
+
+// magnora - zenora
+
+.about-section.magnora {
+  background: var(--bg-magnora-section);
+
+  .grid-wrapper {
+    @include container;
+
+    .section-header-texts {
+      h1 {
+        color: var(--Typography-White-100);
+
+        span {
+          color: var(--Typography-White-300);
+        }
+      }
+      p {
+        color: var(--Typography-White-300);
+      }
+    }
+    .texts {
+      p {
+        color: var(--Typography-White-300);
+      }
+    }
+  }
+}

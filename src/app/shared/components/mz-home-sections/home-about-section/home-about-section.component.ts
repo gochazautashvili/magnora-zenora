@@ -1,6 +1,7 @@
 import { TranslateModule } from '@ngx-translate/core';
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ISectionType } from '@shared/types/enums';
 
 @Component({
   selector: 'app-home-about-section',
@@ -9,5 +10,5 @@ import { CommonModule } from '@angular/common';
   styleUrl: './home-about-section.component.scss',
 })
 export class HomeAboutSectionComponent {
-  @Input() type: 'magnora' | 'zenora' = 'magnora';
+  @Input() type: ISectionType = 'magnora';
 }
