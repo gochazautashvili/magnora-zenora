@@ -19,6 +19,11 @@ const routes: Routes = [
             loadComponent: () =>
               import('./views/verify-code/verify-code.component'),
           },
+          {
+            path: 'success',
+            loadComponent: () =>
+              import('./views/sign-up-form/succsess-message/succsess-message.component'),
+          },
         ],
       },
       {
@@ -64,7 +69,7 @@ const routes: Routes = [
           {
             path: 'success',
             loadComponent: () =>
-              import('./views/succsess-message/succsess-message.component'),
+              import('./views/reset-password-form-passwords/succsess-message/succsess-message.component'),
           },
         ],
       },
