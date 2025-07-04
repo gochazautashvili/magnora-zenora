@@ -1,6 +1,6 @@
 <section class="section" [ngClass]="type">
   <div class="grid-container">
-    <div class="filter">
+    <div class="filter" *ngIf="hasFilter">
       <button (click)="showFilter()" class="filter_btn">
         <div class="filter-wrapper">
           <img src="assets/icons/filter-icon.png" alt="" class="filter-img" />
@@ -20,19 +20,19 @@
             name="min-price"
             placeholder="Min"
             label="Price Range"
-            class="pricing_input"
+            class="pricing_input input"
             [(ngModel)]="filter.minPrice"
           />
           <app-form-input
             [(ngModel)]="filter.maxPrice"
-            class="pricing_input"
+            class="pricing_input input"
             placeholder="Max"
             name="max-price"
           />
         </div>
         <app-form-select
           [(ngModel)]="filter.category"
-          class="earrings_input"
+          class="earrings_input input"
           placeholder="Earrings"
           [options]="options"
           label="Categories:"
@@ -41,8 +41,8 @@
         <app-form-select
           placeholder="Recently Added"
           [(ngModel)]="filter.sortBy"
+          class="sort_input input"
           [options]="options"
-          class="sort_input"
           label="Sort By:"
           name="sort-by"
         />

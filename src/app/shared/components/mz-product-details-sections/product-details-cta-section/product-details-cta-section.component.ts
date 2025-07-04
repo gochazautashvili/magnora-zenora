@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+
 import { ISectionType } from '@shared/types/enums';
 import { ButtonComponent } from '@shared/ui';
 

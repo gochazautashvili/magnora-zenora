@@ -6,6 +6,10 @@
   border-radius: 48px;
   background-color: var(--BG-Section);
 
+  @media screen and (max-width: 600px) {
+    padding-inline: 12px;
+  }
+
   .input-group {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

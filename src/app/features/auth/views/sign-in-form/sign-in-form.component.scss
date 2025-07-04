@@ -3,6 +3,7 @@
 
 .container {
   max-width: 768px;
+
   display: flex;
   justify-content: center;
 }
@@ -20,6 +21,10 @@
   padding: 48px;
   border-radius: 48px;
   background-color: var(--BG-Section);
+
+  @media screen and (max-width: 600px) {
+    padding-inline: 24px;
+  }
 
   .input {
     p {

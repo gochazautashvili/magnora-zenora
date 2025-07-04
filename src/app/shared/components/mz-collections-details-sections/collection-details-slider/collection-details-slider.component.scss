@@ -76,6 +76,13 @@
       &:hover {
         background: var(--BG-Disabled);
       }
+
+      @media screen and (max-width: 768px) {
+        svg {
+          width: 24px;
+          height: 24px;
+        }
+      }
     }
 
     .dots {
@@ -129,6 +136,8 @@
 
 @media screen and (max-width: 830px) {
   .hero {
+    aspect-ratio: 1 / 1;
+
     .content {
       .title {
         font-size: var(--FONT-SIZE-SHL);

@@ -1,6 +1,6 @@
 import { Component, inject, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 import { ISectionType } from '@shared/types/enums';
 import {
@@ -41,6 +41,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class CollectionDetailsProductsComponent {
   @Input() type: ISectionType = 'magnora';
+  @Input() hasFilter = true;
 
   private router = inject(Router);
 

@@ -26,6 +26,7 @@
     .filter_btn {
       display: flex;
       align-items: center;
+
       background: none;
       gap: 0.7rem;
       height: 36px;
@@ -54,6 +55,7 @@
     .filter__menu {
       display: flex;
       align-items: end;
+      flex-wrap: wrap;
       gap: var(--Spacing-L);
 
       padding: 20px 32px;

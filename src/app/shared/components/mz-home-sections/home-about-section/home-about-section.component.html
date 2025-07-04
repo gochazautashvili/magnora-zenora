@@ -9,12 +9,29 @@
           {{ "ZENORA.HOME.ABOUT.TEXT_1" | translate }}
           }
         </h1>
+
+        <div class="mobile">
+          <img
+            class="box_2"
+            loading="lazy"
+            alt="magnora-about-img-1"
+            src="assets/images/magnora-about-img2.png "
+          />
+
+          <div class="text_box">
+            <p class="text">
+              @if(type === "magnora"){
+              {{ "MAGNORA.HOME.ABOUT.TEXT_2" | translate }}
+              } @else {
+              {{ "ZENORA.HOME.ABOUT.TEXT_2" | translate }}
+              }
+            </p>
+          </div>
+        </div>
       </div>
 
       <div class="right img">
         <img
-          width="300"
-          height="208"
           class="box_2"
           loading="lazy"
           alt="magnora-about-img-1"
@@ -26,8 +43,6 @@
     <div class="bottom">
       <div class="left img">
         <img
-          width="300"
-          height="360"
           class="box_4"
           loading="lazy"
           alt="magnora-about-img-2"
@@ -36,7 +51,7 @@
       </div>
 
       <div class="right">
-        <div class="text_box">
+        <div class="text_box mobile">
           <p class="text">
             @if(type === "magnora"){
             {{ "MAGNORA.HOME.ABOUT.TEXT_2" | translate }}
