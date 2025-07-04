@@ -1,0 +1,68 @@
+@use "typography" as *;
+@use "layout" as *;
+
+.container {
+    padding: 48px;
+    border-radius: 48px;
+    background-color: var(--BG-Section); 
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;    
+    gap: 36px;
+
+    .image-wrapper {
+        max-width: 75px;
+        
+        height: 55px;
+        margin: 20px auto;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .texts {
+        display: grid;
+        gap: 15px;
+        text-align: center;
+
+        h2 {
+            @include sub-header-l;
+            color: var(--Indicator-Success);
+        }
+        p {
+            @include regular-r;
+            color: var(--Typography-200);
+        }
+    }
+}
+
+.button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+@media (max-width: 350px) {
+    .container {
+        gap: 10px;
+        
+        .image-wrapper {
+            margin-top: 0px;
+        }
+        .texts {
+            gap: 10px;
+            h2 {
+                @include sub-header-s;
+            }
+            p {
+            }
+        }
+        .button {
+            margin-top: 5px;
+        }
+    }
+    
+
+}
