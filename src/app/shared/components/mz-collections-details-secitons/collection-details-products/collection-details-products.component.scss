@@ -106,14 +106,29 @@ section {
                 font-family: outfit;
                 color: var(--Typography-Purple-100);
                 
+                
                 display: grid;
                 grid-template-columns: 11fr 1fr;
                 
                 justify-content: space-between;
                 align-items: center;
+
+                h3 {
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1; 
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+    
+                }
             }
             .description {
                 color: var(--Typography-Purple-200);
+                display: -webkit-box;
+                -webkit-line-clamp: 2; /* Limit to 2 lines */
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
             .button ::ng-deep button {
                 width: 100%;
