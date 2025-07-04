@@ -10,7 +10,7 @@ export class ProductsService {
     {
       id : 1,
       img : 'assets/images/product-test.jpg',
-      title: 'Obsidian Shield Braceletssssss',
+      title: 'Obsidian Shield Bracelets',
       price : '60',
       content : 'A grounding talisman that absorbs negativity and stabilizes emotions.',
       isLiked : false,
