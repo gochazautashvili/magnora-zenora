@@ -1,0 +1,15 @@
+.container {
+    padding: 48px;
+    border-radius: 48px;
+    background-color: var(--BG-Section); 
+
+    .image-wrapper {
+        max-width: 75px;
+        height: 55px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
