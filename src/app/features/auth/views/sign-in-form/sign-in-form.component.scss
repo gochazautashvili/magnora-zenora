@@ -2,31 +2,29 @@
 @use "layout" as *;
 
 .container {
-    max-width: 768px;
-    display: flex;
-    justify-content: center;
+  max-width: 768px;
+  display: flex;
+  justify-content: center;
 }
-
 
 .input-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
 }
-.button {
-    margin-top: 3rem;
-}
-.container {
-    padding: 48px;
-    border-radius: 48px;
-    background-color: var(--BG-Section);
 
-    
-    .input {
-        p {
-            color: red; 
-            
-        }
+.button {
+  margin-top: 3rem;
+}
+
+.container {
+  padding: 48px;
+  border-radius: 48px;
+  background-color: var(--BG-Section);
+
+  .input {
+    p {
+      color: red;
     }
 
 }
@@ -44,7 +42,7 @@
     .button {
         margin-top: 2rem;
     }
+  }
 }
-
 
 
