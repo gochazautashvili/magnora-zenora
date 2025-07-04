@@ -17,6 +17,11 @@
     justify-self: end;
     max-width: 1200px;
 
+    @media (max-width: 700px) {
+      grid-template-columns: 1fr;
+      gap: var(--Spacing-L);
+    }
+
     .left {
       margin-top: var(--Spacing-L);
     }
@@ -26,10 +31,22 @@
       column-gap: var(--Spacing-L);
       grid-template-columns: repeat(2, minmax(200px, auto));
 
+      @media (max-width: 700px) {
+        grid-template-columns: 1.4fr 1fr;
+      }
+
       .img {
         max-width: 20dvw;
         max-height: 360px;
         aspect-ratio: 300 / 360;
+
+        @media (max-width: 700px) {
+          display: flex;
+          justify-content: center;
+
+          width: 100%;
+          max-width: none;
+        }
       }
 
       .text {
@@ -47,8 +64,18 @@
     margin-bottom: var(--Spacing-L);
     column-gap: var(--Spacing-L);
 
+    @media (max-width: 700px) {
+      grid-template-columns: 1fr;
+      justify-self: auto;
+      gap: 48px;
+    }
+
     .left {
       align-self: flex-start;
+
+      @media (max-width: 700px) {
+        grid-row: 2;
+      }
     }
 
     .right {
@@ -57,9 +84,22 @@
       margin-top: var(--Spacing-XL);
       grid-template-columns: auto 1fr;
 
+      @media (max-width: 700px) {
+        grid-row: 1;
+        margin: 0px;
+      }
+
+      @media screen and (max-width: 400px) {
+        grid-template-columns: 1fr 1fr;
+      }
+
       .text {
         margin-top: var(--Spacing-L);
         max-width: 21vw;
+
+        @media screen and (max-width: 400px) {
+          max-width: none;
+        }
       }
     }
 
@@ -67,6 +107,11 @@
       width: 29dvw;
       max-width: 416px;
       max-height: 288px;
+
+      @media (max-width: 700px) {
+        width: 100%;
+        max-width: none;
+      }
     }
   }
 
@@ -77,20 +122,45 @@
     margin-bottom: var(--Spacing-XL);
     column-gap: var(--Spacing-L);
 
+    @media (max-width: 700px) {
+      grid-template-columns: 1fr;
+    }
+
     .left {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       column-gap: var(--Spacing-L);
 
+      @media (max-width: 700px) {
+        grid-template-columns: 1.4fr 1fr;
+
+        grid-row: 2;
+      }
+
       .img:first-child {
         justify-self: end;
         max-width: 184px;
         max-height: 220px;
+
+        @media (max-width: 700px) {
+          justify-self: auto;
+          max-width: none;
+          max-height: 280px;
+        }
       }
 
       .img:last-child {
         max-width: 300px;
         max-height: 360px;
+
+        @media (max-width: 700px) {
+          max-width: none;
+          max-height: 210px;
+        }
+
+        @media screen and (max-width: 400px) {
+          aspect-ratio: 133 / 150;
+        }
       }
     }
 
@@ -106,11 +176,24 @@
     grid-template-columns: 1fr 2fr;
     column-gap: var(--Spacing-L);
 
+    @media (max-width: 700px) {
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+
     .left {
       width: 21dvw;
       max-width: 300px;
       max-height: 360px;
       align-self: center;
+      justify-self: center;
+
+      @media (max-width: 700px) {
+        max-width: none;
+        width: 100%;
+        max-height: none;
+        height: 270px;
+      }
     }
 
     .right {
@@ -122,15 +205,29 @@
         grid-template-columns: repeat(2, 1fr);
         column-gap: var(--Spacing-L);
 
+        @media (max-width: 700px) {
+          grid-template-columns: 1fr;
+        }
+
         .text {
           align-self: flex-end;
           margin-bottom: var(--Spacing-L);
+
+          @media (max-width: 700px) {
+            grid-row: 1;
+          }
         }
 
         .img {
           width: 29dvw;
           max-width: 416px;
           max-height: 288px;
+
+          @media (max-width: 700px) {
+            width: 100%;
+            max-width: none;
+            max-height: 270px;
+          }
         }
       }
 
@@ -163,10 +260,19 @@
 // TEXTS
 .title {
   @include header-s;
+
+  @media screen and (max-width: 400px) {
+    font-size: var(--FONT-SIZE-SHL);
+  }
 }
 
 .text {
   @include sub-header-s;
+
+  @media screen and (max-width: 400px) {
+    word-break: break-all;
+    font-size: 12px;
+  }
 }
 
 .features.magnora {

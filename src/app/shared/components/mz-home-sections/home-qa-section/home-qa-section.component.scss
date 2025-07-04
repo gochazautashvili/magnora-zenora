@@ -21,7 +21,7 @@
     display: grid;
     grid-template-columns: 1fr 41.1dvw;
     justify-content: center;
-    gap: 48px;
+    gap: var(--Spacing-L);
 
     @media (max-width: 900px) {
       width: 100%;
@@ -36,10 +36,16 @@
 
       h2 {
         @include header-s;
+
+        @media screen and (max-width: 400px) {
+          font-size: var(--FONT-SIZE-SHS);
+        }
       }
 
       p {
         @include sub-header-s;
+
+        font-size: var(--FONT-SIZE-RR);
       }
     }
 
@@ -131,18 +137,12 @@
     flex-direction: column;
     gap: 4px;
 
-    h5 {
-      font-size: 20px;
-      font-weight: 500;
-      line-height: 28px;
-      letter-spacing: 1.6px;
+    .title {
+      @include sub-header-s;
     }
 
-    p {
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 24px;
-      letter-spacing: 0.96px;
+    .text {
+      @include regular-r;
     }
   }
 }

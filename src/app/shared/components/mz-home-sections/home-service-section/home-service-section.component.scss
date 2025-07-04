@@ -139,7 +139,7 @@
       margin-top: var(--Spacing-XL);
 
       .service-card {
-        width: 400px;
+        max-width: 400px;
         justify-self: center;
         gap: var(--Spacing-XL);
 
@@ -186,7 +186,6 @@
       margin-top: var(--Spacing-XL);
 
       .service-card {
-        width: 400px;
         justify-self: center;
         gap: var(--Spacing-XL);
 
@@ -198,7 +197,6 @@
 
         img {
           width: 100%;
-          width: 342px;
           height: 244px;
           border-radius: 12px;
           object-fit: cover;

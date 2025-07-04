@@ -48,6 +48,10 @@
       @media (max-width: 900px) {
         width: 100%;
       }
+
+      @media screen and (max-width: 460px) {
+        font-size: var(--FONT-SIZE-SHL);
+      }
     }
 
     .box {
@@ -56,6 +60,10 @@
 
       h3 {
         @include sub-header-s;
+
+        @media screen and (max-width: 460px) {
+          font-size: var(--FONT-SIZE-RR);
+        }
       }
 
       .btns {

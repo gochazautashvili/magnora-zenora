@@ -1,0 +1,18 @@
+<div class="input-wrapper">
+  <label *ngIf="label" [for]="label">
+    {{ label }}
+  </label>
+
+  <select
+    [attr.placeholder]="placeholder"
+    (change)="onInput($event)"
+    (blur)="onTouched()"
+    class="select"
+    title="select"
+  >
+    <option selected disabled value="">{{ placeholder }}</option>
+    @for (item of options; track $index) {
+    <option [value]="item.value">{{ item.name }}</option>
+    }
+  </select>
+</div>

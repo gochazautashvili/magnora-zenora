@@ -2,32 +2,45 @@
 @use "layout" as *;
 
 .container {
-    max-width: 768px;
-    display: flex;
-    justify-content: center;
-}
+  max-width: 768px;
 
+  display: flex;
+  justify-content: center;
+}
 
 .input-wrapper {
-    display: flex;
-    gap: 2rem;
+  display: flex;
+  gap: 2rem;
 }
+
 .button {
-    margin-top: 3rem;
+  margin-top: 3rem;
 }
+
 .container {
-    padding: 48px;
-    border-radius: 48px;
-    background-color: var(--BG-Section);
+  padding: 48px;
+  border-radius: 48px;
+  background-color: var(--BG-Section);
 
-    
-    .input {
-        p {
-            color: red; 
-            
-        }
+  @media screen and (max-width: 600px) {
+    padding-inline: 24px;
+  }
+
+  .input {
+    p {
+      color: red;
     }
-    
-    
+  }
+}
 
+@media screen and (max-width: 1170px) {
+  .input-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form,
+  .input {
+    width: 100%;
+  }
 }

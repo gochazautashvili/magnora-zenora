@@ -28,10 +28,18 @@
 
     h1 {
       @include sub-header-l;
+
+      @media screen and (max-width: 400px) {
+        font-size: var(--FONT-SIZE-SHS);
+      }
     }
 
     p {
       @include regular-r;
+
+      @media screen and (max-width: 400px) {
+        font-size: var(--FONT-SIZE-SR);
+      }
     }
   }
 }

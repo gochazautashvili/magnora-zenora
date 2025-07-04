@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, Location } from '@angular/common';
 import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { SearchSectionComponent } from '../search-section/search-section.component';
 import { OverlayService } from '@shared/services/overlay.service';
@@ -10,7 +10,7 @@ import {
   transition,
   animate,
   query,
-  stagger
+  stagger,
 } from '@angular/animations';
 
 @Component({
@@ -260,12 +260,15 @@ export class MainOverlayComponent implements OnInit, OnDestroy {
   isOverlayOpen: boolean = false;
   isAuthenticated: boolean = true;
   openSectionName: string = '';
-  mockCart: string[] = ["string"];
+  mockCart: string[] = ['string'];
   buttonStates: { [key: string]: string } = {};
 
   private subscriptions: Subscription[] = [];
 
-  constructor(public overlayService: OverlayService) {}
+  constructor(
+    public overlayService: OverlayService,
+    private location: Location
+  ) {}
 
   ngOnInit(): void {
     // Subscribe to overlay state changes
@@ -281,6 +284,17 @@ export class MainOverlayComponent implements OnInit, OnDestroy {
         this.openSectionName = message;
       })
     );
+  }
+
+  public getCollectionLink() {
+    const path = this.location.path();
+    if (path.includes('magnora')) {
+      return '/magnora/collections';
+    } else if (path.includes('zenora')) {
+      return '/zenora/collections';
+    } else {
+      return '/';
+    }
   }
 
   ngOnDestroy() {

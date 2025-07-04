@@ -1,86 +1,113 @@
 <div class="container">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="input-group">
+      <div class="input">
+        <app-form-input
+          formControlName="firstName"
+          [errorMessage]="getErrorMessage(form.controls.firstName)"
+          [label]="'First Name'"
+          [status]="
+            form.controls.firstName.valid
+              ? 'success'
+              : form.controls.firstName.touched
+              ? 'error'
+              : 'normal'
+          "
+        >
+        </app-form-input>
+      </div>
+      <div class="input">
+        <app-form-input
+          formControlName="lastName"
+          [errorMessage]="getErrorMessage(form.controls.lastName)"
+          [label]="'Last Name'"
+          [status]="
+            form.controls.lastName.valid
+              ? 'success'
+              : form.controls.lastName.touched
+              ? 'error'
+              : 'normal'
+          "
+        >
+        </app-form-input>
+      </div>
+      <div class="input">
+        <app-form-input
+          formControlName="email"
+          [errorMessage]="getErrorMessage(form.controls.email)"
+          [label]="'Your Email'"
+          [type]="'email'"
+          [status]="
+            form.controls.email.valid
+              ? 'success'
+              : form.controls.email.touched
+              ? 'error'
+              : 'normal'
+          "
+        >
+        </app-form-input>
+      </div>
+      <div class="input">
+        <app-form-input
+          formControlName="number"
+          [errorMessage]="getErrorMessage(form.controls.number)"
+          [label]="'Phone Number'"
+          [labelNote]="'Optional'"
+          [status]="
+            form.controls.number.valid
+              ? 'success'
+              : form.controls.number.touched
+              ? 'error'
+              : 'normal'
+          "
+        >
+        </app-form-input>
+      </div>
+      <div class="input">
+        <app-form-input
+          formControlName="password"
+          [label]="'Create Password'"
+          [formatProperties]="[
+            'Minimum 8 characters',
+            'At least one number',
+            'At least uppercase letter'
+          ]"
+          [type]="'password'"
+          [status]="
+            form.controls.password.valid
+              ? 'success'
+              : form.controls.password.touched
+              ? 'error'
+              : 'normal'
+          "
+        >
+        </app-form-input>
+      </div>
+      <div class="input">
+        <app-form-input
+          formControlName="confirmPassword"
+          [errorMessage]="
+            getErrorMessage(
+              form.controls.confirmPassword,
+              'Passwords do not match'
+            )
+          "
+          [label]="'Confirm Password'"
+          [type]="'password'"
+          [status]="
+            form.hasError('passwordsMismatch')
+              ? 'error'
+              : form.controls.confirmPassword.valid
+              ? 'success'
+              : 'normal'
+          "
+        >
+        </app-form-input>
+      </div>
+    </div>
 
-    <form [formGroup]="form" (ngSubmit)="onSubmit()">
-
-        <div class="input-group">
-            
-            <div class="input">
-                <app-form-input 
-                    formControlName="firstName" 
-                    [errorMessage]="getErrorMessage(form.controls.firstName)"
-                    [label]="'First Name'"
-                    [status]="form.controls.firstName.valid ? 'success' : (form.controls.firstName.touched ? 'error' : 'normal')"
-                >
-                </app-form-input>
-            </div>
-            <div class="input">
-                <app-form-input 
-                    formControlName="lastName" 
-                    [errorMessage]="getErrorMessage(form.controls.lastName)"
-                    [label]="'Last Name'"
-                    [status]="form.controls.lastName.valid ? 'success' : (form.controls.lastName.touched ? 'error' : 'normal')"
-                >
-                </app-form-input>
-            </div>
-            <div class="input ">
-                <app-form-input 
-                    formControlName="email" 
-                    [errorMessage]="getErrorMessage(form.controls.email)"
-                    [label]="'Your Email'"
-                    [type]="'email'"
-                    [status]="form.controls.email.valid ? 'success' : (form.controls.email.touched ? 'error' : 'normal')"
-                >
-                </app-form-input>
-            </div>
-            <div class="input">
-                <app-form-input 
-                    formControlName="number" 
-                    [errorMessage]="getErrorMessage(form.controls.number)"
-                    [label]="'Phone Number'"
-                    [labelNote]="'Optional'"
-                    [status]="form.controls.number.valid ? 'success' : (form.controls.number.touched ? 'error' : 'normal')"
-                >
-                </app-form-input>
-            </div>
-            <div class="input">
-                <app-form-input 
-                    formControlName="password" 
-                    [label]="'Create Password'"
-                    [formatProperties]="[
-                       'Minimum 8 characters',
-                       'At least one number',
-                       'At least uppercase letter'
-                    ]"
-                    [type]="'password'"
-                    [status]="form.controls.password.valid ? 'success' : (form.controls.password.touched ? 'error' : 'normal')"
-                >
-                </app-form-input>
-            </div>
-            <div class="input">
-                <app-form-input 
-                    formControlName="confirmPassword" 
-                    [errorMessage]="
-                        form.hasError('passwordsMismatch') && form.controls.confirmPassword.touched
-                        ? 'Passwords do not match'
-                        : getErrorMessage(form.controls.confirmPassword)
-                    "
-                    [label]="'Confirm Password'"
-                    [type]="'password'"
-                    [status]="
-                        form.hasError('passwordsMismatch') && form.controls.confirmPassword.touched
-                        ? 'error'
-                        : (form.controls.confirmPassword.valid ? 'success' : 'normal')
-                    "
-                >
-                </app-form-input>
-            </div>
-
-        </div>
-
-        <div class="button">
-            <app-button [type]="'submit'">Create Account</app-button>
-        </div>
-
-    </form>
-
+    <div class="button">
+      <app-button [type]="'submit'">Create Account</app-button>
+    </div>
+  </form>
 </div>

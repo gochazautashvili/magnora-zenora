@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import {
   CollectionBookConsultComponent,
   CollectionDetailsAboutComponent,
+  CollectionDetailsSliderComponent,
   CollectionDetailsProductsComponent,
 } from '@shared/components/mz-collections-details-sections';
 
@@ -11,6 +12,7 @@ import {
   imports: [
     CollectionBookConsultComponent,
     CollectionDetailsAboutComponent,
+    CollectionDetailsSliderComponent,
     CollectionDetailsProductsComponent,
   ],
   templateUrl: './collections-detail.component.html',
