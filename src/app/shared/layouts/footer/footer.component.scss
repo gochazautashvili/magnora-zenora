@@ -5,8 +5,8 @@
   background-color: var(--BG-Section);
   border-top-right-radius: 96px;
   border-top-left-radius: 96px;
-  position: relative;
   padding-top: 50px;
+  position: relative;
   overflow: hidden;
 
   position: relative;
@@ -14,6 +14,17 @@
   width: 100%;
   display: flex;
   justify-content: center;
+
+  @media screen and (max-width: 900px) {
+    border-top-right-radius: 48px;
+    border-top-left-radius: 48px;
+    padding-top: 20px;
+  }
+
+  @media screen and (max-width: 900px) {
+    border-top-right-radius: 24px;
+    border-top-left-radius: 24px;
+  }
 
   .bg-images {
     position: absolute;
@@ -187,7 +198,8 @@
       @include small-r;
     }
 
-    p, a {
+    p,
+    a {
       @media (max-width: 500px) {
         font-size: 12px;
       }

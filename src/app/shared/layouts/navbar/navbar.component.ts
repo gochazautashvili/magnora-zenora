@@ -1,13 +1,14 @@
-import { CommonModule } from '@angular/common';
 import { Component, HostListener, inject, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
-import { LanguageService } from '@core/i18n/language.service';
+import { SearchSectionComponent } from '@core/components/search-section/search-section.component';
 import { OverlayService } from '@shared/services/overlay.service';
+import { LanguageService } from '@core/i18n/language.service';
 
 @Component({
   selector: 'app-navbar',
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, SearchSectionComponent],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
 })
@@ -16,7 +17,7 @@ export class NavbarComponent {
   isMobile: boolean = window.innerWidth <= 768;
 
   currentActiveSection: string = '';
-  isMenuOpen: boolean = false; 
+  isMenuOpen: boolean = false;
 
   constructor(public overlayService: OverlayService) {}
 
@@ -46,13 +47,12 @@ export class NavbarComponent {
     }
   }
 
-
   get currentLanguage(): string {
-    if (localStorage.getItem("language")?.toString() === 'en') {
-      return "Georgian";
+    if (localStorage.getItem('language')?.toString() === 'en') {
+      return 'Georgian';
     }
 
-    return "English";
+    return 'English';
   }
 
   get navbarLogoLink(): string {

@@ -19,7 +19,7 @@
 
     @media (max-width: 700px) {
       grid-template-columns: 1fr;
-      gap: 48px;
+      gap: var(--Spacing-L);
     }
 
     .left {
@@ -42,10 +42,10 @@
 
         @media (max-width: 700px) {
           display: flex;
+          justify-content: center;
+
           width: 100%;
           max-width: none;
-          height: 270px;
-          justify-content: center;
         }
       }
 
@@ -66,8 +66,8 @@
 
     @media (max-width: 700px) {
       grid-template-columns: 1fr;
-      gap: 48px;
       justify-self: auto;
+      gap: 48px;
     }
 
     .left {
@@ -89,9 +89,17 @@
         margin: 0px;
       }
 
+      @media screen and (max-width: 400px) {
+        grid-template-columns: 1fr 1fr;
+      }
+
       .text {
         margin-top: var(--Spacing-L);
         max-width: 21vw;
+
+        @media screen and (max-width: 400px) {
+          max-width: none;
+        }
       }
     }
 
@@ -103,7 +111,6 @@
       @media (max-width: 700px) {
         width: 100%;
         max-width: none;
-        height: 270px;
       }
     }
   }
@@ -149,6 +156,10 @@
         @media (max-width: 700px) {
           max-width: none;
           max-height: 210px;
+        }
+
+        @media screen and (max-width: 400px) {
+          aspect-ratio: 133 / 150;
         }
       }
     }
@@ -249,10 +260,19 @@
 // TEXTS
 .title {
   @include header-s;
+
+  @media screen and (max-width: 400px) {
+    font-size: var(--FONT-SIZE-SHL);
+  }
 }
 
 .text {
   @include sub-header-s;
+
+  @media screen and (max-width: 400px) {
+    word-break: break-all;
+    font-size: 12px;
+  }
 }
 
 .features.magnora {
