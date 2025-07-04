@@ -1,0 +1,52 @@
+@use "typography" as *;
+
+.input-wrapper {
+  width: 100%;
+}
+
+.select {
+  @include regular-r;
+  margin-top: 0.5rem;
+
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 12px 24px;
+  border-radius: 24px;
+  appearance: none;
+  transition: 0.3s;
+  color: var(--Typography-300, #4b4b52);
+  background: var(--BG-Secondary-Section, #dbdce0);
+  box-shadow: -1px -1px 0px 0px var(--BG-Dissabled, #c7c8cc) inset,
+    1px 1px 0px 0px var(--BG-Dissabled, #c7c8cc) inset,
+    0px 0px 12px -2px var(--BG-Dissabled, #c7c8cc) inset;
+
+  &::placeholder {
+    color: var(--Typography-300, #4b4b52);
+  }
+
+  &:focus {
+    color: var(--Typography-100, #252529);
+    background: var(--BG-Section, #e5e6eb);
+    transition: 0.3s;
+    box-shadow: -1px -1px 0px 0px var(--BG-Dissabled, #c7c8cc) inset,
+      1px 1px 0px 0px var(--BG-Dissabled, #c7c8cc) inset,
+      0px 0px 24px 0px var(--BG-Background, #eff0f5) inset;
+
+    &::placeholder {
+      color: var(--Typography-100, #252529);
+    }
+  }
+
+  &:disabled {
+    color: var(--Typography-Dissabled, #88838f);
+    background: var(--BG-Dissabled, #c7c8cc);
+    box-shadow: -1px -1px 0px 0px var(--BG-Dissabled, #c7c8cc) inset,
+      1px 1px 0px 0px var(--BG-Dissabled, #c7c8cc) inset,
+      0px 0px 24px -4px var(--BG-Section, #e5e6eb) inset;
+
+    &::placeholder {
+      color: var(--Typography-Dissabled, #88838f);
+    }
+  }
+}

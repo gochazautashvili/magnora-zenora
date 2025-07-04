@@ -39,8 +39,8 @@
         <app-button
           [routerLink]="
             type == 'magnora'
-              ? '/magnora/collection/details/{{ item.id }}'
-              : '/zenora/collection/details/{{ item.id }}'
+              ? '/magnora/collection/details/' + item.id
+              : '/zenora/collection/details/' + item.id
           "
           variant="secondary"
         >

@@ -1,14 +1,58 @@
 <section class="section" [ngClass]="type">
   <div class="grid-container">
-    <div class="filter" *ngIf="filter">
-      <div class="filter-wrapper">
-        <img src="assets/icons/filter-icon.png" alt="" class="filter-img" />
-        <p>Filters</p>
-      </div>
-      <img src="assets/icons/right-icon.png" alt="" class="right-icon" />
+    <div class="filter">
+      <button (click)="showFilter()" class="filter_btn">
+        <div class="filter-wrapper">
+          <img src="assets/icons/filter-icon.png" alt="" class="filter-img" />
+          <p>Filters</p>
+        </div>
+        <img src="assets/icons/right-icon.png" alt="" class="right-icon" />
+      </button>
+
+      <form
+        (submit)="onFilter()"
+        *ngIf="isShowFilter"
+        [@fadeAnimation]
+        class="filter__menu"
+      >
+        <div class="pricing_wrapper">
+          <app-form-input
+            name="min-price"
+            placeholder="Min"
+            label="Price Range"
+            class="pricing_input"
+            [(ngModel)]="filter.minPrice"
+          />
+          <app-form-input
+            [(ngModel)]="filter.maxPrice"
+            class="pricing_input"
+            placeholder="Max"
+            name="max-price"
+          />
+        </div>
+        <app-form-select
+          [(ngModel)]="filter.category"
+          class="earrings_input"
+          placeholder="Earrings"
+          [options]="options"
+          label="Categories:"
+          name="category"
+        />
+        <app-form-select
+          placeholder="Recently Added"
+          [(ngModel)]="filter.sortBy"
+          [options]="options"
+          class="sort_input"
+          label="Sort By:"
+          name="sort-by"
+        />
+
+        <app-button type="submit">Filter</app-button>
+      </form>
     </div>
+
     <div class="products-wrapper">
-      @for (product of products; track product.title) {
+      @for (product of products; track $index) {
       <div class="product">
         <div class="img">
           <div class="product-image">
@@ -39,8 +83,8 @@
           <app-button
             [routerLink]="
               type == 'magnora'
-                ? '/magnora/product/details/{{product.id}}'
-                : '/zenora/product/details/{{product.id}}'
+                ? '/magnora/product/details/' + product.title
+                : '/zenora/product/details/' + product.title
             "
             [variant]="type == 'magnora' ? 'dark' : 'secondary'"
             size="full"
@@ -53,3 +97,5 @@
     </div>
   </div>
 </section>
+
+<div *ngIf="isShowFilter" (click)="closeFilter()" class="filter__overlay"></div>

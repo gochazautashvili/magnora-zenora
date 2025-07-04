@@ -1,5 +1,5 @@
 <div class="input-wrapper">
-  <label [for]="label">
+  <label *ngIf="label" [for]="label">
     {{ label }}
     <span *ngIf="labelNote">({{ labelNote }})</span>
   </label>

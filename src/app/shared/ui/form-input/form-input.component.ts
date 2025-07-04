@@ -25,7 +25,7 @@ export class FormInputComponent implements ControlValueAccessor {
   @Input() disabled: boolean = false;
   @Input() errorMessage?: string;
   @Input() placeholder: string = '';
-  @Input() label: string = 'Label';
+  @Input() label?: string;
   @Input() type: string = 'text';
   // this note will display in "()"
   @Input() labelNote?: string;
@@ -63,7 +63,6 @@ export class FormInputComponent implements ControlValueAccessor {
 
   public writeValue(value: string): void {
     this.value = value;
-    console.log(this.errorMessage);
   }
 
   public registerOnChange(fn: any): void {
