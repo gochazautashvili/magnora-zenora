@@ -1,21 +1,22 @@
 <section class="sign_in_section">
-
-    <div class="grid-container">
-
-        <div class="sign_in_texts">
-            <div>
-                <h2>Welcome Back</h2>
-                <p>
-                    Continue your journey with your saved energy, favorites, and orders — all in one place.
-                </p>
-            </div>
-            
-            <p><span>Don’t have an account?</span>Sign Up</p>
-        </div>
-        
-        <div class="outlet">
-            <router-outlet></router-outlet>
-        </div>
+  <div class="grid-container">
+    <div class="sign_in_texts">
+      <div>
+        <h2>{{ "AUTH.SIGN_IN.TITLE" | translate }}</h2>
+        <p>
+          {{ "AUTH.SIGN_IN.TEXT" | translate }}
+        </p>
+      </div>
+      <p routerLink="/auth/sign-up">
+        <span>
+          {{ "AUTH.SIGN_IN.QUESTION.TEXT" | translate }}
+        </span>
+        {{ "AUTH.SIGN_IN.QUESTION.SPAN" | translate }}
+      </p>
     </div>
 
+    <div class="outlet">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
 </section>
