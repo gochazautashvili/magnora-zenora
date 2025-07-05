@@ -148,18 +148,20 @@ $desktop: 1025px;
       color: var(--Typography-White-100, #eff0f5);
     }
 
-    // Tablet positioning
-    @media (max-width: $tablet) {
-      top: 142px;
-      left: 12px;
-    }
-
-    // Mobile positioning - center the sections
     @media (max-width: $mobile) {
-      top: 120px;
+      top: 140px;
       left: 0;
       right: 0;
       margin: 0 auto;
+      max-height: 64dvh;
+    }
+
+    @media (max-width: 600px) {
+      top: 100px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      max-height: 64dvh;
     }
 
     .product-list {
@@ -857,18 +859,21 @@ $desktop: 1025px;
       color: var(--Typography-White-100, #eff0f5);
     }
 
-    // Tablet positioning
-    @media (max-width: $tablet) {
-      top: 120px;
-      right: 24px;
-    }
-
     // Mobile positioning - center the section
     @media (max-width: $mobile) {
-      top: 120px;
+      top: 140px;
       left: 0;
       right: 0;
       margin: 0 auto;
+      max-height: 64dvh;
+    }
+
+    @media (max-width: 600px) {
+      top: 100px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      max-height: 64dvh;
     }
 
     .pages-list {
