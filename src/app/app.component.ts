@@ -27,8 +27,6 @@ export class AppComponent {
         // Change "special" to your keyword
         this.isSpecialRoute = event.urlAfterRedirects.includes('magnora');
         this.type = this.isSpecialRoute === true ? 'magnora' : '';
-        console.log(this.isSpecialRoute);
-        console.log(this.type);
       });
   }
 }
